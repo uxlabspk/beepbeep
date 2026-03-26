@@ -25,9 +25,61 @@
             },
         }
     </script>
+    <style>
+        /* Fix for mobile responsiveness */
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 
 <body class="font-primary text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 bg-dark/95 z-40 hidden">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-end mb-8">
+                <button id="closeMenu" class="text-white hover:text-brand">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-6 items-center">
+                <li><a href="index.html"
+                        class="text-white text-xl font-medium hover:text-brand transition-colors">Home</a></li>
+                <li><a href="about.html" class="text-white text-xl font-medium hover:text-brand transition-colors">About
+                        Us</a></li>
+                <li><a href="lessons.html"
+                        class="text-white text-xl font-medium hover:text-brand transition-colors">Courses</a></li>
+                <li><a href="prices.html"
+                        class="text-white text-xl font-medium hover:text-brand transition-colors">Prices</a></li>
+                <li><a href="contact.html"
+                        class="text-white text-xl font-medium hover:text-brand transition-colors">Contact Us</a></li>
+                <li><a href="book-now.html"
+                        class="px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all">Book
+                        Now</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Top Bar -->
     <div class="bg-gray-900 text-gray-300 text-xs py-2 hidden lg:block">
@@ -105,7 +157,7 @@
             <a href="book-now.html"
                 class="hidden lg:inline-block px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-lg">Book
                 Now</a>
-            <button class="lg:hidden text-gray-700">
+            <button id="menuToggle" class="lg:hidden text-gray-700 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -642,6 +694,34 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+
+        if (menuToggle && mobileMenu && closeMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+
+            // Close menu when clicking on a link
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    </script>
 
 </body>
 
