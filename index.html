@@ -25,9 +25,61 @@
             },
         }
     </script>
+    <style>
+        /* Fix for mobile responsiveness */
+        html,
+        body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 
 <body class="font-primary text-gray-800 antialiased overflow-x-hidden">
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobileMenu" class="fixed inset-0 bg-dark/95 z-40 hidden">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex justify-end mb-8">
+                <button id="closeMenu" class="text-white hover:text-brand">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <ul class="flex flex-col gap-6 items-center">
+                <li><a href="index.html"
+                        class="text-white text-xl font-medium hover:text-brand transition-colors">Home</a></li>
+                <li><a href="about.html" class="text-white text-xl font-medium hover:text-brand transition-colors">About
+                        Us</a></li>
+                <li><a href="lessons.html"
+                        class="text-white text-xl font-medium hover:text-brand transition-colors">Courses</a></li>
+                <li><a href="prices.html"
+                        class="text-white text-xl font-medium hover:text-brand transition-colors">Prices</a></li>
+                <li><a href="contact.html"
+                        class="text-white text-xl font-medium hover:text-brand transition-colors">Contact Us</a></li>
+                <li><a href="book-now.html"
+                        class="px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all">Book
+                        Now</a></li>
+            </ul>
+        </div>
+    </div>
 
     <!-- Top Bar -->
     <div class="bg-gray-900 text-gray-300 text-xs py-2 hidden lg:block">
@@ -105,7 +157,7 @@
                 class="hidden lg:inline-block px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-lg">
                 Book Now
             </a>
-            <button class="lg:hidden text-gray-700">
+            <button id="menuToggle" class="lg:hidden text-gray-700 focus:outline-none">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -127,24 +179,24 @@
                         <span class="w-8 h-0.5 bg-brand inline-block"></span>
                         Start Your Driving Skills
                     </p>
-                    <h1 class="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
                         Learn to Drive<br>with <span class="text-brand">Confidence</span>
                     </h1>
-                    <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                    <p class="text-gray-300 text-base sm:text-lg leading-relaxed mb-8">
                         Professional driving lessons across the UK with DVSA-certified instructors. Your journey to
                         passing your driving test starts here!
                     </p>
-                    <div class="flex gap-4 flex-wrap mb-10">
+                    <div class="flex flex-col sm:flex-row gap-4 mb-10">
                         <a href="book-now.html"
-                            class="px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-xl text-lg">
+                            class="px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-xl text-lg text-center">
                             Book Your First Lesson
                         </a>
                         <a href="lessons.html"
-                            class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all text-lg">
+                            class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all text-lg text-center">
                             View Packages
                         </a>
                     </div>
-                    <div class="flex gap-6 flex-wrap">
+                    <div class="flex flex-wrap gap-4 sm:gap-6">
                         <div class="flex items-center gap-2 text-gray-300 text-sm font-medium">
                             <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -170,14 +222,15 @@
                 </div>
             </div>
             <!-- Floating card -->
-            <div class="absolute bottom-12 right-12 hidden xl:block bg-white rounded-2xl p-5 shadow-2xl">
+            <div
+                class="absolute bottom-12 right-4 xl:right-12 hidden xl:block bg-white rounded-2xl p-5 shadow-2xl max-w-xs">
                 <div class="flex items-center gap-3 mb-3">
-                    <div class="w-12 h-12 rounded-full overflow-hidden">
+                    <div class="w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
                             alt="Instructor" class="w-full h-full object-cover">
                     </div>
-                    <div>
-                        <p class="font-semibold text-gray-800 text-sm">David Miller</p>
+                    <div class="min-w-0">
+                        <p class="font-semibold text-gray-800 text-sm truncate">David Miller</p>
                         <p class="text-xs text-gray-500">Senior Instructor</p>
                     </div>
                 </div>
@@ -208,11 +261,11 @@
         </section>
 
         <!-- Quick Course Search -->
-        <section class="bg-white py-10 shadow-lg relative z-10">
+        <section class="bg-white py-8 sm:py-10 shadow-lg relative z-10">
             <div class="container mx-auto px-4">
-                <h2 class="text-center text-2xl font-bold text-gray-800 mb-6">Start Your Driving Courses</h2>
-                <div class="flex flex-wrap gap-4 items-end justify-center">
-                    <div class="flex-1 min-w-[180px] max-w-xs">
+                <h2 class="text-center text-xl sm:text-2xl font-bold text-gray-800 mb-6">Start Your Driving Courses</h2>
+                <div class="flex flex-col sm:flex-row flex-wrap gap-4 items-end justify-center">
+                    <div class="flex-1 min-w-full sm:min-w-[180px] w-full sm:w-auto">
                         <label class="block text-sm font-medium text-gray-600 mb-2">Course Type</label>
                         <select
                             class="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand">
@@ -223,7 +276,7 @@
                             <option>Intensive Course</option>
                         </select>
                     </div>
-                    <div class="flex-1 min-w-[180px] max-w-xs">
+                    <div class="flex-1 min-w-full sm:min-w-[180px] w-full sm:w-auto">
                         <label class="block text-sm font-medium text-gray-600 mb-2">Transmission</label>
                         <select
                             class="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand">
@@ -232,7 +285,7 @@
                             <option>Automatic</option>
                         </select>
                     </div>
-                    <div class="flex-1 min-w-[180px] max-w-xs">
+                    <div class="flex-1 min-w-full sm:min-w-[180px] w-full sm:w-auto">
                         <label class="block text-sm font-medium text-gray-600 mb-2">Location</label>
                         <select
                             class="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand">
@@ -243,7 +296,7 @@
                         </select>
                     </div>
                     <button
-                        class="px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg">
+                        class="w-full sm:w-auto px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg">
                         Find Course
                     </button>
                 </div>
@@ -283,7 +336,7 @@
                             tests with confidence. Our DVSA-approved instructors are patient, professional, and
                             dedicated to your success.
                         </p>
-                        <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                             <div class="flex items-start gap-3">
                                 <div
                                     class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -355,20 +408,20 @@
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
                     <div>
-                        <span class="text-5xl font-bold block mb-1">5,400+</span>
-                        <span class="text-white/80 text-sm">Total Students</span>
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold block mb-1">5,400+</span>
+                        <span class="text-white/80 text-xs sm:text-sm">Total Students</span>
                     </div>
                     <div>
-                        <span class="text-5xl font-bold block mb-1">1,150+</span>
-                        <span class="text-white/80 text-sm">Tests Passed</span>
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold block mb-1">1,150+</span>
+                        <span class="text-white/80 text-xs sm:text-sm">Tests Passed</span>
                     </div>
                     <div>
-                        <span class="text-5xl font-bold block mb-1">150+</span>
-                        <span class="text-white/80 text-sm">5-Star Reviews</span>
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold block mb-1">150+</span>
+                        <span class="text-white/80 text-xs sm:text-sm">5-Star Reviews</span>
                     </div>
                     <div>
-                        <span class="text-5xl font-bold block mb-1">50+</span>
-                        <span class="text-white/80 text-sm">Awards Won</span>
+                        <span class="text-3xl sm:text-4xl md:text-5xl font-bold block mb-1">50+</span>
+                        <span class="text-white/80 text-xs sm:text-sm">Awards Won</span>
                     </div>
                 </div>
             </div>
@@ -384,8 +437,10 @@
                         Our Services
                         <span class="w-8 h-0.5 bg-brand inline-block"></span>
                     </p>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">We Provide Service For You</h2>
-                    <p class="text-gray-600 max-w-xl mx-auto">Comprehensive training programs designed to help you
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">We Provide Service For You
+                    </h2>
+                    <p class="text-gray-600 max-w-xl mx-auto px-4 sm:px-0">Comprehensive training programs designed to
+                        help you
                         become a safe and confident driver on UK roads.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -460,16 +515,17 @@
         <!-- Popular Courses -->
         <section class="py-20 bg-dark">
             <div class="container mx-auto px-4">
-                <div class="flex justify-between items-center mb-12">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-12">
                     <div>
                         <p
                             class="text-brand font-semibold text-sm uppercase tracking-widest mb-3 flex items-center gap-2">
                             <span class="w-8 h-0.5 bg-brand inline-block"></span>
                             Top Courses
                         </p>
-                        <h2 class="text-4xl font-bold text-white">Our Popular Driving Courses</h2>
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white">Our Popular Driving Courses
+                        </h2>
                     </div>
-                    <div class="hidden md:flex gap-2">
+                    <div class="flex gap-2">
                         <button
                             class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-brand transition-colors">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -498,13 +554,13 @@
                         </div>
                     </div>
                     <div class="text-white">
-                        <h3 class="text-3xl font-bold mb-4">Defensive Driving</h3>
+                        <h3 class="text-2xl sm:text-3xl font-bold mb-4">Defensive Driving</h3>
                         <p class="text-gray-400 leading-relaxed mb-6">
                             Learn advanced defensive driving techniques that go beyond standard lessons. This course
                             focuses on hazard perception, anticipation skills, and techniques that will make you a safer
                             driver for life.
                         </p>
-                        <div class="flex gap-8 mb-6">
+                        <div class="flex flex-wrap gap-4 sm:gap-8 mb-6">
                             <div class="flex items-center gap-2 text-gray-400 text-sm">
                                 <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -550,8 +606,10 @@
                         Our Instructors
                         <span class="w-8 h-0.5 bg-brand inline-block"></span>
                     </p>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Meet Our Qualified Instructors</h2>
-                    <p class="text-gray-600 max-w-xl mx-auto">Our DVSA-approved team brings patience, expertise and a
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Meet Our Qualified
+                        Instructors</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto px-4 sm:px-0">Our DVSA-approved team brings patience,
+                        expertise and a
                         passion for teaching safe driving.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -617,14 +675,14 @@
                             <span class="w-8 h-0.5 bg-brand inline-block"></span>
                             Why Choose Us
                         </p>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                        <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 leading-tight">
                             We're Very Experienced &<br>98% Students Pass Test<br>Driving On First Try
                         </h2>
                         <p class="text-gray-600 leading-relaxed mb-8">
                             Our proven teaching methods and experienced instructors mean you're in safe hands from your
                             very first lesson to the moment you pass your test.
                         </p>
-                        <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
                             <div>
                                 <label class="block text-sm font-medium text-gray-600 mb-2">Driving Type</label>
                                 <select
@@ -676,8 +734,10 @@
                         Our Pricing
                         <span class="w-8 h-0.5 bg-brand inline-block"></span>
                     </p>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Most Valuable Pricing Packages</h2>
-                    <p class="text-gray-600 max-w-xl mx-auto">Transparent, competitive pricing with no hidden fees.
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Most Valuable Pricing
+                        Packages</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto px-4 sm:px-0">Transparent, competitive pricing with no
+                        hidden fees.
                         Choose the package that suits you best.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -859,16 +919,17 @@
         <section class="bg-dark py-16">
             <div class="container mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                    <div class="flex items-center gap-6">
+                    <div class="flex flex-col sm:flex-row items-center gap-6">
                         <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=80" alt="Instructor"
-                            class="w-24 h-24 rounded-full object-cover border-4 border-brand hidden md:block">
-                        <div>
+                            class="w-24 h-24 rounded-full object-cover border-4 border-brand">
+                        <div class="text-center sm:text-left">
                             <p class="text-brand font-semibold text-sm uppercase tracking-widest mb-2">Learn With Pro
                             </p>
-                            <h2 class="text-3xl font-bold text-white">Start Learning To Drive Today<br>Contact Now!</h2>
+                            <h2 class="text-2xl sm:text-3xl font-bold text-white">Start Learning To Drive
+                                Today<br>Contact Now!</h2>
                         </div>
                     </div>
-                    <div class="flex flex-wrap gap-4 lg:justify-end">
+                    <div class="flex flex-wrap gap-4 justify-center sm:justify-end">
                         <a href="contact.html"
                             class="px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl">
                             Contact Now
@@ -892,8 +953,10 @@
                         Testimonials
                         <span class="w-8 h-0.5 bg-brand inline-block"></span>
                     </p>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">What Saying Students Feedback</h2>
-                    <p class="text-gray-600 max-w-xl mx-auto">Don't just take our word for it — hear from our thousands
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Saying Students
+                        Feedback</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto px-4 sm:px-0">Don't just take our word for it — hear from
+                        our thousands
                         of successful students.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1013,8 +1076,10 @@
                         Our Blog
                         <span class="w-8 h-0.5 bg-brand inline-block"></span>
                     </p>
-                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Latest News & Articles</h2>
-                    <p class="text-gray-600 max-w-xl mx-auto">Tips, guides and news to help you on your journey to
+                    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Latest News & Articles
+                    </h2>
+                    <p class="text-gray-600 max-w-xl mx-auto px-4 sm:px-0">Tips, guides and news to help you on your
+                        journey to
                         becoming a confident driver.</p>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1098,17 +1163,18 @@
         </section>
 
         <!-- Newsletter / Sign Up Banner -->
-        <section class="bg-brand py-12">
+        <section class="bg-brand py-10 sm:py-12">
             <div class="container mx-auto px-4">
-                <div class="flex flex-wrap items-center justify-between gap-6">
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-1">Sign Up to get updates & news about Us</h3>
+                <div class="flex flex-col lg:flex-row items-center justify-between gap-6">
+                    <div class="text-center lg:text-left">
+                        <h3 class="text-xl sm:text-2xl font-bold text-white mb-1">Sign Up to get updates & news about Us
+                        </h3>
                         <p class="text-white/80 text-sm">Join thousands of learners and get driving tips direct to your
                             inbox.</p>
                     </div>
-                    <div class="flex gap-3 flex-1 max-w-md">
+                    <div class="flex gap-3 flex-1 w-full lg:max-w-md">
                         <input type="email" placeholder="Your email address"
-                            class="flex-1 px-5 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                            class="flex-1 px-5 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white w-full">
                         <button
                             class="px-6 py-3 bg-dark text-white font-semibold rounded-lg hover:bg-gray-900 transition-colors whitespace-nowrap">
                             Subscribe
@@ -1118,6 +1184,34 @@
             </div>
         </section>
     </main>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+
+        if (menuToggle && mobileMenu && closeMenu) {
+            menuToggle.addEventListener('click', () => {
+                mobileMenu.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            });
+
+            closeMenu.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.body.style.overflow = '';
+            });
+
+            // Close menu when clicking on a link
+            const menuLinks = mobileMenu.querySelectorAll('a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    document.body.style.overflow = '';
+                });
+            });
+        }
+    </script>
 
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8">
