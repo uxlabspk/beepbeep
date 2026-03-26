@@ -933,6 +933,93 @@
                 });
             });
         }
+
+        // Course Filter Functionality
+        const courseLevelFilter = document.querySelector('select:nth-of-type(1)');
+        const transmissionFilter = document.querySelector('select:nth-of-type(2)');
+        const durationFilter = document.querySelector('select:nth-of-type(3)');
+        const searchButton = document.querySelector('button');
+        const courseCards = document.querySelectorAll('.grid.grid-cols-1.lg\:grid-cols-2.gap-8 > div');
+
+        // Add data attributes to course cards for filtering
+        const courseData = {
+            'beginners': { level: 'beginner', transmission: 'both', duration: 'standard' },
+            'refresher': { level: 'intermediate', transmission: 'both', duration: 'standard' },
+            'test-prep': { level: 'advanced', transmission: 'both', duration: 'intensive' },
+            'intensive': { level: 'all', transmission: 'both', duration: 'intensive' },
+            'manual': { level: 'all', transmission: 'manual', duration: 'standard' },
+            'automatic': { level: 'all', transmission: 'automatic', duration: 'standard' }
+        };
+
+        // Add data attributes to each card
+        courseCards.forEach(card => {
+            const cardId = card.id;
+            if (courseData[cardId]) {
+                card.setAttribute('data-level', courseData[cardId].level);
+                card.setAttribute('data-transmission', courseData[cardId].transmission);
+                card.setAttribute('data-duration', courseData[cardId].duration);
+            }
+        });
+
+        function filterCourses() {
+            const selectedLevel = courseLevelFilter.value.toLowerCase();
+            const selectedTransmission = transmissionFilter.value.toLowerCase();
+            const selectedDuration = durationFilter.value.toLowerCase();
+
+            courseCards.forEach(card => {
+                const cardLevel = card.getAttribute('data-level');
+                const cardTransmission = card.getAttribute('data-transmission');
+                const cardDuration = card.getAttribute('data-duration');
+
+                let showCard = true;
+
+                // Filter by level
+                if (selectedLevel !== 'all levels' && cardLevel !== 'all' && cardLevel !== selectedLevel) {
+                    showCard = false;
+                }
+
+                // Filter by transmission
+                if (selectedTransmission !== 'manual or automatic') {
+                    const transmissionValue = selectedTransmission.split(' ')[0]; // 'manual' or 'automatic'
+                    if (cardTransmission !== 'both' && cardTransmission !== transmissionValue) {
+                        showCard = false;
+                    }
+                }
+
+                // Filter by duration
+                if (selectedDuration !== 'any duration') {
+                    const durationKey = selectedDuration.split(' ')[0]; // 'intensive', 'standard', 'extended'
+                    if (cardDuration !== durationKey && cardDuration !== 'all') {
+                        showCard = false;
+                    }
+                }
+
+                // Show/hide card with animation
+                if (showCard) {
+                    card.style.display = 'block';
+                    setTimeout(() => {
+                        card.style.opacity = '1';
+                        card.style.transform = 'scale(1)';
+                    }, 50);
+                } else {
+                    card.style.opacity = '0';
+                    card.style.transform = 'scale(0.95)';
+                    setTimeout(() => {
+                        card.style.display = 'none';
+                    }, 300);
+                }
+            });
+        }
+
+        // Event listeners for filters
+        if (searchButton) {
+            searchButton.addEventListener('click', filterCourses);
+        }
+
+        // Also filter when any dropdown changes
+        if (courseLevelFilter) courseLevelFilter.addEventListener('change', filterCourses);
+        if (transmissionFilter) transmissionFilter.addEventListener('change', filterCourses);
+        if (durationFilter) durationFilter.addEventListener('change', filterCourses);
     </script>
 
 </body>
