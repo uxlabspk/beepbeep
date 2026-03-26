@@ -4,613 +4,1155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description"
-        content="Beep Beep Driving School - Professional driving lessons in the UK. Learn to drive with confidence from certified instructors.">
-    <meta name="keywords"
-        content="driving school, driving lessons, learn to drive, UK driving instructor, manual driving, automatic driving">
-    <meta name="author" content="Beep Beep Driving School">
-
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Beep Beep Driving School - Professional Driving Lessons UK">
-    <meta property="og:description"
-        content="Learn to drive with confidence from certified instructors. Book your first lesson today!">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_GB">
-
     <title>Beep Beep Driving School | Professional Driving Lessons UK</title>
-
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-
-    <!-- Custom Config for Tailwind -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        'primary': ['Poppins', 'sans-serif'],
-                    },
+                    fontFamily: { 'primary': ['Poppins', 'sans-serif'] },
                     colors: {
-                        'primary': '#0066CC',
-                        'primary-dark': '#0052A3',
-                        'secondary': '#FFD700',
-                        'secondary-dark': '#E6C200',
-                        'accent': '#FF6B6B',
+                        'brand': '#FF6B00',
+                        'brand-dark': '#E05A00',
+                        'dark': '#1A1A2E',
+                        'dark-card': '#16213E',
                     },
                 },
             },
         }
     </script>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 </head>
 
 <body class="font-primary text-gray-800 antialiased overflow-x-hidden">
-    <!-- Header/Navigation -->
-    <header class="header fixed top-0 left-0 w-full bg-white shadow-sm z-[300] transition-all duration-300">
-        <nav class="nav container mx-auto px-4 py-4 flex justify-between items-center gap-4">
-            <a href="index.html" class="nav__logo flex items-center gap-2 text-2xl font-bold text-primary">
-                <img src="images/logo.svg" alt="Beep Beep Driving School Logo" class="nav__logo-img h-10 w-auto">
-                <span class="nav__logo-text">Beep Beep</span>
-            </a>
 
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list flex gap-6 items-center">
-                    <li class="nav__item">
-                        <a href="index.html"
-                            class="nav__link nav__link--active font-medium relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full hover:text-primary">Home</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="about.html"
-                            class="nav__link font-medium relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full hover:text-primary">About
-                            Us</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="lessons.html"
-                            class="nav__link font-medium relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full hover:text-primary">Lessons</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="prices.html"
-                            class="nav__link font-medium relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full hover:text-primary">Prices</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="testimonials.html"
-                            class="nav__link font-medium relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full hover:text-primary">Testimonials</a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="contact.html"
-                            class="nav__link font-medium relative py-2 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full hover:text-primary">Contact</a>
-                    </li>
-                </ul>
-
-                <a href="book-now.html"
-                    class="btn btn--primary nav__btn ml-6 inline-block px-6 py-3 bg-primary text-white font-medium text-center rounded-md transition-all duration-300 hover:bg-primary-dark hover:-translate-y-0.5 hover:shadow-md cursor-pointer border-2 border-transparent">Book
-                    Now</a>
+    <!-- Top Bar -->
+    <div class="bg-gray-900 text-gray-300 text-xs py-2 hidden lg:block">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <div class="flex gap-6">
+                <span class="flex items-center gap-1">
+                    <svg class="w-3 h-3 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                    info@beepbeepdriving.co.uk
+                </span>
+                <span class="flex items-center gap-1">
+                    <svg class="w-3 h-3 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                    01234 567 890
+                </span>
+                <span class="flex items-center gap-1">
+                    <svg class="w-3 h-3 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    </svg>
+                    123 High Street, Manchester
+                </span>
             </div>
+            <div class="flex gap-3">
+                <a href="#" class="hover:text-brand transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-brand transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path
+                            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                    </svg>
+                </a>
+                <a href="#" class="hover:text-brand transition-colors">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
 
-            <button class="nav__toggle hidden flex-col gap-1" id="nav-toggle" aria-label="Toggle navigation">
-                <span class="nav__toggle-bar w-6 h-0.75 bg-primary rounded transition-all duration-300"></span>
-                <span class="nav__toggle-bar w-6 h-0.75 bg-primary rounded transition-all duration-300"></span>
-                <span class="nav__toggle-bar w-6 h-0.75 bg-primary rounded transition-all duration-300"></span>
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 text-2xl font-bold text-dark">
+                <div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                </div>
+                <span>Beep<span class="text-brand">Beep</span></span>
+            </a>
+            <ul class="hidden lg:flex gap-8 items-center">
+                <li><a href="index.html" class="font-medium text-brand border-b-2 border-brand pb-1">Home</a></li>
+                <li><a href="about.html" class="font-medium text-gray-600 hover:text-brand transition-colors">About
+                        Us</a></li>
+                <li><a href="lessons.html"
+                        class="font-medium text-gray-600 hover:text-brand transition-colors">Courses</a></li>
+                <li><a href="prices.html"
+                        class="font-medium text-gray-600 hover:text-brand transition-colors">Prices</a></li>
+                <li><a href="#" class="font-medium text-gray-600 hover:text-brand transition-colors">Blog</a></li>
+                <li><a href="contact.html" class="font-medium text-gray-600 hover:text-brand transition-colors">Contact
+                        Us</a></li>
+            </ul>
+            <a href="book-now.html"
+                class="hidden lg:inline-block px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-lg">
+                Book Now
+            </a>
+            <button class="lg:hidden text-gray-700">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
             </button>
         </nav>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero relative min-h-screen flex items-center pt-24 pb-16 mt-[72px]">
-            <div class="hero__bg absolute top-0 left-0 w-full h-full z-[-2]">
-                <picture>
-                    <source srcset="images/hero-bg.webp" type="image/webp">
-                    <img src="images/hero-bg.jpg" alt="Student driver with instructor"
-                        class="hero__image w-full h-full object-cover" loading="eager">
-                </picture>
+        <section class="relative min-h-screen flex items-center overflow-hidden bg-gray-900">
+            <div class="absolute inset-0">
+                <img src="https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1600&q=80" alt="Driving"
+                    class="w-full h-full object-cover opacity-40">
             </div>
-            <div
-                class="hero__overlay absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/90 to-primary-dark/80 z-[-1]">
-            </div>
-            <div class="hero__content container mx-auto px-4 relative text-white max-w-4xl">
-                <h1 class="hero__title text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6">
-                    Learn to Drive with <span class="highlight text-primary">Confidence</span>
-                </h1>
-                <p class="hero__subtitle text-xl md:text-2xl leading-relaxed mb-8 opacity-95">
-                    Professional driving lessons in the UK with certified instructors.
-                    Your journey to passing your driving test starts here!
-                </p>
-                <div class="hero__buttons flex gap-4 mb-8 flex-wrap">
-                    <a href="book-now.html"
-                        class="btn btn--primary btn--lg inline-block px-8 py-4 bg-primary text-white font-medium text-lg text-center rounded-md transition-all duration-300 hover:bg-primary-dark hover:-translate-y-0.5 hover:shadow-md cursor-pointer border-2 border-transparent">Book
-                        Your First Lesson</a>
-                    <a href="lessons.html"
-                        class="btn btn--outline btn--lg inline-block px-8 py-4 bg-transparent border-2 border-white text-white font-medium text-lg text-center rounded-md transition-all duration-300 hover:bg-white hover:text-primary cursor-pointer">View
-                        Packages</a>
-                </div>
-                <div class="hero__features flex gap-6 flex-wrap">
-                    <div class="hero__feature flex items-center gap-2 text-sm font-medium">
-                        <svg class="hero__icon w-5 h-5 text-secondary" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                            <polyline points="22 4 12 14.01 9 11.01" />
-                        </svg>
-                        <span>DVSA Approved Instructors</span>
-                    </div>
-                    <div class="hero__feature flex items-center gap-2 text-sm font-medium">
-                        <svg class="hero__icon w-5 h-5 text-secondary" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                        </svg>
-                        <span>Fully Insured</span>
-                    </div>
-                    <div class="hero__feature flex items-center gap-2 text-sm font-medium">
-                        <svg class="hero__icon w-5 h-5 text-secondary" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10" />
-                            <polyline points="12 6 12 12 16 14" />
-                        </svg>
-                        <span>Flexible Scheduling</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Why Choose Us Section -->
-        <section class="features py-16">
-            <div class="container mx-auto px-4">
-                <div class="section__header text-center mb-16">
-                    <h2 class="section__title text-4xl sm:text-5xl font-bold text-gray-800 mb-4">Why Choose Beep Beep?
-                    </h2>
-                    <p class="section__subtitle text-lg text-gray-600 max-w-2xl mx-auto">We're committed to helping you
-                        become a safe, confident driver</p>
-                </div>
-
-                <div class="features__grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div
-                        class="feature-card bg-white p-6 rounded-xl shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="feature-card__icon text-primary mb-4">
-                            <svg class="w-12 h-12 mx-auto" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                                <circle cx="9" cy="7" r="4" />
-                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title text-xl mb-2 text-gray-800">Experienced Instructors</h3>
-                        <p class="feature-card__text text-gray-600 leading-relaxed">Our DVSA-approved instructors have
-                            years of experience teaching
-                            students of all ages and abilities.</p>
-                    </div>
-
-                    <div
-                        class="feature-card bg-white p-6 rounded-xl shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="feature-card__icon text-primary mb-4">
-                            <svg class="w-12 h-12 mx-auto" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
-                                <line x1="16" y1="2" x2="16" y2="6" />
-                                <line x1="8" y1="2" x2="8" y2="6" />
-                                <line x1="3" y1="10" x2="21" y2="10" />
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title text-xl mb-2 text-gray-800">Flexible Schedule</h3>
-                        <p class="feature-card__text text-gray-600 leading-relaxed">Book lessons around your schedule.
-                            We offer weekday, evening, and
-                            weekend slots.</p>
-                    </div>
-
-                    <div
-                        class="feature-card bg-white p-6 rounded-xl shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="feature-card__icon text-primary mb-4">
-                            <svg class="w-12 h-12 mx-auto" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                                <path d="M2 17l10 5 10-5" />
-                                <path d="M2 12l10 5 10-5" />
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title text-xl mb-2 text-gray-800">Modern Fleet</h3>
-                        <p class="feature-card__text text-gray-600 leading-relaxed">Learn in our latest model vehicles
-                            with dual controls, available
-                            in both manual and automatic.</p>
-                    </div>
-
-                    <div
-                        class="feature-card bg-white p-6 rounded-xl shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="feature-card__icon text-primary mb-4">
-                            <svg class="w-12 h-12 mx-auto" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <polyline points="20 6 9 17 4 12" />
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title text-xl mb-2 text-gray-800">High Pass Rate</h3>
-                        <p class="feature-card__text text-gray-600 leading-relaxed">Our students achieve a 85% pass
-                            rate, well above the national
-                            average.</p>
-                    </div>
-
-                    <div
-                        class="feature-card bg-white p-6 rounded-xl shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="feature-card__icon text-primary mb-4">
-                            <svg class="w-12 h-12 mx-auto" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10" />
-                                <line x1="12" y1="16" x2="12" y2="12" />
-                                <line x1="12" y1="8" x2="12.01" y2="8" />
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title text-xl mb-2 text-gray-800">Patient Approach</h3>
-                        <p class="feature-card__text text-gray-600 leading-relaxed">We create a relaxed, pressure-free
-                            learning environment tailored
-                            to your pace.</p>
-                    </div>
-
-                    <div
-                        class="feature-card bg-white p-6 rounded-xl shadow-md text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="feature-card__icon text-primary mb-4">
-                            <svg class="w-12 h-12 mx-auto" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <line x1="22" y1="12" x2="18" y2="12" />
-                                <line x1="6" y1="12" x2="2" y2="12" />
-                                <line x1="12" y1="6" x2="12" y2="2" />
-                                <line x1="12" y1="22" x2="12" y2="18" />
-                                <circle cx="12" cy="12" r="3" />
-                            </svg>
-                        </div>
-                        <h3 class="feature-card__title text-xl mb-2 text-gray-800">Competitive Prices</h3>
-                        <p class="feature-card__text text-gray-600 leading-relaxed">Affordable lesson packages with no
-                            hidden fees. Great value for
-                            money.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Our Services Section -->
-        <section class="services py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="section__header text-center mb-16">
-                    <h2 class="section__title text-4xl sm:text-5xl font-bold text-gray-800 mb-4">Our Driving Lesson
-                        Services</h2>
-                    <p class="section__subtitle text-lg text-gray-600 max-w-2xl mx-auto">Comprehensive training to
-                        prepare you for the road ahead</p>
-                </div>
-
-                <div class="services__grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div
-                        class="service-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="service-card__image w-full h-60 overflow-hidden">
-                            <img src="images/first-time-drivers.jpg" alt="First time driver lesson" loading="lazy"
-                                width="400" height="250"
-                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        </div>
-                        <div class="service-card__content p-6">
-                            <h3 class="service-card__title text-2xl mb-2 text-primary">First Time Drivers</h3>
-                            <p class="service-card__text text-gray-600 mb-4 leading-relaxed">Complete beginner courses
-                                starting from your very first
-                                lesson. We'll teach you everything from basic car control to independent driving.</p>
-                            <ul class="service-card__list mb-4">
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Introduction to car controls</li>
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Moving off and stopping</li>
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Junctions and roundabouts</li>
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Emergency stop procedure</li>
-                            </ul>
-                            <a href="lessons.html#beginners"
-                                class="btn btn--secondary inline-block px-6 py-3 bg-secondary text-black font-medium text-center rounded-md transition-all duration-300 hover:bg-secondary-dark hover:-translate-y-0.5 hover:shadow-md cursor-pointer border-2 border-transparent">Learn
-                                More</a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="service-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="service-card__image w-full h-60 overflow-hidden">
-                            <img src="images/refresher-lessons.jpg" alt="Refresher driving lesson" loading="lazy"
-                                width="400" height="250"
-                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        </div>
-                        <div class="service-card__content p-6">
-                            <h3 class="service-card__title text-2xl mb-2 text-primary">Refresher Lessons</h3>
-                            <p class="service-card__text text-gray-600 mb-4 leading-relaxed">Already have some
-                                experience? Our refresher courses will
-                                polish your skills and build your confidence before taking the test.</p>
-                            <ul class="service-card__list mb-4">
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Skills assessment</li>
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Targeted practice</li>
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Mock tests</li>
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Test preparation</li>
-                            </ul>
-                            <a href="lessons.html#refresher"
-                                class="btn btn--secondary inline-block px-6 py-3 bg-secondary text-black font-medium text-center rounded-md transition-all duration-300 hover:bg-secondary-dark hover:-translate-y-0.5 hover:shadow-md cursor-pointer border-2 border-transparent">Learn
-                                More</a>
-                        </div>
-                    </div>
-
-                    <div
-                        class="service-card bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="service-card__image w-full h-60 overflow-hidden">
-                            <img src="images/test-preparation.jpg" alt="Driving test preparation" loading="lazy"
-                                width="400" height="250"
-                                class="w-full h-full object-cover transition-transform duration-500 hover:scale-110">
-                        </div>
-                        <div class="service-card__content p-6">
-                            <h3 class="service-card__title text-2xl mb-2 text-primary">Test Preparation</h3>
-                            <p class="service-card__text text-gray-600 mb-4 leading-relaxed">Intensive courses designed
-                                to get you test-ready. Includes
-                                mock tests and detailed feedback on areas to improve.</p>
-                            <ul class="service-card__list mb-4">
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Full test route practice</li>
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Independent driving section</li>
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Manoeuvre mastery</li>
-                                <li
-                                    class="py-2 pl-8 relative text-gray-600 before:content-['✓'] before:absolute before:left-0 before:text-primary before:font-bold">
-                                    Test day preparation</li>
-                            </ul>
-                            <a href="lessons.html#test-prep"
-                                class="btn btn--secondary inline-block px-6 py-3 bg-secondary text-black font-medium text-center rounded-md transition-all duration-300 hover:bg-secondary-dark hover:-translate-y-0.5 hover:shadow-md cursor-pointer border-2 border-transparent">Learn
-                                More</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Statistics Section -->
-        <section class="stats py-16 bg-primary text-white">
-            <div class="container mx-auto px-4">
-                <div class="stats__grid grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    <div class="stat-card p-6">
-                        <span class="stat-card__number block text-5xl font-bold text-secondary mb-2"
-                            data-target="85">0</span>
-                        <span class="stat-card__label text-base opacity-90">% Pass Rate</span>
-                    </div>
-                    <div class="stat-card p-6">
-                        <span class="stat-card__number block text-5xl font-bold text-secondary mb-2"
-                            data-target="500">0</span>
-                        <span class="stat-card__label text-base opacity-90">Students Taught</span>
-                    </div>
-                    <div class="stat-card p-6">
-                        <span class="stat-card__number block text-5xl font-bold text-secondary mb-2"
-                            data-target="15">0</span>
-                        <span class="stat-card__label text-base opacity-90">Expert Instructors</span>
-                    </div>
-                    <div class="stat-card p-6">
-                        <span class="stat-card__number block text-5xl font-bold text-secondary mb-2"
-                            data-target="10">0</span>
-                        <span class="stat-card__label text-base opacity-90">Years Experience</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section class="testimonials py-16 bg-gray-50">
-            <div class="container mx-auto px-4">
-                <div class="section__header text-center mb-16">
-                    <h2 class="section__title text-4xl sm:text-5xl font-bold text-gray-800 mb-4">What Our Students Say
-                    </h2>
-                    <p class="section__subtitle text-lg text-gray-600 max-w-2xl mx-auto">Don't just take our word for it
-                        - hear from our successful students</p>
-                </div>
-
-                <div class="testimonials__grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-                    <div
-                        class="testimonial-card bg-white p-6 rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="testimonial-card__rating flex gap-1 mb-4">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                        </div>
-                        <p class="testimonial-card__text text-gray-600 italic mb-6 leading-relaxed">"Passed my test
-                            first time thanks to my amazing instructor!
-                            The lessons were fun and professional. Highly recommend Beep Beep!"</p>
-                        <div class="testimonial-card__author flex items-center gap-3">
-                            <img src="images/testimonial-1.jpg" alt="Sarah M."
-                                class="testimonial-card__avatar w-12 h-12 rounded-full object-cover" loading="lazy">
-                            <div>
-                                <h4 class="testimonial-card__name text-base font-semibold text-gray-800 mb-0">Sarah M.
-                                </h4>
-                                <p class="testimonial-card__location text-sm text-gray-600 m-0">Manchester</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="testimonial-card bg-white p-6 rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="testimonial-card__rating flex gap-1 mb-4">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                        </div>
-                        <p class="testimonial-card__text text-gray-600 italic mb-6 leading-relaxed">"Great patient
-                            instruction. I was nervous at first but they
-                            made me feel comfortable from day one. Worth every penny!"</p>
-                        <div class="testimonial-card__author flex items-center gap-3">
-                            <img src="images/testimonial-2.jpg" alt="James T."
-                                class="testimonial-card__avatar w-12 h-12 rounded-full object-cover" loading="lazy">
-                            <div>
-                                <h4 class="testimonial-card__name text-base font-semibold text-gray-800 mb-0">James T.
-                                </h4>
-                                <p class="testimonial-card__location text-sm text-gray-600 m-0">London</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div
-                        class="testimonial-card bg-white p-6 rounded-xl shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-                        <div class="testimonial-card__rating flex gap-1 mb-4">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FFD700">
-                                <polygon
-                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
-                            </svg>
-                        </div>
-                        <p class="testimonial-card__text text-gray-600 italic mb-6 leading-relaxed">"Excellent service!
-                            Very flexible with scheduling and the
-                            intensive course got me test ready in just 6 weeks."</p>
-                        <div class="testimonial-card__author flex items-center gap-3">
-                            <img src="images/testimonial-3.jpg" alt="Emma L."
-                                class="testimonial-card__avatar w-12 h-12 rounded-full object-cover" loading="lazy">
-                            <div>
-                                <h4 class="testimonial-card__name text-base font-semibold text-gray-800 mb-0">Emma L.
-                                </h4>
-                                <p class="testimonial-card__location text-sm text-gray-600 m-0">Birmingham</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonials__cta text-center">
-                    <a href="testimonials.html"
-                        class="btn btn--primary inline-block px-6 py-3 bg-primary text-white font-medium text-center rounded-md transition-all duration-300 hover:bg-primary-dark hover:-translate-y-0.5 hover:shadow-md cursor-pointer border-2 border-transparent">Read
-                        More Success Stories</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta py-16 bg-gradient-to-br from-primary to-primary-dark text-white text-center">
-            <div class="container mx-auto px-4">
-                <div class="cta__content max-w-3xl mx-auto">
-                    <h2 class="cta__title text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Ready to Start Your Driving
-                        Journey?</h2>
-                    <p class="cta__text text-lg mb-6 opacity-95">Book your first lesson today and take the first step
-                        towards getting your full
-                        licence!</p>
-                    <div class="cta__buttons flex gap-4 justify-center flex-wrap mb-6">
-                        <a href="book-now.html"
-                            class="btn btn--primary btn--lg inline-block px-8 py-4 bg-primary text-white font-medium text-lg text-center rounded-md transition-all duration-300 hover:bg-primary-dark hover:-translate-y-0.5 hover:shadow-md cursor-pointer border-2 border-transparent">Book
-                            Now</a>
-                        <a href="contact.html"
-                            class="btn btn--outline btn--lg inline-block px-8 py-4 bg-transparent border-2 border-white text-white font-medium text-lg text-center rounded-md transition-all duration-300 hover:bg-white hover:text-primary cursor-pointer">Contact
-                            Us</a>
-                    </div>
-                    <p class="cta__phone flex items-center justify-center gap-2 text-2xl font-semibold">
-                        <svg class="w-6 h-6 text-secondary" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                        </svg>
-                        <a href="tel:01234567890"
-                            class="text-secondary hover:text-secondary-dark transition-colors">01234 567 890</a>
+            <div class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"></div>
+            <div class="container mx-auto px-4 relative z-10 py-24">
+                <div class="max-w-xl">
+                    <p class="text-brand font-semibold text-sm uppercase tracking-widest mb-4 flex items-center gap-2">
+                        <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                        Start Your Driving Skills
                     </p>
+                    <h1 class="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                        Learn to Drive<br>with <span class="text-brand">Confidence</span>
+                    </h1>
+                    <p class="text-gray-300 text-lg leading-relaxed mb-8">
+                        Professional driving lessons across the UK with DVSA-certified instructors. Your journey to
+                        passing your driving test starts here!
+                    </p>
+                    <div class="flex gap-4 flex-wrap mb-10">
+                        <a href="book-now.html"
+                            class="px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-xl text-lg">
+                            Book Your First Lesson
+                        </a>
+                        <a href="lessons.html"
+                            class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all text-lg">
+                            View Packages
+                        </a>
+                    </div>
+                    <div class="flex gap-6 flex-wrap">
+                        <div class="flex items-center gap-2 text-gray-300 text-sm font-medium">
+                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7" />
+                            </svg>
+                            DVSA Approved Instructors
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300 text-sm font-medium">
+                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                            Fully Insured
+                        </div>
+                        <div class="flex items-center gap-2 text-gray-300 text-sm font-medium">
+                            <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10" stroke-width="2" />
+                                <polyline points="12 6 12 12 16 14" stroke-width="2" />
+                            </svg>
+                            Flexible Scheduling
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Floating card -->
+            <div class="absolute bottom-12 right-12 hidden xl:block bg-white rounded-2xl p-5 shadow-2xl">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-12 h-12 rounded-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+                            alt="Instructor" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                        <p class="font-semibold text-gray-800 text-sm">David Miller</p>
+                        <p class="text-xs text-gray-500">Senior Instructor</p>
+                    </div>
+                </div>
+                <div class="flex gap-1 mb-1">
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF6B00">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF6B00">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF6B00">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF6B00">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                    <svg class="w-4 h-4" viewBox="0 0 24 24" fill="#FF6B00">
+                        <polygon
+                            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                    </svg>
+                </div>
+                <p class="text-xs text-gray-500">4.9/5 Rating · 200+ Reviews</p>
+            </div>
+        </section>
+
+        <!-- Quick Course Search -->
+        <section class="bg-white py-10 shadow-lg relative z-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-center text-2xl font-bold text-gray-800 mb-6">Start Your Driving Courses</h2>
+                <div class="flex flex-wrap gap-4 items-end justify-center">
+                    <div class="flex-1 min-w-[180px] max-w-xs">
+                        <label class="block text-sm font-medium text-gray-600 mb-2">Course Type</label>
+                        <select
+                            class="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand">
+                            <option>Select Course</option>
+                            <option>Beginner Lessons</option>
+                            <option>Refresher Course</option>
+                            <option>Test Preparation</option>
+                            <option>Intensive Course</option>
+                        </select>
+                    </div>
+                    <div class="flex-1 min-w-[180px] max-w-xs">
+                        <label class="block text-sm font-medium text-gray-600 mb-2">Transmission</label>
+                        <select
+                            class="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand">
+                            <option>Manual or Automatic</option>
+                            <option>Manual</option>
+                            <option>Automatic</option>
+                        </select>
+                    </div>
+                    <div class="flex-1 min-w-[180px] max-w-xs">
+                        <label class="block text-sm font-medium text-gray-600 mb-2">Location</label>
+                        <select
+                            class="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand">
+                            <option>Your Area</option>
+                            <option>Manchester</option>
+                            <option>London</option>
+                            <option>Birmingham</option>
+                        </select>
+                    </div>
+                    <button
+                        class="px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg">
+                        Find Course
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- About / Why Choose Us -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <!-- Images collage -->
+                    <div class="relative">
+                        <div class="grid grid-cols-2 gap-4">
+                            <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=400&q=80"
+                                alt="Driving lesson" class="w-full h-56 object-cover rounded-2xl">
+                            <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=400&q=80"
+                                alt="Driving lesson" class="w-full h-56 object-cover rounded-2xl mt-8">
+                        </div>
+                        <!-- Badge -->
+                        <div class="absolute bottom-4 left-4 bg-brand text-white rounded-2xl px-6 py-4 shadow-xl">
+                            <span class="text-4xl font-bold block">23+</span>
+                            <span class="text-sm opacity-90">Years of Experience</span>
+                        </div>
+                    </div>
+                    <!-- Content -->
+                    <div>
+                        <p
+                            class="text-brand font-semibold text-sm uppercase tracking-widest mb-3 flex items-center gap-2">
+                            <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                            About Us
+                        </p>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-4 leading-tight">
+                            Beep Beep Best Driving School In The World
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed mb-6">
+                            With over two decades of experience, we've helped thousands of students pass their driving
+                            tests with confidence. Our DVSA-approved instructors are patient, professional, and
+                            dedicated to your success.
+                        </p>
+                        <div class="grid grid-cols-2 gap-6 mb-8">
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M5 13l4 4L19 7" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 text-sm">We Are Certified</h4>
+                                    <p class="text-xs text-gray-500 mt-1">All instructors are fully DVSA approved</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 text-sm">Award Win</h4>
+                                    <p class="text-xs text-gray-500 mt-1">Best driving school in the UK 2024</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 text-sm">Flexible Hours</h4>
+                                    <p class="text-xs text-gray-500 mt-1">Weekday, evening & weekend slots</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div
+                                    class="w-10 h-10 bg-brand/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                                    <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-gray-800 text-sm">Expert Team</h4>
+                                    <p class="text-xs text-gray-500 mt-1">15+ experienced instructors</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="about.html"
+                            class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg">
+                            Discover More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Banner -->
+        <section class="bg-brand py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+                    <div>
+                        <span class="text-5xl font-bold block mb-1">5,400+</span>
+                        <span class="text-white/80 text-sm">Total Students</span>
+                    </div>
+                    <div>
+                        <span class="text-5xl font-bold block mb-1">1,150+</span>
+                        <span class="text-white/80 text-sm">Tests Passed</span>
+                    </div>
+                    <div>
+                        <span class="text-5xl font-bold block mb-1">150+</span>
+                        <span class="text-white/80 text-sm">5-Star Reviews</span>
+                    </div>
+                    <div>
+                        <span class="text-5xl font-bold block mb-1">50+</span>
+                        <span class="text-white/80 text-sm">Awards Won</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-14">
+                    <p
+                        class="text-brand font-semibold text-sm uppercase tracking-widest mb-3 flex items-center gap-2 justify-center">
+                        <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                        Our Services
+                        <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                    </p>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">We Provide Service For You</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto">Comprehensive training programs designed to help you
+                        become a safe and confident driver on UK roads.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div class="h-52 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80"
+                                alt="Instructor Training"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Instructor Training</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Become a qualified driving instructor
+                                with our comprehensive ADI training program. We guide you through all three qualifying
+                                tests.</p>
+                            <a href="lessons.html"
+                                class="text-brand font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                                Read More
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div class="h-52 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=600&q=80"
+                                alt="Driving License"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Driving License</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">From first lesson to passing your
+                                test, we provide structured lessons covering all DVSA test requirements and skills.</p>
+                            <a href="lessons.html"
+                                class="text-brand font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                                Read More
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all group hover:-translate-y-1">
+                        <div class="h-52 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=600&q=80"
+                                alt="Traffic Guideline"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-3">Traffic Guideline</h3>
+                            <p class="text-gray-600 text-sm leading-relaxed mb-4">Master the Highway Code and traffic
+                                regulations with our theory training. Pass your theory test with flying colours.</p>
+                            <a href="lessons.html"
+                                class="text-brand font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all">
+                                Read More
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M9 5l7 7-7 7" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular Courses -->
+        <section class="py-20 bg-dark">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-between items-center mb-12">
+                    <div>
+                        <p
+                            class="text-brand font-semibold text-sm uppercase tracking-widest mb-3 flex items-center gap-2">
+                            <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                            Top Courses
+                        </p>
+                        <h2 class="text-4xl font-bold text-white">Our Popular Driving Courses</h2>
+                    </div>
+                    <div class="hidden md:flex gap-2">
+                        <button
+                            class="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center text-white hover:bg-brand transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M15 19l-7-7 7-7" />
+                            </svg>
+                        </button>
+                        <button
+                            class="w-10 h-10 bg-brand rounded-full flex items-center justify-center text-white hover:bg-brand-dark transition-colors">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="relative rounded-2xl overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=700&q=80"
+                            alt="Defensive Driving" class="w-full h-80 object-cover">
+                        <div class="absolute top-4 left-4 flex gap-2">
+                            <span class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full">Most
+                                Popular</span>
+                            <span
+                                class="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full">Intermediate</span>
+                        </div>
+                    </div>
+                    <div class="text-white">
+                        <h3 class="text-3xl font-bold mb-4">Defensive Driving</h3>
+                        <p class="text-gray-400 leading-relaxed mb-6">
+                            Learn advanced defensive driving techniques that go beyond standard lessons. This course
+                            focuses on hazard perception, anticipation skills, and techniques that will make you a safer
+                            driver for life.
+                        </p>
+                        <div class="flex gap-8 mb-6">
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                                8 Hours
+                            </div>
+                            <div class="flex items-center gap-2 text-gray-400 text-sm">
+                                <svg class="w-5 h-5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0" />
+                                </svg>
+                                Small Groups
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 mb-8">
+                            <div class="flex -space-x-3">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80"
+                                    alt="Student" class="w-9 h-9 rounded-full border-2 border-dark object-cover">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80"
+                                    alt="Student" class="w-9 h-9 rounded-full border-2 border-dark object-cover">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80"
+                                    alt="Student" class="w-9 h-9 rounded-full border-2 border-dark object-cover">
+                            </div>
+                            <span class="text-gray-400 text-sm">200+ Students Enrolled</span>
+                        </div>
+                        <a href="lessons.html"
+                            class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl">
+                            Enrol Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meet Instructors -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-14">
+                    <p
+                        class="text-brand font-semibold text-sm uppercase tracking-widest mb-3 flex items-center gap-2 justify-center">
+                        <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                        Our Instructors
+                        <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                    </p>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Meet Our Qualified Instructors</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto">Our DVSA-approved team brings patience, expertise and a
+                        passion for teaching safe driving.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="text-center group">
+                        <div class="relative mb-5 inline-block">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&q=80"
+                                alt="Max Abacus"
+                                class="w-48 h-48 rounded-2xl object-cover mx-auto group-hover:shadow-xl transition-all">
+                            <div
+                                class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-brand rounded-full flex items-center justify-center shadow-lg">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mt-4">Max Abacus</h4>
+                        <p class="text-brand text-sm font-medium">Senior Instructor · 12 yrs</p>
+                    </div>
+                    <div class="text-center group">
+                        <div class="relative mb-5 inline-block">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&q=80"
+                                alt="Jenifer Lopez"
+                                class="w-48 h-48 rounded-2xl object-cover mx-auto group-hover:shadow-xl transition-all">
+                            <div
+                                class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-brand rounded-full flex items-center justify-center shadow-lg">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mt-4">Jenifer Lopez</h4>
+                        <p class="text-brand text-sm font-medium">Lead Instructor · 8 yrs</p>
+                    </div>
+                    <div class="text-center group">
+                        <div class="relative mb-5 inline-block">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=300&q=80"
+                                alt="Henry Jassy"
+                                class="w-48 h-48 rounded-2xl object-cover mx-auto group-hover:shadow-xl transition-all">
+                            <div
+                                class="absolute -bottom-3 left-1/2 -translate-x-1/2 w-8 h-8 bg-brand rounded-full flex items-center justify-center shadow-lg">
+                                <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                        </div>
+                        <h4 class="text-lg font-bold text-gray-800 mt-4">Henry Jassy</h4>
+                        <p class="text-brand text-sm font-medium">Instructor · 5 yrs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience / CTA Banner -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p
+                            class="text-brand font-semibold text-sm uppercase tracking-widest mb-3 flex items-center gap-2">
+                            <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                            Why Choose Us
+                        </p>
+                        <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+                            We're Very Experienced &<br>98% Students Pass Test<br>Driving On First Try
+                        </h2>
+                        <p class="text-gray-600 leading-relaxed mb-8">
+                            Our proven teaching methods and experienced instructors mean you're in safe hands from your
+                            very first lesson to the moment you pass your test.
+                        </p>
+                        <div class="grid grid-cols-2 gap-4 mb-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-600 mb-2">Driving Type</label>
+                                <select
+                                    class="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand">
+                                    <option>Driving</option>
+                                    <option>Manual</option>
+                                    <option>Automatic</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-600 mb-2">Location</label>
+                                <select
+                                    class="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand">
+                                    <option>UK</option>
+                                    <option>Manchester</option>
+                                    <option>London</option>
+                                </select>
+                            </div>
+                        </div>
+                        <a href="book-now.html"
+                            class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg">
+                            Book A Lesson Now
+                        </a>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80"
+                            alt="Driving Experience" class="w-full h-96 object-cover rounded-2xl shadow-xl">
+                        <!-- Play button overlay -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <button
+                                class="w-16 h-16 bg-brand rounded-full flex items-center justify-center shadow-2xl hover:bg-brand-dark transition-colors hover:scale-110 transform">
+                                <svg class="w-7 h-7 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-14">
+                    <p
+                        class="text-brand font-semibold text-sm uppercase tracking-widest mb-3 flex items-center gap-2 justify-center">
+                        <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                        Our Pricing
+                        <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                    </p>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Most Valuable Pricing Packages</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto">Transparent, competitive pricing with no hidden fees.
+                        Choose the package that suits you best.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Basic -->
+                    <div
+                        class="border border-gray-200 rounded-2xl p-8 hover:border-brand transition-all hover:shadow-xl group">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Basic Package</h3>
+                        <p class="text-gray-500 text-sm mb-6">Perfect for beginners</p>
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold text-gray-900">£75</span>
+                            <span class="text-gray-500">/lesson</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                5 x 1-hour lessons
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                DVSA approved instructor
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                Flexible scheduling
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-400">
+                                <svg class="w-5 h-5 text-gray-300 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                                Mock test included
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-400">
+                                <svg class="w-5 h-5 text-gray-300 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                                Theory test support
+                            </li>
+                        </ul>
+                        <a href="book-now.html"
+                            class="block text-center py-3 border-2 border-brand text-brand font-semibold rounded-lg hover:bg-brand hover:text-white transition-all">
+                            Learn More
+                        </a>
+                    </div>
+                    <!-- Standard - highlighted -->
+                    <div class="bg-brand rounded-2xl p-8 shadow-2xl relative -translate-y-4">
+                        <span
+                            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-dark text-white text-xs font-bold px-4 py-1.5 rounded-full">Most
+                            Popular</span>
+                        <h3 class="text-xl font-bold text-white mb-2">Standard Package</h3>
+                        <p class="text-white/70 text-sm mb-6">Best value for most learners</p>
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold text-white">£85</span>
+                            <span class="text-white/70">/lesson</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-sm text-white/90">
+                                <svg class="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                10 x 1-hour lessons
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-white/90">
+                                <svg class="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                DVSA approved instructor
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-white/90">
+                                <svg class="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                Flexible scheduling
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-white/90">
+                                <svg class="w-5 h-5 text-white flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                1 Mock test included
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-white/70">
+                                <svg class="w-5 h-5 text-white/40 flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                                Theory test support
+                            </li>
+                        </ul>
+                        <a href="book-now.html"
+                            class="block text-center py-3 bg-white text-brand font-semibold rounded-lg hover:bg-gray-100 transition-all">
+                            Learn More
+                        </a>
+                    </div>
+                    <!-- Premium -->
+                    <div
+                        class="border border-gray-200 rounded-2xl p-8 hover:border-brand transition-all hover:shadow-xl">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Premium Package</h3>
+                        <p class="text-gray-500 text-sm mb-6">Everything you need to pass</p>
+                        <div class="mb-6">
+                            <span class="text-5xl font-bold text-gray-900">£95</span>
+                            <span class="text-gray-500">/lesson</span>
+                        </div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                20 x 1-hour lessons
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                DVSA approved instructor
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                Flexible scheduling
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                3 Mock tests included
+                            </li>
+                            <li class="flex items-center gap-3 text-sm text-gray-600">
+                                <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7" />
+                                </svg>
+                                Full theory test support
+                            </li>
+                        </ul>
+                        <a href="book-now.html"
+                            class="block text-center py-3 border-2 border-brand text-brand font-semibold rounded-lg hover:bg-brand hover:text-white transition-all">
+                            Learn More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Banner -->
+        <section class="bg-dark py-16">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    <div class="flex items-center gap-6">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=200&q=80" alt="Instructor"
+                            class="w-24 h-24 rounded-full object-cover border-4 border-brand hidden md:block">
+                        <div>
+                            <p class="text-brand font-semibold text-sm uppercase tracking-widest mb-2">Learn With Pro
+                            </p>
+                            <h2 class="text-3xl font-bold text-white">Start Learning To Drive Today<br>Contact Now!</h2>
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4 lg:justify-end">
+                        <a href="contact.html"
+                            class="px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl">
+                            Contact Now
+                        </a>
+                        <a href="book-now.html"
+                            class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all">
+                            Book A Lesson
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-14">
+                    <p
+                        class="text-brand font-semibold text-sm uppercase tracking-widest mb-3 flex items-center gap-2 justify-center">
+                        <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                        Testimonials
+                        <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                    </p>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">What Saying Students Feedback</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto">Don't just take our word for it — hear from our thousands
+                        of successful students.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1">
+                        <div class="flex gap-1 mb-4">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                        </div>
+                        <p class="text-gray-600 italic mb-6 leading-relaxed">"Passed my test first time thanks to my
+                            amazing instructor! The lessons were fun and professional. Highly recommend Beep Beep!"</p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80"
+                                alt="Sarah M." class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Hassan Zubair</h4>
+                                <p class="text-sm text-gray-500">Manchester · ⭐ 5.0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1">
+                        <div class="flex gap-1 mb-4">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                        </div>
+                        <p class="text-gray-600 italic mb-6 leading-relaxed">"Great patient instruction. I was nervous
+                            at first but they made me feel comfortable from day one. Worth every penny!"</p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
+                                alt="Ana Pinchi" class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Ana Pinchi</h4>
+                                <p class="text-sm text-gray-500">London · ⭐ 5.0</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all hover:-translate-y-1">
+                        <div class="flex gap-1 mb-4">
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
+                                <polygon
+                                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                            </svg>
+                        </div>
+                        <p class="text-gray-600 italic mb-6 leading-relaxed">"Excellent service! Very flexible with
+                            scheduling and the intensive course got me test ready in just 6 weeks."</p>
+                        <div class="flex items-center gap-3">
+                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80"
+                                alt="Brian Settings" class="w-12 h-12 rounded-full object-cover">
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Brian Settings</h4>
+                                <p class="text-sm text-gray-500">Birmingham · ⭐ 5.0</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog / News -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-14">
+                    <p
+                        class="text-brand font-semibold text-sm uppercase tracking-widest mb-3 flex items-center gap-2 justify-center">
+                        <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                        Our Blog
+                        <span class="w-8 h-0.5 bg-brand inline-block"></span>
+                    </p>
+                    <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Latest News & Articles</h2>
+                    <p class="text-gray-600 max-w-xl mx-auto">Tips, guides and news to help you on your journey to
+                        becoming a confident driver.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="group cursor-pointer">
+                        <div class="rounded-2xl overflow-hidden mb-4 h-52">
+                            <img src="https://images.unsplash.com/photo-1504215680853-026ed2a45def?w=600&q=80"
+                                alt="Defensive Driving"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center gap-2 text-brand text-xs font-semibold mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" stroke-width="2" />
+                                <line x1="8" y1="2" x2="8" y2="6" stroke-width="2" />
+                                <line x1="3" y1="10" x2="21" y2="10" stroke-width="2" />
+                            </svg>
+                            12 March 2026
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-brand transition-colors">The
+                            Benefits of Taking a Defensive Driving Course</h3>
+                        <a href="#"
+                            class="text-brand text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                            Read More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div class="rounded-2xl overflow-hidden mb-4 h-52">
+                            <img src="https://images.unsplash.com/photo-1471506480208-91b3a4cc78be?w=600&q=80"
+                                alt="Driving Test Tips"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center gap-2 text-brand text-xs font-semibold mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" stroke-width="2" />
+                                <line x1="8" y1="2" x2="8" y2="6" stroke-width="2" />
+                                <line x1="3" y1="10" x2="21" y2="10" stroke-width="2" />
+                            </svg>
+                            18 March 2026
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-brand transition-colors">10
+                            Tips for Passing Your Driving Test First Time</h3>
+                        <a href="#"
+                            class="text-brand text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                            Read More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="group cursor-pointer">
+                        <div class="rounded-2xl overflow-hidden mb-4 h-52">
+                            <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?w=600&q=80"
+                                alt="First Driving Lesson"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="flex items-center gap-2 text-brand text-xs font-semibold mb-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke-width="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" stroke-width="2" />
+                                <line x1="8" y1="2" x2="8" y2="6" stroke-width="2" />
+                                <line x1="3" y1="10" x2="21" y2="10" stroke-width="2" />
+                            </svg>
+                            22 March 2026
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800 mb-2 group-hover:text-brand transition-colors">What
+                            to Expect on Your First Driving Lesson</h3>
+                        <a href="#"
+                            class="text-brand text-sm font-semibold flex items-center gap-1 hover:gap-2 transition-all">
+                            Read More <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 5l7 7-7 7" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter / Sign Up Banner -->
+        <section class="bg-brand py-12">
+            <div class="container mx-auto px-4">
+                <div class="flex flex-wrap items-center justify-between gap-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-1">Sign Up to get updates & news about Us</h3>
+                        <p class="text-white/80 text-sm">Join thousands of learners and get driving tips direct to your
+                            inbox.</p>
+                    </div>
+                    <div class="flex gap-3 flex-1 max-w-md">
+                        <input type="email" placeholder="Your email address"
+                            class="flex-1 px-5 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-white">
+                        <button
+                            class="px-6 py-3 bg-dark text-white font-semibold rounded-lg hover:bg-gray-900 transition-colors whitespace-nowrap">
+                            Subscribe
+                        </button>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <!-- Footer -->
-    <footer class="footer py-16 bg-gray-900 text-white">
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
         <div class="container mx-auto px-4">
-            <div class="footer__grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                <div class="footer__col">
-                    <a href="index.html" class="footer__logo flex items-center gap-2 text-2xl font-bold mb-4">
-                        <img src="images/logo.svg" alt="Beep Beep Driving School Logo"
-                            class="footer__logo-img h-10 w-auto">
-                        <span class="footer__logo-text">Beep Beep</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+                <div>
+                    <a href="index.html" class="flex items-center gap-2 text-2xl font-bold mb-4">
+                        <div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z" />
+                            </svg>
+                        </div>
+                        <span>Beep<span class="text-brand">Beep</span></span>
                     </a>
-                    <p class="footer__text text-gray-300 leading-relaxed mb-4">Professional driving lessons in the UK
-                        with DVSA-approved instructors. Your
-                        safety and success are our priority.</p>
-                    <div class="footer__social flex gap-3">
+                    <p class="text-gray-400 text-sm leading-relaxed mb-5">Professional driving lessons in the UK with
+                        DVSA-approved instructors. Your safety and success are our priority.</p>
+                    <div class="flex gap-3">
                         <a href="#"
-                            class="footer__social-link flex items-center justify-center w-10 h-10 bg-white/10 rounded-full transition-colors hover:bg-primary"
-                            aria-label="Facebook">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
                             </svg>
                         </a>
                         <a href="#"
-                            class="footer__social-link flex items-center justify-center w-10 h-10 bg-white/10 rounded-full transition-colors hover:bg-primary"
-                            aria-label="Twitter">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                                 <path
                                     d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
                             </svg>
                         </a>
                         <a href="#"
-                            class="footer__social-link flex items-center justify-center w-10 h-10 bg-white/10 rounded-full transition-colors hover:bg-primary"
-                            aria-label="Instagram">
-                            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center hover:bg-brand transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                                 <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                                 <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
                                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
@@ -618,97 +1160,81 @@
                         </a>
                     </div>
                 </div>
-
-                <div class="footer__col">
-                    <h4 class="footer__title text-xl font-semibold mb-4 text-white">Quick Links</h4>
-                    <ul class="footer__links flex flex-col gap-2">
-                        <li><a href="about.html" class="text-gray-300 transition-colors hover:text-primary">About Us</a>
+                <div>
+                    <h4 class="text-lg font-semibold mb-5">Our Courses</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="lessons.html#beginners" class="hover:text-brand transition-colors">Beginner
+                                Lessons</a></li>
+                        <li><a href="lessons.html#refresher" class="hover:text-brand transition-colors">Refresher
+                                Courses</a></li>
+                        <li><a href="lessons.html#test-prep" class="hover:text-brand transition-colors">Test
+                                Preparation</a></li>
+                        <li><a href="lessons.html#manual" class="hover:text-brand transition-colors">Manual Driving</a>
                         </li>
-                        <li><a href="lessons.html"
-                                class="text-gray-300 transition-colors hover:text-primary">Lessons</a></li>
-                        <li><a href="prices.html" class="text-gray-300 transition-colors hover:text-primary">Prices</a>
-                        </li>
-                        <li><a href="testimonials.html"
-                                class="text-gray-300 transition-colors hover:text-primary">Testimonials</a></li>
-                        <li><a href="contact.html"
-                                class="text-gray-300 transition-colors hover:text-primary">Contact</a></li>
+                        <li><a href="lessons.html#automatic" class="hover:text-brand transition-colors">Automatic
+                                Driving</a></li>
+                        <li><a href="lessons.html" class="hover:text-brand transition-colors">Intensive Courses</a></li>
                     </ul>
                 </div>
-
-                <div class="footer__col">
-                    <h4 class="footer__title text-xl font-semibold mb-4 text-white">Services</h4>
-                    <ul class="footer__links flex flex-col gap-2">
-                        <li><a href="lessons.html#beginners"
-                                class="text-gray-300 transition-colors hover:text-primary">Beginner Lessons</a></li>
-                        <li><a href="lessons.html#refresher"
-                                class="text-gray-300 transition-colors hover:text-primary">Refresher Courses</a></li>
-                        <li><a href="lessons.html#test-prep"
-                                class="text-gray-300 transition-colors hover:text-primary">Test Preparation</a></li>
-                        <li><a href="lessons.html#manual"
-                                class="text-gray-300 transition-colors hover:text-primary">Manual Driving</a></li>
-                        <li><a href="lessons.html#automatic"
-                                class="text-gray-300 transition-colors hover:text-primary">Automatic Driving</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer__col">
-                    <h4 class="footer__title text-xl font-semibold mb-4 text-white">Contact Info</h4>
-                    <ul class="footer__contact flex flex-col gap-2">
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 min-w-[20px] text-primary" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
-                                <circle cx="12" cy="10" r="3" />
+                <div>
+                    <h4 class="text-lg font-semibold mb-5">Contact Us</h4>
+                    <ul class="space-y-4 text-gray-400 text-sm">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand flex-shrink-0 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                             </svg>
-                            <span class="text-gray-300">123 High Street, Manchester, M1 1AA</span>
+                            123 High Street, Manchester, M1 1AA
                         </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 min-w-[20px] text-primary" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path
-                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
-                            <a href="tel:01234567890" class="text-gray-300 transition-colors hover:text-primary">01234
-                                567 890</a>
+                            <a href="tel:01234567890" class="hover:text-brand transition-colors">01234 567 890</a>
                         </li>
-                        <li class="flex items-start gap-2">
-                            <svg class="w-5 h-5 min-w-[20px] text-primary" viewBox="0 0 24 24" fill="none"
-                                stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                <polyline points="22,6 12,13 2,6" />
+                        <li class="flex items-center gap-3">
+                            <svg class="w-5 h-5 text-brand flex-shrink-0" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                             </svg>
                             <a href="mailto:info@beepbeepdriving.co.uk"
-                                class="text-gray-300 transition-colors hover:text-primary">info@beepbeepdriving.co.uk</a>
+                                class="hover:text-brand transition-colors">info@beepbeepdriving.co.uk</a>
                         </li>
                     </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-5">Our Gallery</h4>
+                    <div class="grid grid-cols-3 gap-2">
+                        <img src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=150&q=80" alt="Gallery"
+                            class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=150&q=80" alt="Gallery"
+                            class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=150&q=80" alt="Gallery"
+                            class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&q=80" alt="Gallery"
+                            class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=150&q=80" alt="Gallery"
+                            class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=150&q=80" alt="Gallery"
+                            class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer">
+                    </div>
                 </div>
             </div>
-
-            <div class="footer__bottom border-t border-white/10 pt-8">
-                <div class="footer__legal flex justify-between items-center flex-wrap gap-4 mb-4">
-                    <p class="text-gray-400 text-sm">&copy; 2026 Beep Beep Driving School. All rights reserved.</p>
-                    <ul class="footer__legal-links flex gap-6">
-                        <li><a href="privacy.html"
-                                class="text-gray-400 text-sm transition-colors hover:text-primary">Privacy Policy</a>
-                        </li>
-                        <li><a href="terms.html"
-                                class="text-gray-400 text-sm transition-colors hover:text-primary">Terms &
-                                Conditions</a></li>
-                        <li><a href="cookies.html"
-                                class="text-gray-400 text-sm transition-colors hover:text-primary">Cookie Policy</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="footer__dvsa text-center pt-4">
-                    <p class="text-gray-400 text-sm mb-2">DVSA Approved Driving Instructors</p>
-                    <img src="images/dvsa-logo.png" alt="DVSA Approved" loading="lazy" width="100" height="50">
-                </div>
+            <div class="border-t border-white/10 pt-8 flex flex-wrap justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">© 2026 Beep Beep Driving School. All rights reserved.</p>
+                <ul class="flex gap-6 text-gray-500 text-sm">
+                    <li><a href="privacy.html" class="hover:text-brand transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms.html" class="hover:text-brand transition-colors">Terms & Conditions</a></li>
+                    <li><a href="cookies.html" class="hover:text-brand transition-colors">Cookie Policy</a></li>
+                </ul>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/main.js" defer></script>
 </body>
 
 </html>
