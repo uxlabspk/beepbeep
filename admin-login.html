@@ -1,33 +1,10 @@
-<?php
-session_start();
-
-// Handle form submission
-$error = '';
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $username = $_POST['username'] ?? '';
-    $password = $_POST['password'] ?? '';
-    
-    // Simple authentication (you should use database in production)
-    // Default credentials: admin / admin123
-    if ($username === 'admin' && $password === 'admin123') {
-        $_SESSION['admin_logged_in'] = true;
-        $_SESSION['admin_username'] = $username;
-        header('Location: admin/dashboard.php');
-        exit();
-    } else {
-        $error = 'Invalid username or password. Please try again.';
-    }
-}
-
-$pageTitle = "Admin Login";
-?>
 <!DOCTYPE html>
 <html lang="en-GB">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $pageTitle; ?> | Beep Beep Driving School</title>
+    <title>Admin Login | Beep Beep Driving School</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -67,7 +44,7 @@ $pageTitle = "Admin Login";
     <div class="w-full max-w-md px-6">
         <!-- Logo -->
         <div class="text-center mb-8">
-            <a href="index.php" class="inline-flex items-center space-x-2">
+            <a href="index.html" class="inline-flex items-center space-x-2">
                 <div class="w-12 h-12 bg-brand rounded-full flex items-center justify-center">
                     <svg class="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
@@ -83,19 +60,17 @@ $pageTitle = "Admin Login";
             <p class="text-gray-400 text-center mb-8">Enter your credentials to access the dashboard</p>
 
             <!-- Error Message -->
-            <?php if ($error): ?>
-            <div class="bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6">
-                <p class="text-sm"><?php echo htmlspecialchars($error); ?></p>
+            <div id="errorMessage" class="hidden bg-red-500/20 border border-red-500 text-red-400 px-4 py-3 rounded-lg mb-6">
+                <p class="text-sm">Invalid username or password. Please try again.</p>
             </div>
-            <?php endif; ?>
 
             <!-- Login Form -->
-            <form method="POST" action="" class="space-y-6">
+            <form id="loginForm" class="space-y-6">
                 <div>
                     <label for="username" class="block text-sm font-medium text-gray-300 mb-2">Username</label>
                     <input type="text" id="username" name="username" required
                         class="w-full px-4 py-3 bg-dark border border-gray-600 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-brand focus:ring-1 focus:ring-brand transition-colors"
-                        placeholder="Enter your username" value="<?php echo htmlspecialchars($username ?? ''); ?>">
+                        placeholder="Enter your username">
                 </div>
 
                 <div>
@@ -125,41 +100,13 @@ $pageTitle = "Admin Login";
 
         <!-- Back to Home -->
         <div class="text-center mt-6">
-            <a href="index.php" class="text-gray-400 hover:text-brand transition-colors text-sm">
+            <a href="index.html" class="text-gray-400 hover:text-brand transition-colors text-sm">
                 &larr; Back to Home
             </a>
         </div>
-        
-        <!-- Demo Credentials -->
-        <div class="mt-4 p-4 bg-dark-card rounded-lg border border-gray-700">
-            <p class="text-xs text-gray-400 text-center">Demo Credentials:</p>
-            <p class="text-xs text-gray-300 text-center mt-1">Username: <code class="text-brand">admin</code> | Password: <code class="text-brand">admin123</code></p>
-        </div>
     </div>
 
-    <script>
-        // Toggle password visibility
-        const togglePassword = document.getElementById('togglePassword');
-        const passwordInput = document.getElementById('password');
-        const eyeIcon = document.getElementById('eyeIcon');
-
-        togglePassword.addEventListener('click', () => {
-            const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-            passwordInput.setAttribute('type', type);
-            
-            // Toggle eye icon
-            if (type === 'text') {
-                eyeIcon.innerHTML = `
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/>
-                `;
-            } else {
-                eyeIcon.innerHTML = `
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
-                `;
-            }
-        });
-    </script>
+    <script src="js/admin.js"></script>
 </body>
 
 </html>
