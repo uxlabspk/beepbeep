@@ -51,12 +51,12 @@
 
       /* Hide scrollbar for courses section */
       .scrollbar-hide {
-        -ms-overflow-style: none;  /* IE and Edge */
-        scrollbar-width: none;  /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
       }
 
       .scrollbar-hide::-webkit-scrollbar {
-        display: none;  /* Chrome, Safari and Opera */
+        display: none; /* Chrome, Safari and Opera */
       }
     </style>
   </head>
@@ -102,13 +102,6 @@
               href="lessons.html"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >Courses</a
-            >
-          </li>
-          <li>
-            <a
-              href="prices.html"
-              class="text-white text-xl font-medium hover:text-brand transition-colors"
-              >Prices</a
             >
           </li>
           <li>
@@ -262,13 +255,6 @@
               href="lessons.html"
               class="font-medium text-gray-600 hover:text-brand transition-colors"
               >Courses</a
-            >
-          </li>
-          <li>
-            <a
-              href="prices.html"
-              class="font-medium text-gray-600 hover:text-brand transition-colors"
-              >Prices</a
             >
           </li>
           <li>
@@ -791,7 +777,10 @@
           </div>
           <!-- Carousel Container -->
           <div class="relative overflow-hidden">
-            <div id="servicesCarousel" class="flex transition-transform duration-700 ease-in-out">
+            <div
+              id="servicesCarousel"
+              class="flex transition-transform duration-700 ease-in-out"
+            >
               <!-- Card 1: Instructor Training -->
               <div class="w-full md:w-1/3 flex-shrink-0 px-4">
                 <div
@@ -809,9 +798,9 @@
                       Instructor Training
                     </h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                      Become a qualified driving instructor with our comprehensive
-                      ADI training program. We guide you through all three
-                      qualifying tests.
+                      Become a qualified driving instructor with our
+                      comprehensive ADI training program. We guide you through
+                      all three qualifying tests.
                     </p>
                     <a
                       href="lessons.html"
@@ -853,8 +842,9 @@
                       Driving License
                     </h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                      From first lesson to passing your test, we provide structured
-                      lessons covering all DVSA test requirements and skills.
+                      From first lesson to passing your test, we provide
+                      structured lessons covering all DVSA test requirements and
+                      skills.
                     </p>
                     <a
                       href="lessons.html"
@@ -897,7 +887,8 @@
                     </h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4">
                       Master the Highway Code and traffic regulations with our
-                      theory training. Pass your theory test with flying colours.
+                      theory training. Pass your theory test with flying
+                      colours.
                     </p>
                     <a
                       href="lessons.html"
@@ -939,7 +930,9 @@
                       Refresher Courses
                     </h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                      Build confidence and polish your skills with our refresher courses. Perfect for drivers returning after a break or nervous drivers.
+                      Build confidence and polish your skills with our refresher
+                      courses. Perfect for drivers returning after a break or
+                      nervous drivers.
                     </p>
                     <a
                       href="lessons.html"
@@ -981,7 +974,9 @@
                       Pass Plus
                     </h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                      Enhance your driving skills after passing your test. Gain experience in motorway driving, night driving, and adverse weather conditions.
+                      Enhance your driving skills after passing your test. Gain
+                      experience in motorway driving, night driving, and adverse
+                      weather conditions.
                     </p>
                     <a
                       href="lessons.html"
@@ -1023,7 +1018,9 @@
                       Intensive Courses
                     </h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                      Fast-track your learning with our intensive courses. Get test-ready in as little as one week with concentrated daily lessons.
+                      Fast-track your learning with our intensive courses. Get
+                      test-ready in as little as one week with concentrated
+                      daily lessons.
                     </p>
                     <a
                       href="lessons.html"
@@ -1051,8 +1048,14 @@
 
             <!-- Navigation Dots -->
             <div class="flex justify-center gap-2 mt-8">
-              <button class="carousel-dot w-3 h-3 rounded-full bg-brand transition-all" data-index="0"></button>
-              <button class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all" data-index="1"></button>
+              <button
+                class="carousel-dot w-3 h-3 rounded-full bg-brand transition-all"
+                data-index="0"
+              ></button>
+              <button
+                class="carousel-dot w-3 h-3 rounded-full bg-gray-300 transition-all"
+                data-index="1"
+              ></button>
             </div>
           </div>
         </div>
@@ -1064,7 +1067,7 @@
           <div
             class="flex flex-col sm:flex-row justify-between items-center gap-4 mb-12"
           >
-            <div> 
+            <div>
               <p
                 class="text-brand font-semibold text-sm uppercase tracking-widest mb-3 flex items-center gap-2"
               >
@@ -1116,292 +1119,300 @@
           </div>
 
           <!-- Scrollable Courses Container -->
-          <div id="courses-scroll-container" class="overflow-x-auto snap-x snap-mandatory scrollbar-hide">
+          <div
+            id="courses-scroll-container"
+            class="overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+          >
             <div class="flex gap-8">
-          <!-- course 1 -->
-           <div class="snap-center flex-shrink-0 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div class="relative rounded-2xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=700&q=80"
-                alt="Defensive Driving"
-                class="w-full h-80 object-cover"
-              />
-              <div class="absolute top-4 left-4 flex gap-2">
-                <span
-                  class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full"
-                  >Most Popular</span
-                >
-                <span
-                  class="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full"
-                  >Intermediate</span
-                >
-              </div>
-            </div>
-            <div class="text-white">
-              <h3 class="text-2xl sm:text-3xl font-bold mb-4">
-                Defensive Driving
-              </h3>
-              <p class="text-gray-400 leading-relaxed mb-6">
-                Learn advanced defensive driving techniques that go beyond
-                standard lessons. This course focuses on hazard perception,
-                anticipation skills, and techniques that will make you a safer
-                driver for life.
-              </p>
-              <div class="flex flex-wrap gap-4 sm:gap-8 mb-6">
-                <div class="flex items-center gap-2 text-gray-400 text-sm">
-                  <svg
-                    class="w-5 h-5 text-brand"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  8 Hours
-                </div>
-                <div class="flex items-center gap-2 text-gray-400 text-sm">
-                  <svg
-                    class="w-5 h-5 text-brand"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"
-                    />
-                  </svg>
-                  Small Groups
-                </div>
-              </div>
-              <div class="flex items-center gap-4 mb-8">
-                <div class="flex -space-x-3">
-                  <img
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80"
-                    alt="Student"
-                    class="w-9 h-9 rounded-full border-2 border-dark object-cover"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80"
-                    alt="Student"
-                    class="w-9 h-9 rounded-full border-2 border-dark object-cover"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80"
-                    alt="Student"
-                    class="w-9 h-9 rounded-full border-2 border-dark object-cover"
-                  />
-                </div>
-                <span class="text-gray-400 text-sm"
-                  >200+ Students Enrolled</span
-                >
-              </div>
-              <a
-                href="lessons.html"
-                class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
+              <!-- course 1 -->
+              <div
+                class="snap-center flex-shrink-0 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
               >
-                Enrol Now
-              </a>
-            </div>
-          </div>
+                <div class="relative rounded-2xl overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=700&q=80"
+                    alt="Defensive Driving"
+                    class="w-full h-80 object-cover"
+                  />
+                  <div class="absolute top-4 left-4 flex gap-2">
+                    <span
+                      class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full"
+                      >Most Popular</span
+                    >
+                    <span
+                      class="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full"
+                      >Intermediate</span
+                    >
+                  </div>
+                </div>
+                <div class="text-white">
+                  <h3 class="text-2xl sm:text-3xl font-bold mb-4">
+                    Defensive Driving
+                  </h3>
+                  <p class="text-gray-400 leading-relaxed mb-6">
+                    Learn advanced defensive driving techniques that go beyond
+                    standard lessons. This course focuses on hazard perception,
+                    anticipation skills, and techniques that will make you a
+                    safer driver for life.
+                  </p>
+                  <div class="flex flex-wrap gap-4 sm:gap-8 mb-6">
+                    <div class="flex items-center gap-2 text-gray-400 text-sm">
+                      <svg
+                        class="w-5 h-5 text-brand"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      8 Hours
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400 text-sm">
+                      <svg
+                        class="w-5 h-5 text-brand"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"
+                        />
+                      </svg>
+                      Small Groups
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 mb-8">
+                    <div class="flex -space-x-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80"
+                        alt="Student"
+                        class="w-9 h-9 rounded-full border-2 border-dark object-cover"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80"
+                        alt="Student"
+                        class="w-9 h-9 rounded-full border-2 border-dark object-cover"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80"
+                        alt="Student"
+                        class="w-9 h-9 rounded-full border-2 border-dark object-cover"
+                      />
+                    </div>
+                    <span class="text-gray-400 text-sm"
+                      >200+ Students Enrolled</span
+                    >
+                  </div>
+                  <a
+                    href="lessons.html"
+                    class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
+                  >
+                    Enrol Now
+                  </a>
+                </div>
+              </div>
 
-          <!-- course 2 -->
-           <div class="snap-center flex-shrink-0 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div class="relative rounded-2xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=700&q=80"
-                alt="Defensive Driving"
-                class="w-full h-80 object-cover"
-              />
-              <div class="absolute top-4 left-4 flex gap-2">
-                <span
-                  class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full"
-                  >Most Popular</span
-                >
-                <span
-                  class="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full"
-                  >Intermediate</span
-                >
-              </div>
-            </div>
-            <div class="text-white">
-              <h3 class="text-2xl sm:text-3xl font-bold mb-4">
-                Defensive Driving
-              </h3>
-              <p class="text-gray-400 leading-relaxed mb-6">
-                Learn advanced defensive driving techniques that go beyond
-                standard lessons. This course focuses on hazard perception,
-                anticipation skills, and techniques that will make you a safer
-                driver for life.
-              </p>
-              <div class="flex flex-wrap gap-4 sm:gap-8 mb-6">
-                <div class="flex items-center gap-2 text-gray-400 text-sm">
-                  <svg
-                    class="w-5 h-5 text-brand"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  8 Hours
-                </div>
-                <div class="flex items-center gap-2 text-gray-400 text-sm">
-                  <svg
-                    class="w-5 h-5 text-brand"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"
-                    />
-                  </svg>
-                  Small Groups
-                </div>
-              </div>
-              <div class="flex items-center gap-4 mb-8">
-                <div class="flex -space-x-3">
-                  <img
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80"
-                    alt="Student"
-                    class="w-9 h-9 rounded-full border-2 border-dark object-cover"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80"
-                    alt="Student"
-                    class="w-9 h-9 rounded-full border-2 border-dark object-cover"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80"
-                    alt="Student"
-                    class="w-9 h-9 rounded-full border-2 border-dark object-cover"
-                  />
-                </div>
-                <span class="text-gray-400 text-sm"
-                  >200+ Students Enrolled</span
-                >
-              </div>
-              <a
-                href="lessons.html"
-                class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
+              <!-- course 2 -->
+              <div
+                class="snap-center flex-shrink-0 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
               >
-                Enrol Now
-              </a>
-            </div>
-          </div>
+                <div class="relative rounded-2xl overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=700&q=80"
+                    alt="Defensive Driving"
+                    class="w-full h-80 object-cover"
+                  />
+                  <div class="absolute top-4 left-4 flex gap-2">
+                    <span
+                      class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full"
+                      >Most Popular</span
+                    >
+                    <span
+                      class="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full"
+                      >Intermediate</span
+                    >
+                  </div>
+                </div>
+                <div class="text-white">
+                  <h3 class="text-2xl sm:text-3xl font-bold mb-4">
+                    Defensive Driving
+                  </h3>
+                  <p class="text-gray-400 leading-relaxed mb-6">
+                    Learn advanced defensive driving techniques that go beyond
+                    standard lessons. This course focuses on hazard perception,
+                    anticipation skills, and techniques that will make you a
+                    safer driver for life.
+                  </p>
+                  <div class="flex flex-wrap gap-4 sm:gap-8 mb-6">
+                    <div class="flex items-center gap-2 text-gray-400 text-sm">
+                      <svg
+                        class="w-5 h-5 text-brand"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      8 Hours
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400 text-sm">
+                      <svg
+                        class="w-5 h-5 text-brand"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"
+                        />
+                      </svg>
+                      Small Groups
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 mb-8">
+                    <div class="flex -space-x-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80"
+                        alt="Student"
+                        class="w-9 h-9 rounded-full border-2 border-dark object-cover"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80"
+                        alt="Student"
+                        class="w-9 h-9 rounded-full border-2 border-dark object-cover"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80"
+                        alt="Student"
+                        class="w-9 h-9 rounded-full border-2 border-dark object-cover"
+                      />
+                    </div>
+                    <span class="text-gray-400 text-sm"
+                      >200+ Students Enrolled</span
+                    >
+                  </div>
+                  <a
+                    href="lessons.html"
+                    class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
+                  >
+                    Enrol Now
+                  </a>
+                </div>
+              </div>
 
-          <!-- course 3 -->
-           <div class="snap-center flex-shrink-0 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div class="relative rounded-2xl overflow-hidden">
-              <img
-                src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=700&q=80"
-                alt="Defensive Driving"
-                class="w-full h-80 object-cover"
-              />
-              <div class="absolute top-4 left-4 flex gap-2">
-                <span
-                  class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full"
-                  >Most Popular</span
-                >
-                <span
-                  class="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full"
-                  >Intermediate</span
-                >
-              </div>
-            </div>
-            <div class="text-white">
-              <h3 class="text-2xl sm:text-3xl font-bold mb-4">
-                Defensive Driving
-              </h3>
-              <p class="text-gray-400 leading-relaxed mb-6">
-                Learn advanced defensive driving techniques that go beyond
-                standard lessons. This course focuses on hazard perception,
-                anticipation skills, and techniques that will make you a safer
-                driver for life.
-              </p>
-              <div class="flex flex-wrap gap-4 sm:gap-8 mb-6">
-                <div class="flex items-center gap-2 text-gray-400 text-sm">
-                  <svg
-                    class="w-5 h-5 text-brand"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                  8 Hours
-                </div>
-                <div class="flex items-center gap-2 text-gray-400 text-sm">
-                  <svg
-                    class="w-5 h-5 text-brand"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"
-                    />
-                  </svg>
-                  Small Groups
-                </div>
-              </div>
-              <div class="flex items-center gap-4 mb-8">
-                <div class="flex -space-x-3">
-                  <img
-                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80"
-                    alt="Student"
-                    class="w-9 h-9 rounded-full border-2 border-dark object-cover"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80"
-                    alt="Student"
-                    class="w-9 h-9 rounded-full border-2 border-dark object-cover"
-                  />
-                  <img
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80"
-                    alt="Student"
-                    class="w-9 h-9 rounded-full border-2 border-dark object-cover"
-                  />
-                </div>
-                <span class="text-gray-400 text-sm"
-                  >200+ Students Enrolled</span
-                >
-              </div>
-              <a
-                href="lessons.html"
-                class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
+              <!-- course 3 -->
+              <div
+                class="snap-center flex-shrink-0 w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
               >
-                Enrol Now
-              </a>
+                <div class="relative rounded-2xl overflow-hidden">
+                  <img
+                    src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=700&q=80"
+                    alt="Defensive Driving"
+                    class="w-full h-80 object-cover"
+                  />
+                  <div class="absolute top-4 left-4 flex gap-2">
+                    <span
+                      class="bg-brand text-white text-xs font-semibold px-3 py-1 rounded-full"
+                      >Most Popular</span
+                    >
+                    <span
+                      class="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full"
+                      >Intermediate</span
+                    >
+                  </div>
+                </div>
+                <div class="text-white">
+                  <h3 class="text-2xl sm:text-3xl font-bold mb-4">
+                    Defensive Driving
+                  </h3>
+                  <p class="text-gray-400 leading-relaxed mb-6">
+                    Learn advanced defensive driving techniques that go beyond
+                    standard lessons. This course focuses on hazard perception,
+                    anticipation skills, and techniques that will make you a
+                    safer driver for life.
+                  </p>
+                  <div class="flex flex-wrap gap-4 sm:gap-8 mb-6">
+                    <div class="flex items-center gap-2 text-gray-400 text-sm">
+                      <svg
+                        class="w-5 h-5 text-brand"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                        />
+                      </svg>
+                      8 Hours
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-400 text-sm">
+                      <svg
+                        class="w-5 h-5 text-brand"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0"
+                        />
+                      </svg>
+                      Small Groups
+                    </div>
+                  </div>
+                  <div class="flex items-center gap-4 mb-8">
+                    <div class="flex -space-x-3">
+                      <img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&q=80"
+                        alt="Student"
+                        class="w-9 h-9 rounded-full border-2 border-dark object-cover"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&q=80"
+                        alt="Student"
+                        class="w-9 h-9 rounded-full border-2 border-dark object-cover"
+                      />
+                      <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&q=80"
+                        alt="Student"
+                        class="w-9 h-9 rounded-full border-2 border-dark object-cover"
+                      />
+                    </div>
+                    <span class="text-gray-400 text-sm"
+                      >200+ Students Enrolled</span
+                    >
+                  </div>
+                  <a
+                    href="lessons.html"
+                    class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
+                  >
+                    Enrol Now
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-            </div>
-          </div>
-
         </div>
       </section>
 
@@ -1422,14 +1433,17 @@
               Meet Our Qualified Instructors
             </h2>
             <p class="text-gray-600 text-lg max-w-2xl mx-auto px-4 sm:px-0">
-              DVSA-approved professionals dedicated to helping you become a confident, safe driver
+              DVSA-approved professionals dedicated to helping you become a
+              confident, safe driver
             </p>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
             <!-- Instructor 1: Max Abacus -->
             <div class="group">
-              <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              >
                 <!-- Image Container -->
                 <div class="relative overflow-hidden">
                   <img
@@ -1450,7 +1464,9 @@
                         d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                       />
                     </svg>
-                    <span class="text-sm font-semibold text-gray-800">DVSA Certified</span>
+                    <span class="text-sm font-semibold text-gray-800"
+                      >DVSA Certified</span
+                    >
                   </div>
                 </div>
 
@@ -1459,37 +1475,49 @@
                   <h3 class="text-2xl font-bold text-gray-900 mb-2">
                     Max Abacus
                   </h3>
-                  <p class="text-brand font-semibold mb-4">
-                    Senior Instructor
-                  </p>
+                  <p class="text-brand font-semibold mb-4">Senior Instructor</p>
 
                   <!-- Stats -->
-                  <div class="flex items-center gap-6 mb-6 pb-6 border-b border-gray-100">
+                  <div
+                    class="flex items-center gap-6 mb-6 pb-6 border-b border-gray-100"
+                  >
                     <div>
                       <div class="text-2xl font-bold text-gray-900">12+</div>
                       <div class="text-xs text-gray-500 uppercase">Years</div>
                     </div>
                     <div>
                       <div class="text-2xl font-bold text-gray-900">500+</div>
-                      <div class="text-xs text-gray-500 uppercase">Students</div>
+                      <div class="text-xs text-gray-500 uppercase">
+                        Students
+                      </div>
                     </div>
                     <div>
                       <div class="text-2xl font-bold text-brand">98%</div>
-                      <div class="text-xs text-gray-500 uppercase">Pass Rate</div>
+                      <div class="text-xs text-gray-500 uppercase">
+                        Pass Rate
+                      </div>
                     </div>
                   </div>
 
                   <!-- Specialties -->
                   <div class="space-y-2">
-                    <p class="text-sm font-semibold text-gray-700 mb-3">Specialties:</p>
+                    <p class="text-sm font-semibold text-gray-700 mb-3">
+                      Specialties:
+                    </p>
                     <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full">
+                      <span
+                        class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
+                      >
                         ADI Training
                       </span>
-                      <span class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full">
+                      <span
+                        class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
+                      >
                         Motorway Driving
                       </span>
-                      <span class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full">
+                      <span
+                        class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
+                      >
                         Advanced Skills
                       </span>
                     </div>
@@ -1500,7 +1528,9 @@
 
             <!-- Instructor 2: Jenifer Lopez -->
             <div class="group">
-              <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              >
                 <!-- Image Container -->
                 <div class="relative overflow-hidden">
                   <img
@@ -1521,7 +1551,9 @@
                         d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                       />
                     </svg>
-                    <span class="text-sm font-semibold text-gray-800">DVSA Certified</span>
+                    <span class="text-sm font-semibold text-gray-800"
+                      >DVSA Certified</span
+                    >
                   </div>
                 </div>
 
@@ -1530,37 +1562,49 @@
                   <h3 class="text-2xl font-bold text-gray-900 mb-2">
                     Jenifer Lopez
                   </h3>
-                  <p class="text-brand font-semibold mb-4">
-                    Lead Instructor
-                  </p>
+                  <p class="text-brand font-semibold mb-4">Lead Instructor</p>
 
                   <!-- Stats -->
-                  <div class="flex items-center gap-6 mb-6 pb-6 border-b border-gray-100">
+                  <div
+                    class="flex items-center gap-6 mb-6 pb-6 border-b border-gray-100"
+                  >
                     <div>
                       <div class="text-2xl font-bold text-gray-900">8+</div>
                       <div class="text-xs text-gray-500 uppercase">Years</div>
                     </div>
                     <div>
                       <div class="text-2xl font-bold text-gray-900">350+</div>
-                      <div class="text-xs text-gray-500 uppercase">Students</div>
+                      <div class="text-xs text-gray-500 uppercase">
+                        Students
+                      </div>
                     </div>
                     <div>
                       <div class="text-2xl font-bold text-brand">96%</div>
-                      <div class="text-xs text-gray-500 uppercase">Pass Rate</div>
+                      <div class="text-xs text-gray-500 uppercase">
+                        Pass Rate
+                      </div>
                     </div>
                   </div>
 
                   <!-- Specialties -->
                   <div class="space-y-2">
-                    <p class="text-sm font-semibold text-gray-700 mb-3">Specialties:</p>
+                    <p class="text-sm font-semibold text-gray-700 mb-3">
+                      Specialties:
+                    </p>
                     <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full">
+                      <span
+                        class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
+                      >
                         Nervous Drivers
                       </span>
-                      <span class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full">
+                      <span
+                        class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
+                      >
                         Pass Plus
                       </span>
-                      <span class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full">
+                      <span
+                        class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
+                      >
                         Intensive Courses
                       </span>
                     </div>
@@ -1571,7 +1615,9 @@
 
             <!-- Instructor 3: Henry Jassy -->
             <div class="group">
-              <div class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
+              <div
+                class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
+              >
                 <!-- Image Container -->
                 <div class="relative overflow-hidden">
                   <img
@@ -1592,7 +1638,9 @@
                         d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                       />
                     </svg>
-                    <span class="text-sm font-semibold text-gray-800">DVSA Certified</span>
+                    <span class="text-sm font-semibold text-gray-800"
+                      >DVSA Certified</span
+                    >
                   </div>
                 </div>
 
@@ -1606,32 +1654,46 @@
                   </p>
 
                   <!-- Stats -->
-                  <div class="flex items-center gap-6 mb-6 pb-6 border-b border-gray-100">
+                  <div
+                    class="flex items-center gap-6 mb-6 pb-6 border-b border-gray-100"
+                  >
                     <div>
                       <div class="text-2xl font-bold text-gray-900">5+</div>
                       <div class="text-xs text-gray-500 uppercase">Years</div>
                     </div>
                     <div>
                       <div class="text-2xl font-bold text-gray-900">200+</div>
-                      <div class="text-xs text-gray-500 uppercase">Students</div>
+                      <div class="text-xs text-gray-500 uppercase">
+                        Students
+                      </div>
                     </div>
                     <div>
                       <div class="text-2xl font-bold text-brand">95%</div>
-                      <div class="text-xs text-gray-500 uppercase">Pass Rate</div>
+                      <div class="text-xs text-gray-500 uppercase">
+                        Pass Rate
+                      </div>
                     </div>
                   </div>
 
                   <!-- Specialties -->
                   <div class="space-y-2">
-                    <p class="text-sm font-semibold text-gray-700 mb-3">Specialties:</p>
+                    <p class="text-sm font-semibold text-gray-700 mb-3">
+                      Specialties:
+                    </p>
                     <div class="flex flex-wrap gap-2">
-                      <span class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full">
+                      <span
+                        class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
+                      >
                         Theory Training
                       </span>
-                      <span class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full">
+                      <span
+                        class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
+                      >
                         Urban Driving
                       </span>
-                      <span class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full">
+                      <span
+                        class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
+                      >
                         First-Time Learners
                       </span>
                     </div>
@@ -1787,34 +1849,55 @@
           <!-- Testimonials Slider -->
           <div class="relative max-w-7xl mx-auto">
             <div class="overflow-hidden">
-              <div id="testimonials-track" class="flex transition-transform duration-500 ease-out">
+              <div
+                id="testimonials-track"
+                class="flex transition-transform duration-500 ease-out"
+              >
                 <!-- Testimonial 1 -->
                 <div class="w-full md:w-1/3 flex-shrink-0 px-4">
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "Passed my test first time thanks to my amazing instructor! The lessons were fun and professional. Highly recommend Beep Beep!"
+                      "Passed my test first time thanks to my amazing
+                      instructor! The lessons were fun and professional. Highly
+                      recommend Beep Beep!"
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80" alt="Hassan Zubair" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&q=80"
+                        alt="Hassan Zubair"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
-                        <h4 class="font-semibold text-gray-800">Hassan Zubair</h4>
+                        <h4 class="font-semibold text-gray-800">
+                          Hassan Zubair
+                        </h4>
                         <p class="text-sm text-gray-500">Manchester · ⭐ 5.0</p>
                       </div>
                     </div>
@@ -1826,26 +1909,42 @@
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "Great patient instruction. I was nervous at first but they made me feel comfortable from day one. Worth every penny!"
+                      "Great patient instruction. I was nervous at first but
+                      they made me feel comfortable from day one. Worth every
+                      penny!"
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Ana Pinchi" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80"
+                        alt="Ana Pinchi"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
                         <h4 class="font-semibold text-gray-800">Ana Pinchi</h4>
                         <p class="text-sm text-gray-500">London · ⭐ 5.0</p>
@@ -1859,28 +1958,45 @@
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "Excellent service! Very flexible with scheduling and the intensive course got me test ready in just 6 weeks."
+                      "Excellent service! Very flexible with scheduling and the
+                      intensive course got me test ready in just 6 weeks."
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80" alt="Brian Settings" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&q=80"
+                        alt="Brian Settings"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
-                        <h4 class="font-semibold text-gray-800">Brian Settings</h4>
+                        <h4 class="font-semibold text-gray-800">
+                          Brian Settings
+                        </h4>
                         <p class="text-sm text-gray-500">Birmingham · ⭐ 5.0</p>
                       </div>
                     </div>
@@ -1892,28 +2008,45 @@
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "My instructor was brilliant! Very calm and explained everything clearly. Passed with only 2 minors!"
+                      "My instructor was brilliant! Very calm and explained
+                      everything clearly. Passed with only 2 minors!"
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="James Miller" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80"
+                        alt="James Miller"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
-                        <h4 class="font-semibold text-gray-800">James Miller</h4>
+                        <h4 class="font-semibold text-gray-800">
+                          James Miller
+                        </h4>
                         <p class="text-sm text-gray-500">Leeds · ⭐ 5.0</p>
                       </div>
                     </div>
@@ -1925,26 +2058,42 @@
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "Couldn't have asked for a better experience. The instructors really care about your success. Highly professional!"
+                      "Couldn't have asked for a better experience. The
+                      instructors really care about your success. Highly
+                      professional!"
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Emily Chen" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80"
+                        alt="Emily Chen"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
                         <h4 class="font-semibold text-gray-800">Emily Chen</h4>
                         <p class="text-sm text-gray-500">Liverpool · ⭐ 5.0</p>
@@ -1958,28 +2107,46 @@
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "Best driving school in the area! The instructors are friendly, knowledgeable, and made learning to drive enjoyable."
+                      "Best driving school in the area! The instructors are
+                      friendly, knowledgeable, and made learning to drive
+                      enjoyable."
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="David Thompson" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80"
+                        alt="David Thompson"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
-                        <h4 class="font-semibold text-gray-800">David Thompson</h4>
+                        <h4 class="font-semibold text-gray-800">
+                          David Thompson
+                        </h4>
                         <p class="text-sm text-gray-500">Sheffield · ⭐ 5.0</p>
                       </div>
                     </div>
@@ -1991,28 +2158,45 @@
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "I was terrified of driving but my instructor made me feel at ease. Now I drive confidently every day!"
+                      "I was terrified of driving but my instructor made me feel
+                      at ease. Now I drive confidently every day!"
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80" alt="Sophie Williams" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&q=80"
+                        alt="Sophie Williams"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
-                        <h4 class="font-semibold text-gray-800">Sophie Williams</h4>
+                        <h4 class="font-semibold text-gray-800">
+                          Sophie Williams
+                        </h4>
                         <p class="text-sm text-gray-500">Bristol · ⭐ 5.0</p>
                       </div>
                     </div>
@@ -2024,28 +2208,45 @@
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "Amazing value for money! The crash course was intense but incredibly effective. Passed first time!"
+                      "Amazing value for money! The crash course was intense but
+                      incredibly effective. Passed first time!"
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80" alt="Michael Brown" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80"
+                        alt="Michael Brown"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
-                        <h4 class="font-semibold text-gray-800">Michael Brown</h4>
+                        <h4 class="font-semibold text-gray-800">
+                          Michael Brown
+                        </h4>
                         <p class="text-sm text-gray-500">Newcastle · ⭐ 5.0</p>
                       </div>
                     </div>
@@ -2057,28 +2258,46 @@
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "Professional, punctual, and patient. My instructor helped me overcome my anxiety and build real confidence behind the wheel."
+                      "Professional, punctual, and patient. My instructor helped
+                      me overcome my anxiety and build real confidence behind
+                      the wheel."
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80" alt="Rachel Green" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&q=80"
+                        alt="Rachel Green"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
-                        <h4 class="font-semibold text-gray-800">Rachel Green</h4>
+                        <h4 class="font-semibold text-gray-800">
+                          Rachel Green
+                        </h4>
                         <p class="text-sm text-gray-500">Glasgow · ⭐ 5.0</p>
                       </div>
                     </div>
@@ -2090,28 +2309,45 @@
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "The lesson structure was perfect! Each session built on the last. I felt prepared and confident on test day."
+                      "The lesson structure was perfect! Each session built on
+                      the last. I felt prepared and confident on test day."
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?w=100&q=80" alt="Oliver Martinez" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1489980557514-251d61e3eeb6?w=100&q=80"
+                        alt="Oliver Martinez"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
-                        <h4 class="font-semibold text-gray-800">Oliver Martinez</h4>
+                        <h4 class="font-semibold text-gray-800">
+                          Oliver Martinez
+                        </h4>
                         <p class="text-sm text-gray-500">Edinburgh · ⭐ 5.0</p>
                       </div>
                     </div>
@@ -2123,28 +2359,45 @@
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "Fantastic experience from start to finish! They genuinely care about every student's progress and success."
+                      "Fantastic experience from start to finish! They genuinely
+                      care about every student's progress and success."
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&q=80" alt="Isabella Taylor" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&q=80"
+                        alt="Isabella Taylor"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
-                        <h4 class="font-semibold text-gray-800">Isabella Taylor</h4>
+                        <h4 class="font-semibold text-gray-800">
+                          Isabella Taylor
+                        </h4>
                         <p class="text-sm text-gray-500">Cardiff · ⭐ 5.0</p>
                       </div>
                     </div>
@@ -2156,28 +2409,45 @@
                   <div class="bg-white p-8 rounded-2xl shadow-md h-full">
                     <div class="flex gap-1 mb-4">
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                       <svg class="w-5 h-5" viewBox="0 0 24 24" fill="#FF6B00">
-                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        <polygon
+                          points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                        />
                       </svg>
                     </div>
                     <p class="text-gray-600 italic mb-6 leading-relaxed">
-                      "I recommend Beep Beep to everyone! Great rates, modern cars, and instructors who actually want you to pass!"
+                      "I recommend Beep Beep to everyone! Great rates, modern
+                      cars, and instructors who actually want you to pass!"
                     </p>
                     <div class="flex items-center gap-3">
-                      <img src="https://images.unsplash.com/photo-1507019403270-cca502add9f8?w=100&q=80" alt="Nathan Davis" class="w-12 h-12 rounded-full object-cover"/>
+                      <img
+                        src="https://images.unsplash.com/photo-1507019403270-cca502add9f8?w=100&q=80"
+                        alt="Nathan Davis"
+                        class="w-12 h-12 rounded-full object-cover"
+                      />
                       <div>
-                        <h4 class="font-semibold text-gray-800">Nathan Davis</h4>
+                        <h4 class="font-semibold text-gray-800">
+                          Nathan Davis
+                        </h4>
                         <p class="text-sm text-gray-500">Nottingham · ⭐ 5.0</p>
                       </div>
                     </div>
@@ -2187,19 +2457,48 @@
             </div>
 
             <!-- Navigation Buttons -->
-            <button id="prev-testimonial" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors z-10 hidden md:block">
-              <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            <button
+              id="prev-testimonial"
+              class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors z-10 hidden md:block"
+            >
+              <svg
+                class="w-6 h-6 text-gray-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 19l-7-7 7-7"
+                />
               </svg>
             </button>
-            <button id="next-testimonial" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors z-10 hidden md:block">
-              <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+            <button
+              id="next-testimonial"
+              class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-50 transition-colors z-10 hidden md:block"
+            >
+              <svg
+                class="w-6 h-6 text-gray-800"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
               </svg>
             </button>
 
             <!-- Dots Indicator -->
-            <div id="testimonial-dots" class="flex justify-center gap-2 mt-8"></div>
+            <div
+              id="testimonial-dots"
+              class="flex justify-center gap-2 mt-8"
+            ></div>
           </div>
         </div>
       </section>
@@ -2313,7 +2612,12 @@
       const nextTestimonialBtn = document.getElementById("next-testimonial");
       const dotsContainer = document.getElementById("testimonial-dots");
 
-      if (testimonialsTrack && prevTestimonialBtn && nextTestimonialBtn && dotsContainer) {
+      if (
+        testimonialsTrack &&
+        prevTestimonialBtn &&
+        nextTestimonialBtn &&
+        dotsContainer
+      ) {
         const testimonials = testimonialsTrack.children;
         const totalTestimonials = testimonials.length;
         let currentIndex = 0;
@@ -2685,9 +2989,9 @@
 
     <!-- Services Carousel Auto-Slide Script -->
     <script>
-      (function() {
-        const carousel = document.getElementById('servicesCarousel');
-        const dots = document.querySelectorAll('.carousel-dot');
+      (function () {
+        const carousel = document.getElementById("servicesCarousel");
+        const dots = document.querySelectorAll(".carousel-dot");
         let currentIndex = 0;
         const totalSlides = 2; // We have 6 cards, showing 3 at a time = 2 slides
         let autoSlideInterval;
@@ -2701,11 +3005,11 @@
           // Update dots
           dots.forEach((dot, index) => {
             if (index === currentIndex) {
-              dot.classList.remove('bg-gray-300');
-              dot.classList.add('bg-brand');
+              dot.classList.remove("bg-gray-300");
+              dot.classList.add("bg-brand");
             } else {
-              dot.classList.remove('bg-brand');
-              dot.classList.add('bg-gray-300');
+              dot.classList.remove("bg-brand");
+              dot.classList.add("bg-gray-300");
             }
           });
         }
@@ -2729,41 +3033,43 @@
 
         // Add click handlers to dots
         dots.forEach((dot, index) => {
-          dot.addEventListener('click', () => goToSlide(index));
+          dot.addEventListener("click", () => goToSlide(index));
         });
 
         // Start auto-sliding
         startAutoSlide();
 
         // Pause auto-slide on hover
-        carousel.addEventListener('mouseenter', () => {
+        carousel.addEventListener("mouseenter", () => {
           clearInterval(autoSlideInterval);
         });
 
         // Resume auto-slide when mouse leaves
-        carousel.addEventListener('mouseleave', () => {
+        carousel.addEventListener("mouseleave", () => {
           startAutoSlide();
         });
       })();
 
       // Courses horizontal scroll navigation
-      (function() {
-        const scrollContainer = document.getElementById('courses-scroll-container');
-        const prevBtn = document.getElementById('courses-prev-btn');
-        const nextBtn = document.getElementById('courses-next-btn');
+      (function () {
+        const scrollContainer = document.getElementById(
+          "courses-scroll-container",
+        );
+        const prevBtn = document.getElementById("courses-prev-btn");
+        const nextBtn = document.getElementById("courses-next-btn");
 
         if (scrollContainer && prevBtn && nextBtn) {
-          nextBtn.addEventListener('click', () => {
+          nextBtn.addEventListener("click", () => {
             scrollContainer.scrollBy({
               left: scrollContainer.offsetWidth,
-              behavior: 'smooth'
+              behavior: "smooth",
             });
           });
 
-          prevBtn.addEventListener('click', () => {
+          prevBtn.addEventListener("click", () => {
             scrollContainer.scrollBy({
               left: -scrollContainer.offsetWidth,
-              behavior: 'smooth'
+              behavior: "smooth",
             });
           });
         }
