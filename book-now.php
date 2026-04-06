@@ -433,6 +433,116 @@ include 'includes/header.php';
                     </div>
                   </div>
 
+                  <!-- Account Creation (Optional) -->
+                  <div class="space-y-4">
+                    <div class="flex items-center justify-between border-b pb-2">
+                      <h4 class="font-semibold text-gray-700">
+                        Create an Account (Optional)
+                      </h4>
+                      <span
+                        class="text-xs text-brand font-medium bg-brand/10 px-2 py-1 rounded-full"
+                      >
+                        Recommended
+                      </span>
+                    </div>
+                    <p class="text-sm text-gray-600">
+                      Create an account to track your bookings, view your progress, and manage your lessons. Your credentials will be emailed to you.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                      <div>
+                        <label
+                          for="password"
+                          class="block text-sm font-medium text-gray-700 mb-2"
+                          >Password</label
+                        >
+                        <div class="relative">
+                          <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all pr-12"
+                            placeholder="Create password"
+                          />
+                          <button
+                            type="button"
+                            id="togglePassword"
+                            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-brand transition-colors"
+                          >
+                            <svg
+                              id="eyeIcon"
+                              class="w-5 h-5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                              />
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                      <div>
+                        <label
+                          for="confirmPassword"
+                          class="block text-sm font-medium text-gray-700 mb-2"
+                          >Confirm Password</label
+                        >
+                        <div class="relative">
+                          <input
+                            type="password"
+                            id="confirmPassword"
+                            name="confirmPassword"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all pr-12"
+                            placeholder="Confirm password"
+                          />
+                          <button
+                            type="button"
+                            id="toggleConfirmPassword"
+                            class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-brand transition-colors"
+                          >
+                            <svg
+                              id="eyeIconConfirm"
+                              class="w-5 h-5"
+                              fill="none"
+                              stroke="currentColor"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                              />
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="passwordHelp" class="hidden">
+                      <div class="p-3 bg-blue-50 rounded-lg border border-blue-200">
+                        <p class="text-sm text-blue-800">
+                          <strong>Password requirements:</strong> At least 8 characters, including one uppercase letter, one number, and one special character.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
                   <!-- Terms and Consent -->
                   <div class="space-y-3">
                     <div class="flex items-start gap-3">
@@ -860,6 +970,110 @@ include 'includes/header.php';
             licenseNumberField.classList.add("hidden");
           }
         });
+
+      // Toggle password visibility
+      const togglePassword = document.getElementById("togglePassword");
+      const passwordInput = document.getElementById("password");
+      const eyeIcon = document.getElementById("eyeIcon");
+
+      if (togglePassword && passwordInput && eyeIcon) {
+        togglePassword.addEventListener("click", () => {
+          const type =
+            passwordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          passwordInput.setAttribute("type", type);
+
+          if (type === "text") {
+            eyeIcon.innerHTML = `
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+            `;
+          } else {
+            eyeIcon.innerHTML = `
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            `;
+          }
+        });
+      }
+
+      // Toggle confirm password visibility
+      const toggleConfirmPassword = document.getElementById(
+        "toggleConfirmPassword"
+      );
+      const confirmPasswordInput = document.getElementById("confirmPassword");
+      const eyeIconConfirm = document.getElementById("eyeIconConfirm");
+
+      if (toggleConfirmPassword && confirmPasswordInput && eyeIconConfirm) {
+        toggleConfirmPassword.addEventListener("click", () => {
+          const type =
+            confirmPasswordInput.getAttribute("type") === "password"
+              ? "text"
+              : "password";
+          confirmPasswordInput.setAttribute("type", type);
+
+          if (type === "text") {
+            eyeIconConfirm.innerHTML = `
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+            `;
+          } else {
+            eyeIconConfirm.innerHTML = `
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+            `;
+          }
+        });
+      }
+
+      // Password validation and form submission
+      const form = document.querySelector("form");
+      const passwordHelp = document.getElementById("passwordHelp");
+
+      if (form && passwordInput && confirmPasswordInput) {
+        form.addEventListener("submit", function (e) {
+          const password = passwordInput.value;
+          const confirmPassword = confirmPasswordInput.value;
+
+          // Only validate if password field has a value (optional account creation)
+          if (password || confirmPassword) {
+            // Check password strength
+            const hasMinLength = password.length >= 8;
+            const hasUppercase = /[A-Z]/.test(password);
+            const hasNumber = /[0-9]/.test(password);
+            const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+            if (
+              !hasMinLength ||
+              !hasUppercase ||
+              !hasNumber ||
+              !hasSpecial
+            ) {
+              e.preventDefault();
+              passwordHelp.classList.remove("hidden");
+              alert(
+                "Password must be at least 8 characters and include an uppercase letter, a number, and a special character."
+              );
+              return;
+            }
+
+            // Check passwords match
+            if (password !== confirmPassword) {
+              e.preventDefault();
+              alert("Passwords do not match. Please try again.");
+              return;
+            }
+
+            passwordHelp.classList.add("hidden");
+          }
+        });
+
+        // Show password help when user starts typing
+        if (passwordInput) {
+          passwordInput.addEventListener("focus", () => {
+            passwordHelp.classList.remove("hidden");
+          });
+        }
+      }
     </script>
 
 <?php include 'includes/footer.php'; ?>
