@@ -1,63 +1,8 @@
-<!doctype html>
-<html lang="en-GB">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Coming Soon | Beep Beep Driving School</title>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Custom Config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              primary: ["Poppins", "sans-serif"],
-            },
-            colors: {
-              primary: "#0066CC",
-              "primary-dark": "#0052A3",
-              secondary: "#FFD700",
-              "secondary-dark": "#E6C200",
-            },
-          },
-        },
-      };
-    </script>
-  </head>
-
-  <body class="font-primary bg-gray-50">
-    <!-- Navigation -->
-    <header class="fixed top-0 left-0 w-full bg-white shadow-sm z-[300]">
-      <nav
-        class="container mx-auto px-4 py-4 flex justify-between items-center"
-      >
-        <a
-          href="index.php"
-          class="flex items-center gap-2 text-2xl font-bold text-primary"
-        >
-          <span>🚗</span>
-          <span>Beep Beep</span>
-        </a>
-
-        <a
-          href="index.php"
-          class="px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-primary-dark transition-all"
-        >
-          Back to Home
-        </a>
-      </nav>
-    </header>
+<?php
+$pageTitle = 'Page Coming Soon | Beep Beep Driving School - Learn to Drive with Confidence';
+$currentPage = 'coming-soon';
+include 'includes/header.php';
+?>
 
     <!-- Main Content -->
     <main class="min-h-screen flex items-center justify-center pt-20">
@@ -206,16 +151,4 @@
       </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-      <div class="container mx-auto px-4 text-center">
-        <p class="text-gray-400 mb-4">
-          &copy; 2026 Beep Beep Driving School. All rights reserved.
-        </p>
-        <p class="text-gray-500 text-sm">
-          This is a placeholder page. Full page coming soon!
-        </p>
-      </div>
-    </footer>
-  </body>
-</html>
+<?php include 'includes/footer.php'; ?>
