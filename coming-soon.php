@@ -43,7 +43,7 @@
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
         <a
-          href="index.html"
+          href="index.php"
           class="flex items-center gap-2 text-2xl font-bold text-primary"
         >
           <span>🚗</span>
@@ -51,7 +51,7 @@
         </a>
 
         <a
-          href="index.html"
+          href="index.php"
           class="px-6 py-3 bg-primary text-white font-medium rounded-md hover:bg-primary-dark transition-all"
         >
           Back to Home
@@ -171,7 +171,7 @@
           <!-- CTA Buttons -->
           <div class="flex flex-wrap gap-4 justify-center">
             <a
-              href="index.html"
+              href="index.php"
               class="px-8 py-4 bg-primary text-white font-medium rounded-md hover:bg-primary-dark transition-all shadow-md hover:-translate-y-0.5"
             >
               Explore Our Services

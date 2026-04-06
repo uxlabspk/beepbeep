@@ -13,7 +13,7 @@ A modern, responsive driving school website built with **HTML5** and **Tailwind 
 
 ```
 beepbeep/
-├── index.html          # Homepage
+├── index.php          # Homepage
 ├── css/                # Empty (not using custom CSS)
 ├── js/
 │   └── main.js        # JavaScript functionality
@@ -47,11 +47,11 @@ beepbeep/
 
 ### Option 1: Direct HTML (Recommended for Client Review)
 
-Simply open `index.html` in your browser:
+Simply open `index.php` in your browser:
 
 ```bash
 # On Linux
-xdg-open index.html
+xdg-open index.php
 
 # Or right-click and "Open with Browser"
 ```
@@ -68,7 +68,7 @@ python3 -m http.server 8000
 ## 📝 Next Steps
 
 ### For Client Presentation:
-1. ✅ Open `index.html` in a browser to show the design
+1. ✅ Open `index.php` in a browser to show the design
 2. ✅ Replace placeholder images in the `images/` folder
 3. ✅ Update phone number, email, and address
 4. ✅ Customize any text content as needed
@@ -105,19 +105,19 @@ images/
 
 Based on the navigation, you'll need these additional pages:
 
-1. `about.html` - About Us
-2. `lessons.html` - Lessons/Services detail
-3. `prices.html` - Pricing packages
-4. `testimonials.html` - More reviews
-5. `contact.html` - Contact form
-6. `book-now.html` - Booking system
+1. `about.php` - About Us
+2. `lessons.php` - Lessons/Services detail
+3. `prices.php` - Pricing packages
+4. `testimonials.php` - More reviews
+5. `contact.php` - Contact form
+6. `book-now.php` - Booking system
 
 ## 💡 Tailwind CSS Notes
 
 This project uses Tailwind CSS via CDN for rapid development:
 
 ```html
-<!-- Already configured in index.html -->
+<!-- Already configured in index.php -->
 <script src="https://cdn.tailwindcss.com"></script>
 ```
 
@@ -128,7 +128,7 @@ This project uses Tailwind CSS via CDN for rapid development:
 - Responsive utilities built-in
 
 **Customization:**
-The Tailwind config is in the `<head>` of `index.html`:
+The Tailwind config is in the `<head>` of `index.php`:
 
 ```javascript
 tailwind.config = {
@@ -147,7 +147,7 @@ tailwind.config = {
 ## 🔧 Customization Tips
 
 ### Change Colors:
-Edit the Tailwind config in `index.html`
+Edit the Tailwind config in `index.php`
 
 ### Adjust Spacing:
 Tailwind uses a spacing scale:

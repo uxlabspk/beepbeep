@@ -75,35 +75,35 @@
         <ul class="flex flex-col gap-6 items-center">
           <li>
             <a
-              href="index.html"
+              href="index.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >Home</a
             >
           </li>
           <li>
             <a
-              href="about.html"
+              href="about.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >About Us</a
             >
           </li>
           <li>
             <a
-              href="lessons.html"
+              href="lessons.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >Courses</a
             >
           </li>
           <li>
             <a
-              href="contact.html"
+              href="contact.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >Contact Us</a
             >
           </li>
           <li>
             <a
-              href="book-now.html"
+              href="book-now.php"
               class="px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all"
               >Book Now</a
             >
@@ -203,7 +203,7 @@
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
         <a
-          href="index.html"
+          href="index.php"
           class="flex items-center gap-2 text-2xl font-bold text-dark"
         >
           <div
@@ -228,35 +228,35 @@
         <ul class="hidden lg:flex gap-8 items-center">
           <li>
             <a
-              href="index.html"
+              href="index.php"
               class="font-medium text-gray-600 hover:text-brand transition-colors"
               >Home</a
             >
           </li>
           <li>
             <a
-              href="about.html"
+              href="about.php"
               class="font-medium text-gray-600 hover:text-brand transition-colors"
               >About Us</a
             >
           </li>
           <li>
             <a
-              href="lessons.html"
+              href="lessons.php"
               class="font-medium text-brand border-b-2 border-brand pb-1"
               >Courses</a
             >
           </li>
           <li>
             <a
-              href="contact.html"
+              href="contact.php"
               class="font-medium text-gray-600 hover:text-brand transition-colors"
               >Contact Us</a
             >
           </li>
         </ul>
         <a
-          href="book-now.html"
+          href="book-now.php"
           class="hidden lg:inline-block px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-lg"
         >
           Book Now
@@ -585,7 +585,7 @@
                     </div>
                   </div>
                   <a
-                    href="book-now.html"
+                    href="book-now.php"
                     class="px-7 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
                   >
                     Book Now
@@ -778,7 +778,7 @@
                     </div>
                   </div>
                   <a
-                    href="book-now.html"
+                    href="book-now.php"
                     class="px-7 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
                   >
                     Book Now
@@ -977,7 +977,7 @@
                     </div>
                   </div>
                   <a
-                    href="book-now.html"
+                    href="book-now.php"
                     class="px-7 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
                   >
                     Book Now
@@ -1176,7 +1176,7 @@
                     </div>
                   </div>
                   <a
-                    href="book-now.html"
+                    href="book-now.php"
                     class="px-7 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
                   >
                     Book Now
@@ -1369,7 +1369,7 @@
                     </div>
                   </div>
                   <a
-                    href="book-now.html"
+                    href="book-now.php"
                     class="px-7 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
                   >
                     Book Now
@@ -1562,7 +1562,7 @@
                     </div>
                   </div>
                   <a
-                    href="book-now.html"
+                    href="book-now.php"
                     class="px-7 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0"
                   >
                     Book Now
@@ -1673,7 +1673,7 @@
                   <span class="text-gray-400 text-sm">/course</span>
                 </div>
                 <a
-                  href="book-now.html"
+                  href="book-now.php"
                   class="px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
                 >
                   Enrol Now
@@ -1888,13 +1888,13 @@
             </div>
             <div class="flex gap-4">
               <a
-                href="book-now.html"
+                href="book-now.php"
                 class="px-8 py-4 bg-white text-brand font-semibold rounded-lg hover:bg-gray-100 transition-all hover:shadow-xl"
               >
                 Book Your First Lesson
               </a>
               <a
-                href="contact.html"
+                href="contact.php"
                 class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-brand transition-all"
               >
                 Contact Us
@@ -1913,7 +1913,7 @@
         >
           <div>
             <a
-              href="index.html"
+              href="index.php"
               class="flex items-center gap-2 text-2xl font-bold mb-4"
             >
               <div
@@ -2118,17 +2118,17 @@
           </p>
           <ul class="flex gap-6 text-gray-500 text-sm">
             <li>
-              <a href="privacy.html" class="hover:text-brand transition-colors"
+              <a href="privacy.php" class="hover:text-brand transition-colors"
                 >Privacy Policy</a
               >
             </li>
             <li>
-              <a href="terms.html" class="hover:text-brand transition-colors"
+              <a href="terms.php" class="hover:text-brand transition-colors"
                 >Terms & Conditions</a
               >
             </li>
             <li>
-              <a href="cookies.html" class="hover:text-brand transition-colors"
+              <a href="cookies.php" class="hover:text-brand transition-colors"
                 >Cookie Policy</a
               >
             </li>

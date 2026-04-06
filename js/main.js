@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Active Navigation Link Based on Current Page
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const currentPage = window.location.pathname.split('/').pop() || 'index.php';
     const navLinks = document.querySelectorAll('.nav__link');
 
     navLinks.forEach(link => {

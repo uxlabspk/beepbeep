@@ -75,35 +75,35 @@
         <ul class="flex flex-col gap-6 items-center">
           <li>
             <a
-              href="index.html"
+              href="index.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >Home</a
             >
           </li>
           <li>
             <a
-              href="about.html"
+              href="about.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >About Us</a
             >
           </li>
           <li>
             <a
-              href="lessons.html"
+              href="lessons.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >Courses</a
             >
           </li>
           <li>
             <a
-              href="contact.html"
+              href="contact.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >Contact Us</a
             >
           </li>
           <li>
             <a
-              href="book-now.html"
+              href="book-now.php"
               class="px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all"
               >Book Now</a
             >
@@ -203,7 +203,7 @@
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
         <a
-          href="index.html"
+          href="index.php"
           class="flex items-center gap-2 text-2xl font-bold text-dark"
         >
           <div
@@ -228,35 +228,35 @@
         <ul class="hidden lg:flex gap-8 items-center">
           <li>
             <a
-              href="index.html"
+              href="index.php"
               class="font-medium text-gray-600 hover:text-brand transition-colors"
               >Home</a
             >
           </li>
           <li>
             <a
-              href="about.html"
+              href="about.php"
               class="font-medium text-gray-600 hover:text-brand transition-colors"
               >About Us</a
             >
           </li>
           <li>
             <a
-              href="lessons.html"
+              href="lessons.php"
               class="font-medium text-gray-600 hover:text-brand transition-colors"
               >Courses</a
             >
           </li>
           <li>
             <a
-              href="contact.html"
+              href="contact.php"
               class="font-medium text-brand border-b-2 border-brand pb-1"
               >Contact Us</a
             >
           </li>
         </ul>
         <a
-          href="book-now.html"
+          href="book-now.php"
           class="hidden lg:inline-block px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-lg"
           >Book Now</a
         >
@@ -662,7 +662,7 @@
                     />
                     <label for="consent" class="text-sm text-gray-600">
                       I agree to the
-                      <a href="privacy.html" class="text-brand hover:underline"
+                      <a href="privacy.php" class="text-brand hover:underline"
                         >Privacy Policy</a
                       >
                       and consent to having this website store my submitted
@@ -948,7 +948,7 @@
             </div>
             <div class="flex flex-wrap gap-4 lg:justify-end">
               <a
-                href="book-now.html"
+                href="book-now.php"
                 class="px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
               >
                 Book Now
@@ -973,7 +973,7 @@
         >
           <div>
             <a
-              href="index.html"
+              href="index.php"
               class="flex items-center gap-2 text-2xl font-bold mb-4"
             >
               <div
@@ -1043,42 +1043,42 @@
             <ul class="space-y-3 text-gray-400 text-sm">
               <li>
                 <a
-                  href="lessons.html#beginners"
+                  href="lessons.php#beginners"
                   class="hover:text-brand transition-colors"
                   >Beginner Lessons</a
                 >
               </li>
               <li>
                 <a
-                  href="lessons.html#refresher"
+                  href="lessons.php#refresher"
                   class="hover:text-brand transition-colors"
                   >Refresher Courses</a
                 >
               </li>
               <li>
                 <a
-                  href="lessons.html#test-prep"
+                  href="lessons.php#test-prep"
                   class="hover:text-brand transition-colors"
                   >Test Preparation</a
                 >
               </li>
               <li>
                 <a
-                  href="lessons.html#manual"
+                  href="lessons.php#manual"
                   class="hover:text-brand transition-colors"
                   >Manual Driving</a
                 >
               </li>
               <li>
                 <a
-                  href="lessons.html#automatic"
+                  href="lessons.php#automatic"
                   class="hover:text-brand transition-colors"
                   >Automatic Driving</a
                 >
               </li>
               <li>
                 <a
-                  href="lessons.html#intensive"
+                  href="lessons.php#intensive"
                   class="hover:text-brand transition-colors"
                   >Intensive Courses</a
                 >
@@ -1190,17 +1190,17 @@
           </p>
           <ul class="flex gap-6 text-gray-500 text-sm">
             <li>
-              <a href="privacy.html" class="hover:text-brand transition-colors"
+              <a href="privacy.php" class="hover:text-brand transition-colors"
                 >Privacy Policy</a
               >
             </li>
             <li>
-              <a href="terms.html" class="hover:text-brand transition-colors"
+              <a href="terms.php" class="hover:text-brand transition-colors"
                 >Terms & Conditions</a
               >
             </li>
             <li>
-              <a href="cookies.html" class="hover:text-brand transition-colors"
+              <a href="cookies.php" class="hover:text-brand transition-colors"
                 >Cookie Policy</a
               >
             </li>

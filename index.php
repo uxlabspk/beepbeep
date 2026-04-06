@@ -85,35 +85,35 @@
         <ul class="flex flex-col gap-6 items-center">
           <li>
             <a
-              href="index.html"
+              href="index.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >Home</a
             >
           </li>
           <li>
             <a
-              href="about.html"
+              href="about.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >About Us</a
             >
           </li>
           <li>
             <a
-              href="lessons.html"
+              href="lessons.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >Courses</a
             >
           </li>
           <li>
             <a
-              href="contact.html"
+              href="contact.php"
               class="text-white text-xl font-medium hover:text-brand transition-colors"
               >Contact Us</a
             >
           </li>
           <li>
             <a
-              href="book-now.html"
+              href="book-now.php"
               class="px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all"
               >Book Now</a
             >
@@ -213,7 +213,7 @@
         class="container mx-auto px-4 py-4 flex justify-between items-center"
       >
         <a
-          href="index.html"
+          href="index.php"
           class="flex items-center gap-2 text-2xl font-bold text-dark"
         >
           <div
@@ -238,35 +238,35 @@
         <ul class="hidden lg:flex gap-8 items-center">
           <li>
             <a
-              href="index.html"
+              href="index.php"
               class="font-medium text-brand border-b-2 border-brand pb-1"
               >Home</a
             >
           </li>
           <li>
             <a
-              href="about.html"
+              href="about.php"
               class="font-medium text-gray-600 hover:text-brand transition-colors"
               >About Us</a
             >
           </li>
           <li>
             <a
-              href="lessons.html"
+              href="lessons.php"
               class="font-medium text-gray-600 hover:text-brand transition-colors"
               >Courses</a
             >
           </li>
           <li>
             <a
-              href="contact.html"
+              href="contact.php"
               class="font-medium text-gray-600 hover:text-brand transition-colors"
               >Contact Us</a
             >
           </li>
         </ul>
         <a
-          href="book-now.html"
+          href="book-now.php"
           class="hidden lg:inline-block px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-lg"
         >
           Book Now
@@ -344,13 +344,13 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4 mb-10">
               <a
-                href="book-now.html"
+                href="book-now.php"
                 class="px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-xl text-lg text-center"
               >
                 Book Your First Lesson
               </a>
               <a
-                href="lessons.html"
+                href="lessons.php"
                 class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all text-lg text-center"
               >
                 View Packages
@@ -702,7 +702,7 @@
                 </div>
               </div>
               <a
-                href="contact.html"
+                href="contact.php"
                 class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg"
               >
                 Get in Touch
@@ -803,7 +803,7 @@
                       all three qualifying tests.
                     </p>
                     <a
-                      href="lessons.html"
+                      href="lessons.php"
                       class="text-brand font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all"
                     >
                       Read More
@@ -847,7 +847,7 @@
                       skills.
                     </p>
                     <a
-                      href="lessons.html"
+                      href="lessons.php"
                       class="text-brand font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all"
                     >
                       Read More
@@ -891,7 +891,7 @@
                       colours.
                     </p>
                     <a
-                      href="lessons.html"
+                      href="lessons.php"
                       class="text-brand font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all"
                     >
                       Read More
@@ -935,7 +935,7 @@
                       nervous drivers.
                     </p>
                     <a
-                      href="lessons.html"
+                      href="lessons.php"
                       class="text-brand font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all"
                     >
                       Read More
@@ -979,7 +979,7 @@
                       weather conditions.
                     </p>
                     <a
-                      href="lessons.html"
+                      href="lessons.php"
                       class="text-brand font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all"
                     >
                       Read More
@@ -1023,7 +1023,7 @@
                       daily lessons.
                     </p>
                     <a
-                      href="lessons.html"
+                      href="lessons.php"
                       class="text-brand font-semibold text-sm flex items-center gap-2 hover:gap-3 transition-all"
                     >
                       Read More
@@ -1212,7 +1212,7 @@
                     >
                   </div>
                   <a
-                    href="lessons.html"
+                    href="lessons.php"
                     class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
                   >
                     Enrol Now
@@ -1308,7 +1308,7 @@
                     >
                   </div>
                   <a
-                    href="lessons.html"
+                    href="lessons.php"
                     class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
                   >
                     Enrol Now
@@ -1404,7 +1404,7 @@
                     >
                   </div>
                   <a
-                    href="lessons.html"
+                    href="lessons.php"
                     class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
                   >
                     Enrol Now
@@ -1754,7 +1754,7 @@
                 </div>
               </div>
               <a
-                href="book-now.html"
+                href="book-now.php"
                 class="inline-block px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg"
               >
                 Book A Lesson Now
@@ -1808,13 +1808,13 @@
             </div>
             <div class="flex flex-wrap gap-4 justify-center sm:justify-end">
               <a
-                href="contact.html"
+                href="contact.php"
                 class="px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-xl"
               >
                 Contact Now
               </a>
               <a
-                href="book-now.html"
+                href="book-now.php"
                 class="px-8 py-4 bg-transparent border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-gray-900 transition-all"
               >
                 Book A Lesson
@@ -2751,7 +2751,7 @@
         >
           <div>
             <a
-              href="index.html"
+              href="index.php"
               class="flex items-center gap-2 text-2xl font-bold mb-4"
             >
               <div
@@ -2821,42 +2821,42 @@
             <ul class="space-y-3 text-gray-400 text-sm">
               <li>
                 <a
-                  href="lessons.html#beginners"
+                  href="lessons.php#beginners"
                   class="hover:text-brand transition-colors"
                   >Beginner Lessons</a
                 >
               </li>
               <li>
                 <a
-                  href="lessons.html#refresher"
+                  href="lessons.php#refresher"
                   class="hover:text-brand transition-colors"
                   >Refresher Courses</a
                 >
               </li>
               <li>
                 <a
-                  href="lessons.html#test-prep"
+                  href="lessons.php#test-prep"
                   class="hover:text-brand transition-colors"
                   >Test Preparation</a
                 >
               </li>
               <li>
                 <a
-                  href="lessons.html#manual"
+                  href="lessons.php#manual"
                   class="hover:text-brand transition-colors"
                   >Manual Driving</a
                 >
               </li>
               <li>
                 <a
-                  href="lessons.html#automatic"
+                  href="lessons.php#automatic"
                   class="hover:text-brand transition-colors"
                   >Automatic Driving</a
                 >
               </li>
               <li>
                 <a
-                  href="lessons.html"
+                  href="lessons.php"
                   class="hover:text-brand transition-colors"
                   >Intensive Courses</a
                 >
@@ -2968,17 +2968,17 @@
           </p>
           <ul class="flex gap-6 text-gray-500 text-sm">
             <li>
-              <a href="privacy.html" class="hover:text-brand transition-colors"
+              <a href="privacy.php" class="hover:text-brand transition-colors"
                 >Privacy Policy</a
               >
             </li>
             <li>
-              <a href="terms.html" class="hover:text-brand transition-colors"
+              <a href="terms.php" class="hover:text-brand transition-colors"
                 >Terms & Conditions</a
               >
             </li>
             <li>
-              <a href="cookies.html" class="hover:text-brand transition-colors"
+              <a href="cookies.php" class="hover:text-brand transition-colors"
                 >Cookie Policy</a
               >
             </li>
