@@ -1,1 +1,32 @@
-doc
+```php
+# Compiled and build artifacts
+*.pyc
+__pycache__/
+
+# Dependencies
+vendor/
+composer.lock
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Environment
+.env
+.env.local
+.env.*
+
+# Editors
+.vscode/
+.idea/
+
+# Backup files
+*~
+*.bak
+*.orig
+
+# OS generated files
+.DS_Store
+Thumbs.db
+```
