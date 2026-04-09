@@ -61,6 +61,9 @@ try {
     loginUser($user);
 
     setFlash('success', 'Welcome back, ' . $user['first_name'] . '!');
+    if ($user['role'] === 'admin') {
+        redirect('/admin/index.php');
+    }
     redirect('/dashboard.php');
 
 } catch (PDOException $e) {
