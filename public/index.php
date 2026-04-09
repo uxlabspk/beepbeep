@@ -1481,7 +1481,10 @@ include dirname(__DIR__) . '/includes/header.php';
               <!-- Play button overlay -->
               <div class="absolute inset-0 flex items-center justify-center">
                 <button
+                  type="button"
+                  data-video-open
                   class="w-16 h-16 bg-brand rounded-full flex items-center justify-center shadow-2xl hover:bg-brand-dark transition-colors hover:scale-110 transform"
+                  aria-label="Play driving experience video"
                 >
                   <svg
                     class="w-7 h-7 text-white ml-1"
@@ -1496,6 +1499,40 @@ include dirname(__DIR__) . '/includes/header.php';
           </div>
         </div>
       </section>
+
+      <div
+        id="video-modal"
+        class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 px-4"
+        aria-hidden="true"
+      >
+        <div
+          class="absolute inset-0"
+          data-video-close
+          aria-hidden="true"
+        ></div>
+        <div class="relative z-10 w-full max-w-4xl">
+          <button
+            type="button"
+            data-video-close
+            class="absolute -top-12 right-0 text-white text-3xl leading-none hover:text-brand transition-colors"
+            aria-label="Close video player"
+          >
+            &times;
+          </button>
+          <div class="overflow-hidden rounded-2xl bg-black shadow-2xl">
+            <video
+              id="experience-video"
+              class="w-full aspect-video bg-black"
+              controls
+              playsinline
+              preload="metadata"
+            >
+              <source src="assets/videos/clip.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
 
       <!-- CTA Banner -->
       <section class="bg-dark py-16">
@@ -2290,6 +2327,43 @@ include dirname(__DIR__) . '/includes/header.php';
 
         setSlide(0);
         startAutoplay();
+      }
+
+      // Experience video modal
+      const videoModal = document.getElementById("video-modal");
+      const experienceVideo = document.getElementById("experience-video");
+      const openVideoButton = document.querySelector("[data-video-open]");
+      const closeVideoButtons = Array.from(
+        document.querySelectorAll("[data-video-close]"),
+      );
+
+      if (videoModal && experienceVideo && openVideoButton) {
+        const openVideoModal = () => {
+          videoModal.classList.remove("hidden");
+          videoModal.classList.add("flex");
+          videoModal.setAttribute("aria-hidden", "false");
+          experienceVideo.currentTime = 0;
+          experienceVideo.play().catch(() => {});
+        };
+
+        const closeVideoModal = () => {
+          experienceVideo.pause();
+          experienceVideo.currentTime = 0;
+          videoModal.classList.add("hidden");
+          videoModal.classList.remove("flex");
+          videoModal.setAttribute("aria-hidden", "true");
+        };
+
+        openVideoButton.addEventListener("click", openVideoModal);
+        closeVideoButtons.forEach((button) => {
+          button.addEventListener("click", closeVideoModal);
+        });
+
+        window.addEventListener("keydown", (event) => {
+          if (event.key === "Escape" && !videoModal.classList.contains("hidden")) {
+            closeVideoModal();
+          }
+        });
       }
 
       // Testimonials slider
