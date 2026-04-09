@@ -166,13 +166,3 @@ CREATE TABLE IF NOT EXISTS payments (
     INDEX idx_user (user_id),
     INDEX idx_status (status)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
--- --------------------------------------------
--- SEED DATA - Courses
--- --------------------------------------------
-INSERT INTO courses (name, slug, description, level, transmission, min_hours, price_per_lesson, package_price, package_hours, sort_order) VALUES
-('Beginner Driving Lessons', 'beginner-lessons', 'Perfect for complete beginners. Start from scratch with patient, professional instruction.', 'beginner', 'either', 20.0, 35.00, 350.00, 10, 1),
-('Refresher Course', 'refresher-course', 'Already have your license but need to regain confidence? Brush up on your skills.', 'intermediate', 'either', 10.0, 35.00, 165.00, 5, 2),
-('Test Preparation', 'test-preparation', 'Intensive preparation for your DVSA practical driving test with mock tests included.', 'advanced', 'either', 10.0, 40.00, 650.00, 20, 3),
-('Intensive 1 Week', 'intensive-1-week', 'Fast-track your learning with an intensive one-week course designed to get you test-ready quickly.', 'beginner', 'either', 30.0, NULL, 1450.00, 30, 4),
-('Intensive 2 Weeks', 'intensive-2-weeks', 'A two-week intensive programme covering all aspects of driving for rapid progression.', 'beginner', 'either', 40.0, NULL, 1950.00, 40, 5);
