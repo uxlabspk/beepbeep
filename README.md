@@ -84,10 +84,34 @@ mysql -u root -p beepbeep_db < database/schema.sql
 
 ### 3. Configuration
 
-Edit `includes/config.php` and update:
+**Using Environment Variables (Recommended):**
+
+1. Copy the example environment file:
+
+```bash
+cp .env.example .env
+```
+
+2. Edit `.env` and update your settings:
+
+```env
+DB_HOST=127.0.0.1
+DB_NAME=beepbeep_db
+DB_USER=your_username
+DB_PASS=your_password
+DB_CHARSET=utf8mb4
+```
+
+The `.env` file is automatically loaded by `includes/config.php`. Environment variables take precedence over defaults.
+
+> ⚠️ **Important:** Never commit `.env` to version control. It's already in `.gitignore`.
+
+**Alternative - Direct Configuration:**
+
+If you prefer not to use `.env`, you can edit `includes/config.php` directly and update:
 
 - `SITE_URL` — your live domain URL
-- `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS` — your database credentials
+- Database credentials in the `getenv()` fallback values
 - `DEBUG_MODE` — set to `false` on production
 
 ### 4. Web Server Configuration
