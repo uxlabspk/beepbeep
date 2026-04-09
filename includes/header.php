@@ -2,7 +2,10 @@
 require_once dirname(__DIR__) . '/includes/config.php';
 require_once INCLUDES_PATH . '/functions.php';
 
-initSession();
+// Initialize session if not already done
+if (session_status() === PHP_SESSION_NONE) {
+    initSession();
+}
 $flashMessage = getFlash();
 $authUser = currentUser();
 ?>
@@ -111,13 +114,30 @@ $authUser = currentUser();
               >Contact Us</a
             >
           </li>
-          <li>
-            <a
-              href="book-now.php"
-              class="px-8 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all"
-              >Book Now</a
-            >
-          </li>
+          <?php if (isLoggedIn()): ?>
+            <li>
+              <a
+                href="dashboard.php"
+                class="text-white text-xl font-medium hover:text-brand transition-colors"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a
+                href="/auth/logout.php"
+                class="text-white text-xl font-medium hover:text-red-400 transition-colors"
+                >Logout</a
+              >
+            </li>
+          <?php else: ?>
+            <li>
+              <a
+                href="login.php"
+                class="px-8 py-3 bg-white text-brand font-semibold rounded-lg hover:bg-gray-100 transition-all"
+                >Login</a
+              >
+            </li>
+          <?php endif; ?>
         </ul>
       </div>
     </div>
@@ -266,25 +286,65 @@ $authUser = currentUser();
           </li>
         </ul>
         <div class="hidden lg:flex items-center gap-3">
-          <a
-            href="book-now.php"
-            class="px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-lg"
-          >
-            Book Now
-          </a>
           <?php if (isLoggedIn()): ?>
-            <a
-              href="dashboard.php"
-              class="px-5 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-all"
-            >
-              Dashboard
-            </a>
-            <a
-              href="auth/logout.php"
-              class="px-5 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-700 transition-all"
-            >
-              Logout
-            </a>
+            <!-- User Avatar with Dropdown -->
+            <div class="relative" id="userMenu">
+              <button 
+                id="userMenuButton"
+                class="flex items-center gap-2 px-3 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-all cursor-pointer"
+                onclick="document.getElementById('userDropdown').classList.toggle('hidden')"
+              >
+                <div class="w-8 h-8 bg-brand rounded-full flex items-center justify-center">
+                  <span class="text-white text-sm font-semibold">
+                    <?php echo strtoupper(substr(currentUser()['first_name'], 0, 1) . substr(currentUser()['last_name'], 0, 1)); ?>
+                  </span>
+                </div>
+                <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              <!-- Dropdown Menu -->
+              <div 
+                id="userDropdown" 
+                class="hidden absolute right-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+              >
+                <!-- User Info -->
+                <div class="px-4 py-3 border-b border-gray-100">
+                  <p class="text-sm font-semibold text-gray-800">
+                    <?php echo e(currentUser()['first_name'] . ' ' . currentUser()['last_name']); ?>
+                  </p>
+                  <p class="text-xs text-gray-500 mt-1">
+                    <?php echo e(currentUser()['email']); ?>
+                  </p>
+                </div>
+                
+                <!-- Menu Links -->
+                <a
+                  href="dashboard.php"
+                  class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
+                >
+                  <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                  </svg>
+                  Dashboard
+                </a>
+                
+                <!-- Divider -->
+                <div class="border-t border-gray-100 my-2"></div>
+                
+                <!-- Logout -->
+                <a
+                  href="/auth/logout.php"
+                  class="flex items-center gap-3 px-4 py-3 text-sm text-red-600 hover:bg-red-50 transition-colors"
+                >
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                  </svg>
+                  Logout
+                </a>
+              </div>
+            </div>
           <?php else: ?>
             <a
               href="login.php"
@@ -293,11 +353,11 @@ $authUser = currentUser();
               Login
             </a>
             <a
-              href="signup.php"
-              class="px-5 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-700 transition-all"
-            >
-              Sign Up
-            </a>
+            href="book-now.php"
+            class="px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-lg"
+          >
+            Book Now
+          </a>
           <?php endif; ?>
         </div>
         <button
@@ -320,6 +380,19 @@ $authUser = currentUser();
         </button>
       </nav>
     </header>
+
+    <!-- Close dropdown when clicking outside -->
+    <script>
+      document.addEventListener('click', function(event) {
+        const userMenu = document.getElementById('userMenu');
+        const userDropdown = document.getElementById('userDropdown');
+        if (userMenu && userDropdown) {
+          if (!userMenu.contains(event.target)) {
+            userDropdown.classList.add('hidden');
+          }
+        }
+      });
+    </script>
 
     <?php if ($flashMessage): ?>
       <div class="container mx-auto px-4 mt-4">
