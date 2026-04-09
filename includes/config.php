@@ -19,10 +19,10 @@ define('AUTH_PATH', ROOT_PATH . '/auth');
 define('UPLOADS_PATH', ROOT_PATH . '/public/uploads');
 
 // Database credentials (change for production)
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'beepbeep_db');
+define('DB_HOST', '127.0.0.1');
+define('DB_NAME', 'driving');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', 'root');
 define('DB_CHARSET', 'utf8mb4');
 
 // Session settings
