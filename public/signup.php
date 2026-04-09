@@ -1,4 +1,13 @@
 <?php
+require_once dirname(__DIR__) . '/includes/config.php';
+require_once INCLUDES_PATH . '/functions.php';
+
+initSession();
+
+if (isLoggedIn()) {
+  redirect('/dashboard.php');
+}
+
 $pageTitle = 'Sign Up | Beep Beep Driving School - Create Your Account';
 $currentPage = 'signup';
 $customStyles = '
@@ -54,7 +63,8 @@ include dirname(__DIR__) . '/includes/header.php';
                 Fill in your details below to get started.
               </p>
 
-              <form action="#" method="POST" class="space-y-6">
+              <form action="auth/signup-handler.php" method="POST" class="space-y-6">
+                <input type="hidden" name="csrf_token" value="<?php echo e(generateCsrfToken()); ?>" />
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label

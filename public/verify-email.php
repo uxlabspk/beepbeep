@@ -1,4 +1,11 @@
 <?php
+require_once dirname(__DIR__) . '/includes/config.php';
+require_once INCLUDES_PATH . '/functions.php';
+
+initSession();
+
+$emailPrefill = sanitize($_GET['email'] ?? '');
+
 $pageTitle = 'Verify Email | Beep Beep Driving School - Confirm Your Account';
 $currentPage = 'verify-email';
 $customStyles = '
@@ -171,10 +178,12 @@ include dirname(__DIR__) . '/includes/header.php';
                         <p class="text-blue-600 mb-3">
                           Check your spam folder or request a new verification email.
                         </p>
-                        <form action="#" method="POST" class="flex flex-col sm:flex-row gap-3">
+                        <form action="auth/resend-verification-handler.php" method="POST" class="flex flex-col sm:flex-row gap-3">
+                          <input type="hidden" name="csrf_token" value="<?php echo e(generateCsrfToken()); ?>" />
                           <input
                             type="email"
                             name="resend_email"
+                            value="<?php echo e($emailPrefill); ?>"
                             required
                             class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all"
                             placeholder="Enter your email"

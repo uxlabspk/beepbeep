@@ -4,19 +4,11 @@
  * Destroys the user session and redirects to login.
  */
 
-session_start();
+require_once dirname(__DIR__) . '/includes/config.php';
+require_once INCLUDES_PATH . '/functions.php';
 
-// Clear all session data
-$_SESSION = [];
+initSession();
+logoutUser();
 
-// Delete session cookie
-if (isset($_COOKIE[session_name()])) {
-    setcookie(session_name(), '', time() - 3600, '/');
-}
-
-// Destroy the session
-session_destroy();
-
-// Redirect to login page
-header('Location: /login.php');
+header('Location: /login.php', true, 303);
 exit;

@@ -4,10 +4,11 @@
  * Handles AJAX booking form submissions.
  */
 
-session_start();
 require_once dirname(__DIR__) . '/includes/config.php';
 require_once INCLUDES_PATH . '/functions.php';
 require_once DATABASE_PATH . '/db.php';
+
+initSession();
 
 header('Content-Type: application/json');
 

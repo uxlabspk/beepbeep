@@ -1,4 +1,10 @@
 <?php
+require_once dirname(__DIR__) . '/auth/middleware.php';
+requireAuth();
+
+$user = currentUser();
+$userInitials = strtoupper(substr(($user['first_name'] ?? 'U'), 0, 1) . substr(($user['last_name'] ?? 'S'), 0, 1));
+
 $pageTitle = 'Dashboard | Beep Beep Driving School';
 $currentPage = 'dashboard';
 $customStyles = '
@@ -27,10 +33,10 @@ include dirname(__DIR__) . '/includes/header.php';
                   <div
                     class="w-20 h-20 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-3"
                   >
-                    <span class="text-3xl font-bold text-brand">JD</span>
+                    <span class="text-3xl font-bold text-brand"><?php echo e($userInitials); ?></span>
                   </div>
-                  <h3 class="text-lg font-bold text-gray-800">John Doe</h3>
-                  <p class="text-gray-500 text-sm">john@example.com</p>
+                  <h3 class="text-lg font-bold text-gray-800"><?php echo e(trim($user['first_name'] . ' ' . $user['last_name'])); ?></h3>
+                  <p class="text-gray-500 text-sm"><?php echo e($user['email']); ?></p>
                   <span
                     class="inline-block mt-2 px-3 py-1 bg-green-100 text-green-700 text-xs font-medium rounded-full"
                   >
@@ -180,7 +186,7 @@ include dirname(__DIR__) . '/includes/header.php';
                     Settings
                   </a>
                   <a
-                    href="index.php"
+                    href="auth/logout.php"
                     class="sidebar-link flex items-center gap-3 px-4 py-3 text-sm font-medium text-gray-600 rounded-lg hover:bg-gray-50 hover:text-gray-900 transition-colors"
                   >
                     <svg
@@ -208,7 +214,7 @@ include dirname(__DIR__) . '/includes/header.php';
               <div class="bg-gradient-to-r from-brand to-brand-dark rounded-2xl p-8 mb-8 text-white">
                 <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                   <div>
-                    <h1 class="text-3xl font-bold mb-2">Welcome back, John! 👋</h1>
+                    <h1 class="text-3xl font-bold mb-2">Welcome back, <?php echo e($user['first_name']); ?>! 👋</h1>
                     <p class="text-white/90">
                       Ready for your next driving lesson? You're making great progress!
                     </p>

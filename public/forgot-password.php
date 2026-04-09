@@ -1,4 +1,13 @@
 <?php
+require_once dirname(__DIR__) . '/includes/config.php';
+require_once INCLUDES_PATH . '/functions.php';
+
+initSession();
+
+if (isLoggedIn()) {
+  redirect('/dashboard.php');
+}
+
 $pageTitle = 'Forgot Password | Beep Beep Driving School - Reset Your Password';
 $currentPage = 'forgot-password';
 $customStyles = '
@@ -73,7 +82,8 @@ include dirname(__DIR__) . '/includes/header.php';
                 </p>
               </div>
 
-              <form action="#" method="POST" class="space-y-6">
+              <form action="auth/forgot-password-handler.php" method="POST" class="space-y-6">
+                <input type="hidden" name="csrf_token" value="<?php echo e(generateCsrfToken()); ?>" />
                 <div>
                   <label
                     for="email"

@@ -26,7 +26,8 @@ define('DB_PASS', 'root');
 define('DB_CHARSET', 'utf8mb4');
 
 // Session settings
-define('SESSION_LIFETIME', 3600); // 1 hour in seconds
+define('SESSION_LIFETIME', 60 * 60 * 24 * 30); // 30 days
+define('SESSION_COOKIE_NAME', 'beepbeep_session');
 
 // Error reporting (set to false on production)
 define('DEBUG_MODE', true);

@@ -1,4 +1,17 @@
 <?php
+require_once dirname(__DIR__) . '/includes/config.php';
+require_once INCLUDES_PATH . '/functions.php';
+
+initSession();
+
+$resetToken = sanitize($_GET['token'] ?? '');
+$isResetFlow = !empty($resetToken);
+
+if (!$isResetFlow && !isLoggedIn()) {
+  setFlash('error', 'Please log in to change your password.');
+  redirect('/login.php');
+}
+
 $pageTitle = 'Change Password | Beep Beep Driving School - Update Your Password';
 $currentPage = 'change-password';
 $customStyles = '
@@ -146,8 +159,14 @@ include dirname(__DIR__) . '/includes/header.php';
                   </div>
                 </div>
 
-                <form action="#" method="POST" class="space-y-6">
+                <form action="auth/change-password-handler.php" method="POST" class="space-y-6">
+                  <input type="hidden" name="csrf_token" value="<?php echo e(generateCsrfToken()); ?>" />
+                  <?php if ($isResetFlow): ?>
+                    <input type="hidden" name="reset_token" value="<?php echo e($resetToken); ?>" />
+                  <?php endif; ?>
+
                   <!-- Current Password -->
+                  <?php if (!$isResetFlow): ?>
                   <div>
                     <label
                       for="currentPassword"
@@ -191,6 +210,7 @@ include dirname(__DIR__) . '/includes/header.php';
                       </button>
                     </div>
                   </div>
+                  <?php endif; ?>
 
                   <!-- New Password -->
                   <div>
@@ -313,7 +333,7 @@ include dirname(__DIR__) . '/includes/header.php';
                       Update Password
                     </button>
                     <a
-                      href="dashboard.php"
+                      href="<?php echo $isResetFlow ? 'login.php' : 'dashboard.php'; ?>"
                       class="flex-1 px-8 py-4 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300 transition-all text-center"
                     >
                       Cancel
@@ -496,7 +516,7 @@ include dirname(__DIR__) . '/includes/header.php';
 
       if (form) {
         form.addEventListener("submit", function (e) {
-          const currentPassword = currentPasswordInput.value;
+          const currentPassword = currentPasswordInput ? currentPasswordInput.value : "";
           const newPassword = newPasswordInput.value;
           const confirmPassword = confirmPasswordInput.value;
 
@@ -527,7 +547,7 @@ include dirname(__DIR__) . '/includes/header.php';
           }
 
           // Check new password is different from current
-          if (currentPassword === newPassword) {
+          if (currentPasswordInput && currentPassword === newPassword) {
             e.preventDefault();
             alert("New password must be different from your current password.");
             return;

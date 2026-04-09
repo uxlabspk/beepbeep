@@ -1,4 +1,13 @@
 <?php
+require_once dirname(__DIR__) . '/includes/config.php';
+require_once INCLUDES_PATH . '/functions.php';
+
+initSession();
+
+if (isLoggedIn()) {
+  redirect('/dashboard.php');
+}
+
 $pageTitle = 'Login | Beep Beep Driving School';
 $currentPage = 'login';
 $customStyles = '
@@ -54,7 +63,8 @@ include dirname(__DIR__) . '/includes/header.php';
                 Enter your email and password to access your account.
               </p>
 
-              <form action="#" method="POST" class="space-y-6">
+              <form action="auth/login-handler.php" method="POST" class="space-y-6">
+                <input type="hidden" name="csrf_token" value="<?php echo e(generateCsrfToken()); ?>" />
                 <div>
                   <label
                     for="email"

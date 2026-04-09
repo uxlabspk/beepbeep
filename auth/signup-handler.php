@@ -4,10 +4,11 @@
  * Registers a new user and sends a verification email.
  */
 
-session_start();
 require_once dirname(__DIR__) . '/includes/config.php';
 require_once INCLUDES_PATH . '/functions.php';
 require_once DATABASE_PATH . '/db.php';
+
+initSession();
 
 // If already logged in, redirect to dashboard
 if (isLoggedIn()) {
@@ -27,7 +28,7 @@ if (!isset($_POST['csrf_token']) || !verifyCsrfToken($_POST['csrf_token'])) {
 
 $firstName = sanitize($_POST['firstName'] ?? '');
 $lastName = sanitize($_POST['lastName'] ?? '');
-$email = sanitize($_POST['email'] ?? '');
+$email = strtolower(sanitize($_POST['email'] ?? ''));
 $phone = formatPhone($_POST['phone'] ?? '');
 $password = $_POST['password'] ?? '';
 $confirmPassword = $_POST['confirmPassword'] ?? '';
@@ -40,7 +41,7 @@ if (empty($firstName)) $errors[] = 'First name is required.';
 if (empty($lastName)) $errors[] = 'Last name is required.';
 if (empty($email) || !filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'Valid email is required.';
 if (empty($phone)) $errors[] = 'Phone number is required.';
-if (strlen($password) < 8) $errors[] = 'Password must be at least 8 characters.';
+if (!isStrongPassword($password)) $errors[] = 'Password must be at least 8 characters and include an uppercase letter, a number, and a special character.';
 if ($password !== $confirmPassword) $errors[] = 'Passwords do not match.';
 if (!$agreeTerms) $errors[] = 'You must agree to the Terms & Conditions.';
 
@@ -80,20 +81,16 @@ try {
         'token' => $verificationToken,
     ]);
 
-    $userId = $db->lastInsertId();
+    // Send verification email
+    $emailSent = sendVerificationEmail($email, $firstName, $verificationToken);
 
-    // TODO: Send verification email
-    // For now, just redirect with success message
-    setFlash('success', 'Account created successfully! Please check your email to verify your account.');
-    
-    // Auto-login after signup (optional: remove if you require email verification first)
-    $_SESSION['user_id'] = $userId;
-    $_SESSION['user_first_name'] = $firstName;
-    $_SESSION['user_last_name'] = $lastName;
-    $_SESSION['user_email'] = $email;
-    $_SESSION['user_role'] = 'student';
+    if ($emailSent) {
+        setFlash('success', 'Account created successfully! Please check your email to verify your account.');
+    } else {
+        setFlash('error', 'Account created, but we could not send the verification email. Please request a new verification email.');
+    }
 
-    redirect('/dashboard.php');
+    redirect('/verify-email.php?email=' . urlencode($email));
 
 } catch (PDOException $e) {
     error_log("Signup error: " . $e->getMessage());

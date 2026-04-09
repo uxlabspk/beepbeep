@@ -1,10 +1,17 @@
+<?php
+require_once dirname(__DIR__) . '/includes/config.php';
+require_once INCLUDES_PATH . '/functions.php';
+
+initSession();
+$flashMessage = getFlash();
+$authUser = currentUser();
+?>
 <!doctype html>
 <html lang="en-GB">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo isset($pageTitle) ? $pageTitle : 'Beep Beep Driving School'; ?></title>
-    <?php require_once dirname(__DIR__) . '/includes/config.php'; ?>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -258,12 +265,41 @@
             >
           </li>
         </ul>
-        <a
-          href="book-now.php"
-          class="hidden lg:inline-block px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-lg"
-        >
-          Book Now
-        </a>
+        <div class="hidden lg:flex items-center gap-3">
+          <a
+            href="book-now.php"
+            class="px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:-translate-y-0.5 hover:shadow-lg"
+          >
+            Book Now
+          </a>
+          <?php if (isLoggedIn()): ?>
+            <a
+              href="dashboard.php"
+              class="px-5 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-all"
+            >
+              Dashboard
+            </a>
+            <a
+              href="auth/logout.php"
+              class="px-5 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-700 transition-all"
+            >
+              Logout
+            </a>
+          <?php else: ?>
+            <a
+              href="login.php"
+              class="px-5 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-all"
+            >
+              Login
+            </a>
+            <a
+              href="signup.php"
+              class="px-5 py-3 bg-gray-900 text-white font-semibold rounded-lg hover:bg-gray-700 transition-all"
+            >
+              Sign Up
+            </a>
+          <?php endif; ?>
+        </div>
         <button
           id="menuToggle"
           class="lg:hidden text-gray-700 focus:outline-none"
@@ -284,3 +320,11 @@
         </button>
       </nav>
     </header>
+
+    <?php if ($flashMessage): ?>
+      <div class="container mx-auto px-4 mt-4">
+        <div class="px-4 py-3 rounded-lg <?php echo $flashMessage['type'] === 'success' ? 'bg-green-100 text-green-800 border border-green-200' : 'bg-red-100 text-red-800 border border-red-200'; ?>">
+          <?php echo e($flashMessage['message']); ?>
+        </div>
+      </div>
+    <?php endif; ?>
