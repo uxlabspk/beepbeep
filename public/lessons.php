@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'Courses | Beep Beep Driving School - Learn to Drive';
 $currentPage = 'courses';
-include 'includes/header.php';
+include dirname(__DIR__) . '/includes/header.php';
 ?>
 
     <main>
@@ -1754,4 +1754,4 @@ include 'includes/header.php';
         durationFilter.addEventListener("change", filterCourses);
     </script>
 
-<?php include 'includes/footer.php'; ?>
+<?php include dirname(__DIR__) . '/includes/footer.php'; ?>

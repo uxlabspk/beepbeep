@@ -6,7 +6,7 @@ $customStyles = '
         min-height: calc(100vh - 200px);
       }
 ';
-include 'includes/header.php';
+include dirname(__DIR__) . '/includes/header.php';
 ?>
 
     <main>
@@ -188,4 +188,4 @@ include 'includes/header.php';
       }
     </script>
 
-<?php include 'includes/footer.php'; ?>
+<?php include dirname(__DIR__) . '/includes/footer.php'; ?>

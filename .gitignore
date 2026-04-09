@@ -1,4 +1,42 @@
-doc
+# Dependencies
+/vendor/
+/composer.lock
+
+# Environment / config overrides
 .env
-.htaccess
-Robot.txt
+.env.local
+.env.*.local
+
+# Database backups
+*.sql.gz
+*.sql.backup
+/database/*.bak
+
+# Uploaded files (don't commit user data)
+/public/uploads/*
+!/public/uploads/.gitkeep
+
+# IDE / Editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+/logs/
+
+# Cache
+/cache/
+*.cache
+
+# Node modules (if you add frontend build tools later)
+node_modules/
+
+# OS files
+.DS_Store
+ehthumbs.db
+Desktop.ini

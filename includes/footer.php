@@ -1,3 +1,4 @@
+<?php require_once dirname(__DIR__) . '/includes/config.php'; ?>
     <!-- Footer -->
     <footer class="bg-gray-900 text-white pt-16 pb-8">
       <div class="container mx-auto px-4">
@@ -269,5 +270,6 @@
         });
       }
     </script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>

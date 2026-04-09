@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><?php echo isset($pageTitle) ? $pageTitle : 'Beep Beep Driving School'; ?></title>
+    <?php require_once dirname(__DIR__) . '/includes/config.php'; ?>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

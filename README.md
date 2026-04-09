@@ -1,9 +1,11 @@
 # Beep Beep Driving School Website
 
-A modern, responsive driving school website built with **HTML5** and **Tailwind CSS**.
+A modern, responsive driving school website built with **PHP**, **HTML5**, and **Tailwind CSS**.
 
 ## 🚀 Technologies Used
 
+- **PHP 8+** - Server-side scripting
+- **MySQL** - Database
 - **HTML5** - Semantic markup
 - **Tailwind CSS** (CDN) - Utility-first CSS framework
 - **Vanilla JavaScript** - Interactive features
@@ -13,152 +15,183 @@ A modern, responsive driving school website built with **HTML5** and **Tailwind 
 
 ```
 beepbeep/
-├── index.php          # Homepage
-├── css/                # Empty (not using custom CSS)
-├── js/
-│   └── main.js        # JavaScript functionality
-├── images/            # Image assets (create this folder)
-│   ├── logo.svg
-│   ├── hero-bg.jpg
-│   └── ... (other images)
+├── public/                    # 🌐 Web root (point your server here)
+│   ├── index.php             # Homepage
+│   ├── about.php             # About Us
+│   ├── lessons.php           # Courses/Lessons
+│   ├── contact.php           # Contact page
+│   ├── book-now.php          # Booking page
+│   ├── dashboard.php         # Student dashboard
+│   ├── login.php             # Login page
+│   ├── signup.php            # Registration page
+│   ├── forgot-password.php   # Password reset request
+│   ├── change-password.php   # Password change
+│   ├── verify-email.php      # Email verification
+│   ├── coming-soon.php       # Placeholder page
+│   ├── .htaccess             # Apache config
+│   ├── assets/
+│   │   ├── css/              # Custom CSS (if needed)
+│   │   ├── js/
+│   │   │   └── main.js       # Main JavaScript
+│   │   └── images/           # Static images/logos
+│   └── uploads/              # User uploads (license photos, etc.)
+│
+├── includes/                  # 🔧 Reusable PHP partials
+│   ├── header.php            # Site header + navigation
+│   ├── footer.php            # Site footer
+│   ├── config.php            # Site-wide settings
+│   └── functions.php         # Helper functions
+│
+├── auth/                      # 🔐 Authentication logic
+│   ├── login-handler.php     # Process login
+│   ├── signup-handler.php    # Process registration
+│   ├── logout.php            # Destroy session
+│   └── middleware.php        # Auth guards (requireAuth, requireAdmin)
+│
+├── api/                       # 📡 AJAX endpoints
+│   ├── contact-submit.php    # Contact form submission
+│   └── booking-submit.php    # Booking form submission
+│
+├── database/                  # 🗄️ Database files
+│   ├── db.php                # PDO connection singleton
+│   └── schema.sql            # Database structure + seed data
+│
+├── emails/                    # 📧 Email templates
+│   ├── welcome.php           # Welcome / verification email
+│   ├── booking-confirmation.php
+│   └── password-reset.php
+│
 └── README.md
 ```
 
+## 🛠️ Setup Instructions
+
+### 1. Prerequisites
+
+- PHP 8.0+
+- MySQL 5.7+ or MariaDB 10.3+
+- Apache or Nginx web server
+
+### 2. Database Setup
+
+```sql
+-- Create the database
+CREATE DATABASE beepbeep_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+-- Import the schema (includes seed data)
+mysql -u root -p beepbeep_db < database/schema.sql
+```
+
+### 3. Configuration
+
+Edit `includes/config.php` and update:
+
+- `SITE_URL` — your live domain URL
+- `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS` — your database credentials
+- `DEBUG_MODE` — set to `false` on production
+
+### 4. Web Server Configuration
+
+**Point your web server's document root to the `public/` directory.**
+
+#### Apache (httpd.conf or virtual host):
+
+```apache
+DocumentRoot "/path/to/beepbeep/public"
+<Directory "/path/to/beepbeep/public">
+    AllowOverride All
+    Require all granted
+</Directory>
+```
+
+#### Nginx:
+
+```nginx
+server {
+    listen 80;
+    server_name yourdomain.com;
+    root /path/to/beepbeep/public;
+    index index.php;
+
+    location / {
+        try_files $uri $uri/ /index.php?$query_string;
+    }
+
+    location ~ \.php$ {
+        fastcgi_pass unix:/var/run/php/php8.0-fpm.sock;
+        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+        include fastcgi_params;
+    }
+}
+```
+
+### 5. Quick Start (Development)
+
+```bash
+# From the project root
+cd public
+php -S localhost:8000
+
+# Visit: http://localhost:8000
+```
+
+> ⚠️ **Note:** The built-in PHP server is for development only. Use Apache/Nginx for production.
+
 ## 🎨 Color Scheme
 
-- **Primary Blue**: `#0066CC` - Main brand color
-- **Primary Dark**: `#0052A3` - Hover states
-- **Secondary Gold**: `#FFD700` - Accents and highlights
-- **Secondary Dark**: `#E6C200` - Gold hover states
-- **Accent Red**: `#FF6B6B` - Call-to-action elements
+- **Primary Orange**: `#FF6B00` - Main brand color
+- **Primary Dark**: `#E05A00` - Hover states
+- **Dark**: `#1A1A2E` - Dark backgrounds
+- **Dark Card**: `#16213E` - Card backgrounds
 
 ## ✨ Features
 
 1. **Responsive Navigation** - Mobile-friendly hamburger menu
 2. **Hero Section** - Eye-catching header with call-to-action
-3. **Features Grid** - 6 key selling points
-4. **Services Section** - 3 service cards with images
+3. **Course Search** - Quick course finder
+4. **Services Grid** - Service cards with images
 5. **Statistics Counter** - Animated numbers
 6. **Testimonials** - Student reviews with ratings
-7. **Call-to-Action** - Prominent booking section
-8. **Footer** - Complete contact information and links
-
-## 🛠️ Setup Instructions
-
-### Option 1: Direct HTML (Recommended for Client Review)
-
-Simply open `index.php` in your browser:
-
-```bash
-# On Linux
-xdg-open index.php
-
-# Or right-click and "Open with Browser"
-```
-
-### Option 2: Using a Local Server
-
-```bash
-# If you have Python installed
-python3 -m http.server 8000
-
-# Then visit: http://localhost:8000
-```
+7. **Booking System** - Online lesson booking
+8. **Student Dashboard** - Track progress and bookings
+9. **Authentication** - Login, signup, password reset, email verification
+10. **Contact Form** - Inquiry form with validation
 
 ## 📝 Next Steps
 
-### For Client Presentation:
-1. ✅ Open `index.php` in a browser to show the design
-2. ✅ Replace placeholder images in the `images/` folder
-3. ✅ Update phone number, email, and address
-4. ✅ Customize any text content as needed
+### Immediate (Week 1):
 
-### After Client Approval (PHP Conversion):
-The next phase will be converting this to PHP:
-- Split into components (header, footer, sections)
-- Add dynamic content from database
-- Create booking system
-- Add contact form with email
-- Implement admin panel
+- [ ] Add real images to `public/assets/images/`
+- [ ] Test all forms with database connected
+- [ ] Implement CSRF protection on all forms
+- [ ] Add form validation feedback (AJAX)
 
-## 🖼️ Images Needed
+### Mid-term (Week 2):
 
-Create an `images/` folder and add these files:
+- [ ] Build admin panel (`admin/` folder)
+- [ ] Implement booking calendar/scheduler
+- [ ] Add payment integration (Stripe)
+- [ ] Set up email sending (PHPMailer / SendGrid)
 
-```
-images/
-├── logo.svg              # Company logo
-├── hero-bg.jpg           # Hero background (1920x1080)
-├── first-time-drivers.jpg (400x250)
-├── refresher-lessons.jpg (400x250)
-├── test-preparation.jpg (400x250)
-├── testimonial-1.jpg     # Avatar (100x100)
-├── testimonial-2.jpg     # Avatar (100x100)
-├── testimonial-3.jpg     # Avatar (100x100)
-├── dvsa-logo.png         # DVSA approval logo
-├── favicon-32x32.png
-├── favicon-16x16.png
-└── apple-touch-icon.png
-```
+### Final (Week 3):
 
-## 🎯 Key Pages to Create
+- [ ] SEO optimization (meta tags, sitemap, Open Graph)
+- [ ] Performance optimization (image compression, caching)
+- [ ] Security hardening (rate limiting, input sanitization)
+- [ ] Deploy to production server
+- [ ] Set up SSL certificate
 
-Based on the navigation, you'll need these additional pages:
+## 🔒 Security Checklist
 
-1. `about.php` - About Us
-2. `lessons.php` - Lessons/Services detail
-3. `prices.php` - Pricing packages
-4. `testimonials.php` - More reviews
-5. `contact.php` - Contact form
-6. `book-now.php` - Booking system
-
-## 💡 Tailwind CSS Notes
-
-This project uses Tailwind CSS via CDN for rapid development:
-
-```html
-<!-- Already configured in index.php -->
-<script src="https://cdn.tailwindcss.com"></script>
-```
-
-**Advantages:**
-- No build process required
-- Fast prototyping
-- Easy to customize colors in config
-- Responsive utilities built-in
-
-**Customization:**
-The Tailwind config is in the `<head>` of `index.php`:
-
-```javascript
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                'primary': '#0066CC',
-                'primary-dark': '#0052A3',
-                // ... more colors
-            }
-        }
-    }
-}
-```
-
-## 🔧 Customization Tips
-
-### Change Colors:
-Edit the Tailwind config in `index.php`
-
-### Adjust Spacing:
-Tailwind uses a spacing scale:
-- `p-4` = 1rem padding
-- `m-6` = 1.5rem margin
-- `gap-4` = 1rem gap
-
-### Modify Fonts:
-Currently using Poppins from Google Fonts. To change:
-1. Update the Google Fonts link in `<head>`
-2. Change `fontFamily.primary` in Tailwind config
+- [x] CSRF token generation/verification
+- [x] Password hashing (`password_hash`)
+- [x] Prepared statements (SQL injection prevention)
+- [x] Input sanitization (`htmlspecialchars`)
+- [x] Session security
+- [ ] Rate limiting on forms
+- [ ] reCAPTCHA on contact/booking forms
+- [ ] File upload validation
+- [ ] HTTPS enforcement
 
 ## 📱 Responsive Breakpoints
 
@@ -170,6 +203,7 @@ Currently using Poppins from Google Fonts. To change:
 ## 🐛 Browser Support
 
 Works in all modern browsers:
+
 - Chrome/Edge (latest)
 - Firefox (latest)
 - Safari (latest)
@@ -177,11 +211,13 @@ Works in all modern browsers:
 ## 📞 Support
 
 For questions or issues with the code, check:
+
 - Tailwind CSS Docs: https://tailwindcss.com/docs
+- PHP Manual: https://www.php.net/manual/
 - MDN Web Docs: https://developer.mozilla.org
 
 ---
 
-**Ready to show your client!** 🎉
+**Ready to develop!** 🎉
 
-Just add your images and customize the content as needed.
+Point your server to `public/` and start building.
