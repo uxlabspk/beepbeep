@@ -31,7 +31,13 @@ if (file_exists($envFile)) {
 
 // Site settings
 define('SITE_NAME', 'Beep Beep Driving School');
-define('SITE_URL', 'http://localhost/beepbeep'); // Change to your live URL
+// Prefer SITE_URL from environment; otherwise infer from current request.
+$siteUrl = getenv('SITE_URL');
+if (!$siteUrl && isset($_SERVER['HTTP_HOST'])) {
+    $scheme = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+    $siteUrl = $scheme . '://' . $_SERVER['HTTP_HOST'];
+}
+define('SITE_URL', $siteUrl ?: 'http://localhost:8000');
 define('SITE_EMAIL', 'info@beepbeepdriving.co.uk');
 define('SITE_PHONE', '01234 567 890');
 define('SITE_ADDRESS', '123 High Street, Manchester, M1 1AA');
@@ -57,6 +63,16 @@ define('SESSION_COOKIE_NAME', 'beepbeep_session');
 // Email settings (can be overridden by environment variables)
 define('MAIL_FROM_NAME', getenv('MAIL_FROM_NAME') ?: SITE_NAME);
 define('MAIL_FROM_EMAIL', getenv('MAIL_FROM_EMAIL') ?: SITE_EMAIL);
+define('MAIL_REPLY_TO', getenv('MAIL_REPLY_TO') ?: MAIL_FROM_EMAIL);
+define('MAIL_TRANSPORT', strtolower(getenv('MAIL_TRANSPORT') ?: 'mail')); // mail|smtp
+
+// SMTP settings (used when MAIL_TRANSPORT=smtp)
+define('SMTP_HOST', getenv('SMTP_HOST') ?: '');
+define('SMTP_PORT', (int) (getenv('SMTP_PORT') ?: 587));
+define('SMTP_ENCRYPTION', strtolower(getenv('SMTP_ENCRYPTION') ?: 'tls')); // tls|ssl|none
+define('SMTP_USERNAME', getenv('SMTP_USERNAME') ?: '');
+define('SMTP_PASSWORD', getenv('SMTP_PASSWORD') ?: '');
+define('SMTP_AUTH', filter_var(getenv('SMTP_AUTH') ?: 'true', FILTER_VALIDATE_BOOLEAN));
 
 // Error reporting (set to false on production)
 define('DEBUG_MODE', true);

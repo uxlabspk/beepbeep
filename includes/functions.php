@@ -168,19 +168,205 @@ function renderEmailTemplate($templateFile, array $data = []) {
 }
 
 /**
- * Send HTML email using built-in PHP mail().
+ * Remove header-breaking characters from email header values.
  */
-function sendHtmlEmail($to, $subject, $htmlContent) {
-    $from = SITE_NAME . ' <' . SITE_EMAIL . '>';
+function sanitizeEmailHeader($value) {
+    return trim(str_replace(["\r", "\n"], '', (string) $value));
+}
+
+/**
+ * Encode header values that may contain non-ASCII characters.
+ */
+function encodeEmailHeader($value) {
+    $value = sanitizeEmailHeader($value);
+    if ($value === '') {
+        return '';
+    }
+
+    return preg_match('/[^\x20-\x7E]/', $value)
+        ? '=?UTF-8?B?' . base64_encode($value) . '?='
+        : $value;
+}
+
+/**
+ * Read SMTP response (supports multi-line replies).
+ */
+function smtpReadResponse($socket) {
+    $response = '';
+
+    while (($line = fgets($socket, 515)) !== false) {
+        $response .= $line;
+
+        if (preg_match('/^\d{3}\s/', $line)) {
+            break;
+        }
+    }
+
+    return $response;
+}
+
+/**
+ * Send SMTP command and validate response code.
+ */
+function smtpSendCommand($socket, $command, array $expectedCodes) {
+    if ($command !== null) {
+        fwrite($socket, $command . "\r\n");
+    }
+
+    $response = smtpReadResponse($socket);
+    $code = (int) substr($response, 0, 3);
+
+    if (!in_array($code, $expectedCodes, true)) {
+        throw new RuntimeException('SMTP command failed: ' . trim($response));
+    }
+
+    return $response;
+}
+
+/**
+ * Send HTML email through SMTP when configured.
+ */
+function sendHtmlEmailViaSmtp($to, $subject, $htmlContent, $fromEmail, $fromName, $replyTo) {
+    if (empty(SMTP_HOST)) {
+        throw new RuntimeException('SMTP host is not configured.');
+    }
+
+    $port = SMTP_PORT > 0 ? SMTP_PORT : 587;
+    $connectHost = SMTP_ENCRYPTION === 'ssl' ? 'ssl://' . SMTP_HOST : SMTP_HOST;
+    $socket = @stream_socket_client($connectHost . ':' . $port, $errno, $errstr, 15, STREAM_CLIENT_CONNECT);
+
+    if (!$socket) {
+        throw new RuntimeException('SMTP connection failed: ' . $errstr . ' (' . $errno . ')');
+    }
+
+    stream_set_timeout($socket, 15);
+
+    try {
+        smtpSendCommand($socket, null, [220]);
+
+        $ehloHost = sanitizeEmailHeader($_SERVER['SERVER_NAME'] ?? 'localhost');
+        smtpSendCommand($socket, 'EHLO ' . $ehloHost, [250]);
+
+        if (SMTP_ENCRYPTION === 'tls') {
+            smtpSendCommand($socket, 'STARTTLS', [220]);
+
+            $tlsEnabled = stream_socket_enable_crypto($socket, true, STREAM_CRYPTO_METHOD_TLS_CLIENT);
+            if ($tlsEnabled !== true) {
+                throw new RuntimeException('SMTP STARTTLS negotiation failed.');
+            }
+
+            smtpSendCommand($socket, 'EHLO ' . $ehloHost, [250]);
+        }
+
+        if (SMTP_AUTH) {
+            if (SMTP_USERNAME === '' || SMTP_PASSWORD === '') {
+                throw new RuntimeException('SMTP auth is enabled but credentials are missing.');
+            }
+
+            smtpSendCommand($socket, 'AUTH LOGIN', [334]);
+            smtpSendCommand($socket, base64_encode(SMTP_USERNAME), [334]);
+            smtpSendCommand($socket, base64_encode(SMTP_PASSWORD), [235]);
+        }
+
+        smtpSendCommand($socket, 'MAIL FROM:<' . $fromEmail . '>', [250]);
+        smtpSendCommand($socket, 'RCPT TO:<' . $to . '>', [250, 251]);
+        smtpSendCommand($socket, 'DATA', [354]);
+
+        $encodedSubject = encodeEmailHeader($subject);
+        $encodedFromName = encodeEmailHeader($fromName);
+
+        $payload = [
+            'Date: ' . date(DATE_RFC2822),
+            'From: ' . $encodedFromName . ' <' . $fromEmail . '>',
+            'To: <' . $to . '>',
+            'Reply-To: <' . $replyTo . '>',
+            'Subject: ' . $encodedSubject,
+            'MIME-Version: 1.0',
+            'Content-Type: text/html; charset=UTF-8',
+            'Content-Transfer-Encoding: 8bit',
+            '',
+            $htmlContent,
+        ];
+
+        $message = implode("\r\n", $payload);
+        $message = preg_replace('/^\./m', '..', $message);
+
+        fwrite($socket, $message . "\r\n.\r\n");
+        smtpSendCommand($socket, null, [250]);
+        smtpSendCommand($socket, 'QUIT', [221]);
+
+        return true;
+    } finally {
+        if (is_resource($socket)) {
+            fclose($socket);
+        }
+    }
+}
+
+/**
+ * Send HTML email using PHP mail().
+ */
+function sendHtmlEmailViaMail($to, $subject, $htmlContent, $fromEmail, $fromName, $replyTo) {
+    $encodedSubject = encodeEmailHeader($subject);
+    $encodedFromName = encodeEmailHeader($fromName);
+
     $headers = [
         'MIME-Version: 1.0',
         'Content-type: text/html; charset=UTF-8',
-        'From: ' . $from,
-        'Reply-To: ' . SITE_EMAIL,
+        'From: ' . $encodedFromName . ' <' . $fromEmail . '>',
+        'Reply-To: ' . $replyTo,
+        'Return-Path: ' . $fromEmail,
         'X-Mailer: PHP/' . phpversion(),
     ];
 
-    return mail($to, $subject, $htmlContent, implode("\r\n", $headers));
+    $mailError = null;
+    set_error_handler(function ($severity, $message) use (&$mailError) {
+        $mailError = $message;
+        return true;
+    });
+
+    $sent = mail($to, $encodedSubject, $htmlContent, implode("\r\n", $headers), '-f' . $fromEmail);
+    restore_error_handler();
+
+    if (!$sent) {
+        error_log('mail() failed to send email.' . ($mailError ? ' ' . $mailError : ''));
+    }
+
+    return $sent;
+}
+
+/**
+ * Send HTML email using configured transport (SMTP or PHP mail()).
+ */
+function sendHtmlEmail($to, $subject, $htmlContent) {
+    $to = sanitizeEmailHeader($to);
+    $fromEmail = sanitizeEmailHeader(MAIL_FROM_EMAIL);
+    $fromName = sanitizeEmailHeader(MAIL_FROM_NAME);
+    $replyTo = sanitizeEmailHeader(MAIL_REPLY_TO);
+
+    if (!filter_var($to, FILTER_VALIDATE_EMAIL)) {
+        error_log('Email send aborted: invalid recipient address.');
+        return false;
+    }
+
+    if (!filter_var($fromEmail, FILTER_VALIDATE_EMAIL)) {
+        error_log('Email send aborted: invalid MAIL_FROM_EMAIL configuration.');
+        return false;
+    }
+
+    if (!filter_var($replyTo, FILTER_VALIDATE_EMAIL)) {
+        $replyTo = $fromEmail;
+    }
+
+    if (MAIL_TRANSPORT === 'smtp') {
+        try {
+            return sendHtmlEmailViaSmtp($to, $subject, $htmlContent, $fromEmail, $fromName, $replyTo);
+        } catch (Throwable $e) {
+            error_log('SMTP send failed, falling back to mail(): ' . $e->getMessage());
+        }
+    }
+
+    return sendHtmlEmailViaMail($to, $subject, $htmlContent, $fromEmail, $fromName, $replyTo);
 }
 
 /**
