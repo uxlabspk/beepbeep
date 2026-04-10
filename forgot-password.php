@@ -19,38 +19,6 @@ include __DIR__ . '/includes/header.php';
 ?>
 
     <main>
-      <!-- Page Hero Section -->
-      <section class="relative py-20 bg-gray-900">
-        <div class="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1600&q=80"
-            alt="Forgot Password"
-            class="w-full h-full object-cover opacity-40"
-          />
-        </div>
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"
-        ></div>
-        <div class="container mx-auto px-4 relative z-10">
-          <div class="max-w-3xl">
-            <p
-              class="text-brand font-semibold text-sm uppercase tracking-widest mb-4 flex items-center gap-2"
-            >
-              <span class="w-8 h-0.5 bg-brand inline-block"></span>
-              Reset Password
-            </p>
-            <h1
-              class="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
-            >
-              Forgot Your<br /><span class="text-brand">Password?</span>
-            </h1>
-            <p class="text-gray-300 text-lg leading-relaxed">
-              No worries! Enter your email and we'll send you instructions to reset your password.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <!-- Forgot Password Form Section -->
       <section class="py-20 bg-gray-50 auth-section">
         <div class="container mx-auto px-4">
@@ -138,9 +106,7 @@ include __DIR__ . '/includes/header.php';
                   <div class="text-sm text-blue-800">
                     <p class="font-medium mb-1">Didn't receive the email?</p>
                     <p class="text-blue-600">
-                      Check your spam folder or
-                      <a href="#" class="text-brand hover:underline">contact support</a>
-                      if you still need help.
+                      Check your spam folder.
                     </p>
                   </div>
                 </div>

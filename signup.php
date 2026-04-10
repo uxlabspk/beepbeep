@@ -19,38 +19,6 @@ include __DIR__ . '/includes/header.php';
 ?>
 
     <main>
-      <!-- Page Hero Section -->
-      <section class="relative py-20 bg-gray-900">
-        <div class="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1600&q=80"
-            alt="Sign Up"
-            class="w-full h-full object-cover opacity-40"
-          />
-        </div>
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"
-        ></div>
-        <div class="container mx-auto px-4 relative z-10">
-          <div class="max-w-3xl">
-            <p
-              class="text-brand font-semibold text-sm uppercase tracking-widest mb-4 flex items-center gap-2"
-            >
-              <span class="w-8 h-0.5 bg-brand inline-block"></span>
-              Join Us Today
-            </p>
-            <h1
-              class="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
-            >
-              Create Your<br /><span class="text-brand">Account</span>
-            </h1>
-            <p class="text-gray-300 text-lg leading-relaxed">
-              Start your journey to becoming a confident driver. Sign up now!
-            </p>
-          </div>
-        </div>
-      </section>
-
       <!-- Signup Form Section -->
       <section class="py-20 bg-gray-50 auth-section">
         <div class="container mx-auto px-4">
