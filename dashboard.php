@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__DIR__) . '/auth/middleware.php';
+require_once __DIR__ . '/auth/middleware.php';
 requireAuth();
 
 $user = currentUser();
@@ -17,7 +17,7 @@ $customStyles = '
         border-right: 3px solid #FF6B00;
       }
 ';
-include dirname(__DIR__) . '/includes/header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
     <main>
@@ -970,4 +970,4 @@ include dirname(__DIR__) . '/includes/header.php';
       // Dashboard page script placeholder.
     </script>
 
-<?php include dirname(__DIR__) . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

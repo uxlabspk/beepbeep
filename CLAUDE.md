@@ -5,11 +5,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Development Server
 
 ```bash
-# From project root — web root is public/
-cd public && php -S localhost:8000
+# From project root
+php -S localhost:8000
 ```
 
-Apache/Nginx must point document root at `public/`. The `.htaccess` handles routing within Apache.
+Apache/Nginx must point document root at the project root. The `.htaccess` handles Apache rules.
 
 ## Database Setup
 
@@ -29,9 +29,10 @@ Set `DEBUG_MODE` to `false` in `includes/config.php` for production.
 
 **No framework** — plain PHP 8+, MySQL (PDO), Tailwind CSS via CDN, vanilla JS.
 
-**Request flow:** Browser → `public/*.php` → includes config/functions/auth → `database/db.php` (PDO singleton via `getDB()`) → response.
+**Request flow:** Browser → `*.php` (root pages) → includes config/functions/auth → `database/db.php` (PDO singleton via `getDB()`) → response.
 
 **Key layers:**
+
 - `includes/config.php` — constants for DB, mail, paths, session. Always loaded first.
 - `includes/functions.php` — `e()` for XSS-safe output, `redirect()`, `setFlash()`/`getFlash()`, `isLoggedIn()`, `currentUser()`, `initSession()`, CSRF helpers.
 - `database/db.php` — `Database` singleton; use `getDB()` to get PDO connection everywhere.
@@ -43,7 +44,7 @@ Set `DEBUG_MODE` to `false` in `includes/config.php` for production.
 
 **CSRF:** Tokens generated/verified via helpers in `functions.php` — apply to all state-changing forms.
 
-**Uploads:** User files go to `public/uploads/` (e.g. licence photos).
+**Uploads:** User files go to `uploads/` (e.g. licence photos).
 
 ## Conventions
 

@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'About Us | Beep Beep Driving School - Our Story & Team';
 $currentPage = 'about';
-include dirname(__DIR__) . '/includes/header.php';
+include __DIR__ . '/includes/header.php';
 ?>
     <main>
       <!-- Page Hero Section -->
@@ -753,4 +753,4 @@ include dirname(__DIR__) . '/includes/header.php';
       </section>
     </main>
 
-<?php include dirname(__DIR__) . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

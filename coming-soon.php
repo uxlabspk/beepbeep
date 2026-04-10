@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'Page Coming Soon | Beep Beep Driving School - Learn to Drive with Confidence';
 $currentPage = 'coming-soon';
-include dirname(__DIR__) . '/includes/header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
     <!-- Main Content -->
@@ -151,4 +151,4 @@ include dirname(__DIR__) . '/includes/header.php';
       </div>
     </main>
 
-<?php include dirname(__DIR__) . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

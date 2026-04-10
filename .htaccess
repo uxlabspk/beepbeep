@@ -1,5 +1,5 @@
-# Beep Beep Driving School - Public Web Root
-# Place this .htaccess in the public/ directory.
+# Beep Beep Driving School - Web Root
+# Place this .htaccess in the project root when deploying on shared hosting.
 
 # Redirect to HTTPS (uncomment on production)
 # RewriteEngine On

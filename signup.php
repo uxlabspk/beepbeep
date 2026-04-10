@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__DIR__) . '/includes/config.php';
+require_once __DIR__ . '/includes/config.php';
 require_once INCLUDES_PATH . '/functions.php';
 
 initSession();
@@ -15,7 +15,7 @@ $customStyles = '
         min-height: calc(100vh - 200px);
       }
 ';
-include dirname(__DIR__) . '/includes/header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
     <main>
@@ -320,4 +320,4 @@ include dirname(__DIR__) . '/includes/header.php';
       }
     </script>
 
-<?php include dirname(__DIR__) . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

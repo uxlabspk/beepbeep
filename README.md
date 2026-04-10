@@ -15,27 +15,21 @@ A modern, responsive driving school website built with **PHP**, **HTML5**, and *
 
 ```
 beepbeep/
-├── public/                    # 🌐 Web root (point your server here)
-│   ├── index.php             # Homepage
-│   ├── about.php             # About Us
-│   ├── lessons.php           # Courses/Lessons
-│   ├── contact.php           # Contact page
-│   ├── book-now.php          # Booking page
-│   ├── dashboard.php         # Student dashboard
-│   ├── login.php             # Login page
-│   ├── signup.php            # Registration page
-│   ├── forgot-password.php   # Password reset request
-│   ├── change-password.php   # Password change
-│   ├── verify-email.php      # Email verification
-│   ├── coming-soon.php       # Placeholder page
-│   ├── .htaccess             # Apache config
-│   ├── assets/
-│   │   ├── css/              # Custom CSS (if needed)
-│   │   ├── js/
-│   │   │   └── main.js       # Main JavaScript
-│   │   └── images/           # Static images/logos
-│   └── uploads/              # User uploads (license photos, etc.)
-│
+├── index.php                 # Homepage
+├── about.php                 # About Us
+├── lessons.php               # Courses/Lessons
+├── contact.php               # Contact page
+├── book-now.php              # Booking page
+├── dashboard.php             # Student dashboard
+├── login.php                 # Login page
+├── signup.php                # Registration page
+├── forgot-password.php       # Password reset request
+├── change-password.php       # Password change
+├── verify-email.php          # Email verification
+├── coming-soon.php           # Placeholder page
+├── .htaccess                 # Apache config
+├── assets/                   # Static assets
+├── uploads/                  # User uploads (license photos, etc.)
 ├── includes/                  # 🔧 Reusable PHP partials
 │   ├── header.php            # Site header + navigation
 │   ├── footer.php            # Site footer
@@ -116,13 +110,13 @@ If you prefer not to use `.env`, you can edit `includes/config.php` directly and
 
 ### 4. Web Server Configuration
 
-**Point your web server's document root to the `public/` directory.**
+**Point your web server's document root to the project root directory.**
 
 #### Apache (httpd.conf or virtual host):
 
 ```apache
-DocumentRoot "/path/to/beepbeep/public"
-<Directory "/path/to/beepbeep/public">
+DocumentRoot "/path/to/beepbeep"
+<Directory "/path/to/beepbeep">
     AllowOverride All
     Require all granted
 </Directory>
@@ -134,7 +128,7 @@ DocumentRoot "/path/to/beepbeep/public"
 server {
     listen 80;
     server_name yourdomain.com;
-    root /path/to/beepbeep/public;
+    root /path/to/beepbeep;
     index index.php;
 
     location / {
@@ -153,7 +147,6 @@ server {
 
 ```bash
 # From the project root
-cd public
 php -S localhost:8000
 
 # Visit: http://localhost:8000
@@ -185,7 +178,7 @@ php -S localhost:8000
 
 ### Immediate (Week 1):
 
-- [ ] Add real images to `public/assets/images/`
+- [ ] Add real images to `assets/images/`
 - [ ] Test all forms with database connected
 - [ ] Implement CSRF protection on all forms
 - [ ] Add form validation feedback (AJAX)
@@ -244,4 +237,4 @@ For questions or issues with the code, check:
 
 **Ready to develop!** 🎉
 
-Point your server to `public/` and start building.
+Point your server to the project root and start building.

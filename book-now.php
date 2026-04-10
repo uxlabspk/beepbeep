@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'Book Now | Beep Beep Driving School - Reserve Your Lesson';
 $currentPage = 'book-now';
-include dirname(__DIR__) . '/includes/header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
     <main>
@@ -1076,4 +1076,4 @@ include dirname(__DIR__) . '/includes/header.php';
       }
     </script>
 
-<?php include dirname(__DIR__) . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'Contact Us | Beep Beep Driving School - Get in Touch';
 $currentPage = 'contact';
-include dirname(__DIR__) . '/includes/header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
     <main>
@@ -688,4 +688,4 @@ include dirname(__DIR__) . '/includes/header.php';
       </section>
     </main>
 
-<?php include dirname(__DIR__) . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

@@ -1,7 +1,7 @@
 <?php
 $pageTitle = 'Beep Beep Driving School | Professional Driving Lessons UK';
 $currentPage = 'home';
-include dirname(__DIR__) . '/includes/header.php';
+include __DIR__ . '/includes/header.php';
 ?>
 
     <main>
@@ -2592,4 +2592,4 @@ include dirname(__DIR__) . '/includes/header.php';
       })();
     </script>
   
-<?php include dirname(__DIR__) . '/includes/footer.php'; ?>
+<?php include __DIR__ . '/includes/footer.php'; ?>

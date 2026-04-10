@@ -47,7 +47,7 @@ define('ROOT_PATH', dirname(__DIR__));
 define('INCLUDES_PATH', ROOT_PATH . '/includes');
 define('DATABASE_PATH', ROOT_PATH . '/database');
 define('AUTH_PATH', ROOT_PATH . '/auth');
-define('UPLOADS_PATH', ROOT_PATH . '/public/uploads');
+define('UPLOADS_PATH', ROOT_PATH . '/uploads');
 
 // Database credentials (use environment variables in production)
 define('DB_HOST', getenv('DB_HOST') ?: '127.0.0.1');
