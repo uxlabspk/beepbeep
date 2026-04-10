@@ -1473,13 +1473,23 @@ include __DIR__ . '/includes/header.php';
               </a>
             </div>
             <div class="relative">
-              <img
+            <video
+              id="experience-video"
+              class="w-full aspect-video bg-black rounded-xl"
+              controls
+              playsinline
+              preload="metadata"
+            >
+              <source src="assets/videos/clip.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            <!-- <img
                 src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80"
                 alt="Driving Experience"
                 class="w-full h-96 object-cover rounded-2xl shadow-xl"
-              />
+              /> -->
               <!-- Play button overlay -->
-              <div class="absolute inset-0 flex items-center justify-center">
+              <!-- <div class="absolute inset-0 flex items-center justify-center">
                 <button
                   type="button"
                   data-video-open
@@ -1494,7 +1504,7 @@ include __DIR__ . '/includes/header.php';
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </button>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
