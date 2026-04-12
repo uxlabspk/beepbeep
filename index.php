@@ -283,7 +283,7 @@ include __DIR__ . '/includes/header.php';
               <div
                 class="absolute bottom-4 left-4 bg-brand text-white rounded-2xl px-6 py-4 shadow-xl"
               >
-                <span class="text-4xl font-bold block">23+</span>
+                <span class="text-4xl font-bold block">8+</span>
                 <span class="text-sm opacity-90">Years of Excellence</span>
               </div>
             </div>
@@ -416,7 +416,7 @@ include __DIR__ . '/includes/header.php';
                       Expert Instructors
                     </h4>
                     <p class="text-xs text-gray-500 mt-1">
-                      15+ qualified professionals
+                      3+ qualified professionals
                     </p>
                   </div>
                 </div>
