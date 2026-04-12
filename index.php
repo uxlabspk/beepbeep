@@ -1193,24 +1193,23 @@ include __DIR__ . '/includes/header.php';
                   <h3 class="text-2xl font-bold text-gray-900 mb-2">
                     Max Abacus
                   </h3>
-                  <p class="text-brand font-semibold mb-4">Senior Instructor</p>
-
+                  
                   <!-- Stats -->
                   <div
                     class="flex items-center gap-6 mb-6 pb-6 border-b border-gray-100"
                   >
                     <div>
-                      <div class="text-2xl font-bold text-gray-900">12+</div>
+                      <div class="text-2xl font-bold text-gray-900">5+</div>
                       <div class="text-xs text-gray-500 uppercase">Years</div>
                     </div>
                     <div>
-                      <div class="text-2xl font-bold text-gray-900">500+</div>
+                      <div class="text-2xl font-bold text-gray-900">50+</div>
                       <div class="text-xs text-gray-500 uppercase">
                         Students
                       </div>
                     </div>
                     <div>
-                      <div class="text-2xl font-bold text-brand">98%</div>
+                      <div class="text-2xl font-bold text-brand">96%</div>
                       <div class="text-xs text-gray-500 uppercase">
                         Pass Rate
                       </div>
@@ -1218,25 +1217,22 @@ include __DIR__ . '/includes/header.php';
                   </div>
 
                   <!-- Specialties -->
-                  <div class="space-y-2">
-                    <p class="text-sm font-semibold text-gray-700 mb-3">
-                      Specialties:
-                    </p>
+                  <div class="space-y-2">                  
                     <div class="flex flex-wrap gap-2">
                       <span
                         class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
                       >
-                        ADI Training
+                        Pass Plus
                       </span>
                       <span
                         class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
                       >
-                        Motorway Driving
+                        Intensive Courses
                       </span>
                       <span
                         class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
                       >
-                        Advanced Skills
+                        Refresher Courses
                       </span>
                     </div>
                   </div>
@@ -1280,24 +1276,23 @@ include __DIR__ . '/includes/header.php';
                   <h3 class="text-2xl font-bold text-gray-900 mb-2">
                     Jenifer Lopez
                   </h3>
-                  <p class="text-brand font-semibold mb-4">Lead Instructor</p>
-
+                  
                   <!-- Stats -->
                   <div
                     class="flex items-center gap-6 mb-6 pb-6 border-b border-gray-100"
                   >
                     <div>
-                      <div class="text-2xl font-bold text-gray-900">8+</div>
+                      <div class="text-2xl font-bold text-gray-900">4+</div>
                       <div class="text-xs text-gray-500 uppercase">Years</div>
                     </div>
                     <div>
-                      <div class="text-2xl font-bold text-gray-900">350+</div>
+                      <div class="text-2xl font-bold text-gray-900">75+</div>
                       <div class="text-xs text-gray-500 uppercase">
                         Students
                       </div>
                     </div>
                     <div>
-                      <div class="text-2xl font-bold text-brand">96%</div>
+                      <div class="text-2xl font-bold text-brand">92%</div>
                       <div class="text-xs text-gray-500 uppercase">
                         Pass Rate
                       </div>
@@ -1306,9 +1301,6 @@ include __DIR__ . '/includes/header.php';
 
                   <!-- Specialties -->
                   <div class="space-y-2">
-                    <p class="text-sm font-semibold text-gray-700 mb-3">
-                      Specialties:
-                    </p>
                     <div class="flex flex-wrap gap-2">
                       <span
                         class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
@@ -1367,9 +1359,7 @@ include __DIR__ . '/includes/header.php';
                   <h3 class="text-2xl font-bold text-gray-900 mb-2">
                     Henry Jassy
                   </h3>
-                  <p class="text-brand font-semibold mb-4">
-                    Driving Instructor
-                  </p>
+                
 
                   <!-- Stats -->
                   <div
@@ -1380,13 +1370,13 @@ include __DIR__ . '/includes/header.php';
                       <div class="text-xs text-gray-500 uppercase">Years</div>
                     </div>
                     <div>
-                      <div class="text-2xl font-bold text-gray-900">200+</div>
+                      <div class="text-2xl font-bold text-gray-900">60+</div>
                       <div class="text-xs text-gray-500 uppercase">
                         Students
                       </div>
                     </div>
                     <div>
-                      <div class="text-2xl font-bold text-brand">95%</div>
+                      <div class="text-2xl font-bold text-brand">94%</div>
                       <div class="text-xs text-gray-500 uppercase">
                         Pass Rate
                       </div>
@@ -1395,24 +1385,21 @@ include __DIR__ . '/includes/header.php';
 
                   <!-- Specialties -->
                   <div class="space-y-2">
-                    <p class="text-sm font-semibold text-gray-700 mb-3">
-                      Specialties:
-                    </p>
-                    <div class="flex flex-wrap gap-2">
+                   <div class="flex flex-wrap gap-2">
                       <span
                         class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
                       >
-                        Theory Training
+                        Nervous Drivers
                       </span>
                       <span
                         class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
                       >
-                        Urban Driving
+                        Intensive Courses
                       </span>
                       <span
                         class="px-3 py-1 bg-brand/10 text-brand text-xs font-medium rounded-full"
                       >
-                        First-Time Learners
+                        Pass Plus
                       </span>
                     </div>
                   </div>
