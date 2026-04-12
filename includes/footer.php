@@ -182,38 +182,18 @@
             </ul>
           </div>
           <div>
-            <h4 class="text-lg font-semibold mb-5">Our Gallery</h4>
+            <h4 class="text-lg font-semibold mb-5">Area's We Cover</h4>
             <div class="grid grid-cols-3 gap-2">
-              <img
-                src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?w=150&q=80"
-                alt="Gallery"
-                class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=150&q=80"
-                alt="Gallery"
-                class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1580273916550-e323be2ae537?w=150&q=80"
-                alt="Gallery"
-                class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=150&q=80"
-                alt="Gallery"
-                class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=150&q=80"
-                alt="Gallery"
-                class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer"
-              />
-              <img
-                src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=150&q=80"
-                alt="Gallery"
-                class="w-full h-16 object-cover rounded-lg hover:opacity-80 transition-opacity cursor-pointer"
-              />
+              <span class="w-full h-auto text-center bg-brand rounded-lg cursor-pointer">Goole</span>
+              <span class="w-full h-auto text-center bg-brand rounded-lg cursor-pointer">Wakefield</span>
+              <span class="w-full h-auto text-center bg-brand rounded-lg cursor-pointer">Leeds</span>
+              <span class="w-full h-auto text-center bg-brand rounded-lg cursor-pointer">York</span>
+              <span class="w-full h-auto text-center bg-brand rounded-lg cursor-pointer">Dewsbury</span>
+              <span class="w-full h-auto text-center bg-brand rounded-lg cursor-pointer">Barnsley</span>
+              <span class="w-full h-auto text-center bg-brand rounded-lg cursor-pointer">Rotherham</span>
+              <span class="w-full h-auto text-center bg-brand rounded-lg cursor-pointer">Sheffield</span>
+              <span class="w-full h-auto text-center bg-brand rounded-lg cursor-pointer">Doncaster</span>
+              <a href="/areas.php" class="w-full h-auto text-center rounded-lg cursor-pointer">View more</a>
             </div>
           </div>
         </div>
