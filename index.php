@@ -213,9 +213,9 @@ include __DIR__ . '/includes/header.php';
                 class="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand"
               >
                 <option>Select Course</option>
-                <option>Beginner Lessons</option>
-                <option>Refresher Course</option>
-                <option>Test Preparation</option>
+                <option>Beginner Intensive Lesson</option>
+                <option>Refresher Intensive Course</option>
+                <option>Intensive Test Preparation</option>
                 <option>Intensive Course</option>
               </select>
             </div>
@@ -239,9 +239,17 @@ include __DIR__ . '/includes/header.php';
                 class="w-full border border-gray-200 rounded-lg px-4 py-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-brand"
               >
                 <option>Your Area</option>
-                <option>Manchester</option>
-                <option>London</option>
-                <option>Birmingham</option>
+                <option>Wakefield</option>
+                <option>Leeds</option>
+                <option>York</option>
+                <option>Dewsbury</option>
+                <option>Barnsley</option>
+                <option>Rotherham</option>
+                <option>Sheffield</option>
+                <option>Sheffield</option>
+                <option>Doncaster</option>
+                <option>Goole</option>
+                <option>Huddersfield</option>
               </select>
             </div>
             <button
