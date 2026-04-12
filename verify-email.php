@@ -14,182 +14,132 @@ include __DIR__ . '/includes/header.php';
 ?>
 
     <main>
-      <!-- Email Verification Section -->
-      <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-          <div class="max-w-4xl mx-auto">
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div class="grid grid-cols-1 lg:grid-cols-2">
-                <!-- Left side - Branding -->
-                <div class="hidden lg:block bg-gradient-to-br from-dark-card to-dark p-8 text-white">
-                  <div class="flex items-center gap-2 text-2xl font-bold mb-6">
-                    <div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
-                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </div>
-                    <span>Beep<span class="text-brand">Beep</span></span>
-                  </div>
-                  <h2 class="text-3xl font-bold mb-4">Verify Your Email</h2>
-                  <p class="text-gray-300 mb-8">
-                    Complete this important step to activate your account and start your driving journey with BeepBeep.
-                  </p>
-                  <div class="mt-auto">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&q=80"
-                         alt="Driving school car"
-                         class="w-full h-48 object-cover rounded-lg opacity-80" />
-                  </div>
-                </div>
+      <section class="relative min-h-screen overflow-hidden bg-gradient-to-br from-gray-50 to-white py-10 sm:py-14">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(255,107,0,0.14),_transparent_42%),radial-gradient(circle_at_bottom_right,_rgba(26,26,46,0.05),_transparent_46%)]"></div>
 
-                <!-- Right side - Content -->
-                <div class="p-8 lg:p-12">
-                  <div class="lg:hidden mb-8">
-                    <div class="flex items-center gap-2 text-2xl font-bold text-dark mb-4">
-                      <div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                        </svg>
-                      </div>
-                      <span>Beep<span class="text-brand">Beep</span></span>
-                    </div>
-                  </div>
-              <!-- Success State (shown when verification is successful) -->
-              <!-- To show this state, add ?status=success to the URL -->
-              <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
-                <div class="text-center">
-                  <div
-                    class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6"
-                  >
-                    <svg
-                      class="w-10 h-10 text-green-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
+        <div class="container relative z-10 mx-auto px-4">
+          <div class="mx-auto grid max-w-5xl overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-2xl lg:grid-cols-2">
+            <div class="hidden bg-gradient-to-br from-orange-50 to-white p-10 text-gray-900 lg:flex lg:flex-col lg:justify-between">
+              <div>
+                <div class="mb-8 inline-flex items-center gap-2 text-2xl font-bold">
+                  <div class="flex h-11 w-11 items-center justify-center rounded-xl bg-brand shadow-lg shadow-brand/30">
+                    <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
                   </div>
-                  <h3 class="text-2xl font-bold text-gray-800 mb-3">
-                    Email Verified Successfully!
-                  </h3>
-                  <p class="text-gray-600 mb-6">
-                    Your email has been successfully verified. Your account is now active and ready to use.
+                  <span>Beep<span class="text-brand">Beep</span></span>
+                </div>
+
+                <p class="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-brand">Email Verification</p>
+                <h1 class="mb-4 text-4xl font-bold leading-tight">Activate your account</h1>
+                <p class="text-base leading-relaxed text-gray-600">
+                  Verifying your email keeps your account secure and unlocks your full dashboard experience.
+                </p>
+              </div>
+
+              <div class="space-y-3 text-sm text-gray-600">
+                <p class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand"></span>Secure account activation</p>
+                <p class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand"></span>Fast verification process</p>
+                <p class="flex items-center gap-2"><span class="h-2 w-2 rounded-full bg-brand"></span>Support if your link expires</p>
+              </div>
+            </div>
+
+            <div class="px-6 py-10 sm:px-10 lg:px-12">
+              <div class="mb-8 lg:hidden">
+                <div class="inline-flex items-center gap-2 text-2xl font-bold text-dark">
+                  <div class="flex h-10 w-10 items-center justify-center rounded-xl bg-brand">
+                    <svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <span>Beep<span class="text-brand">Beep</span></span>
+                </div>
+              </div>
+
+              <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
+                <div class="text-center">
+                  <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-green-100">
+                    <svg class="h-10 w-10 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <p class="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-green-600">Success</p>
+                  <h2 class="mb-3 text-3xl font-bold text-gray-900">Email verified</h2>
+                  <p class="mb-6 text-sm leading-relaxed text-gray-600">
+                    Your account is now active and ready to use.
                   </p>
                   <a
                     href="login.php"
-                    class="inline-block px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg"
+                    class="inline-block rounded-xl bg-brand px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-brand-dark hover:shadow-xl"
                   >
                     Sign In to Your Account
                   </a>
                 </div>
 
-              <!-- Error State (shown when verification fails) -->
               <?php elseif (isset($_GET['status']) && $_GET['status'] === 'error'): ?>
                 <div class="text-center">
-                  <div
-                    class="w-20 h-20 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6"
-                  >
-                    <svg
-                      class="w-10 h-10 text-red-600"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
+                  <div class="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-2xl bg-red-100">
+                    <svg class="h-10 w-10 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <h3 class="text-2xl font-bold text-gray-800 mb-3">
-                    Verification Failed
-                  </h3>
-                  <p class="text-gray-600 mb-6">
-                    We were unable to verify your email. The link may have expired or is invalid.
+                  <p class="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-red-600">Verification Error</p>
+                  <h2 class="mb-3 text-3xl font-bold text-gray-900">Verification failed</h2>
+                  <p class="mb-6 text-sm leading-relaxed text-gray-600">
+                    The verification link may be expired or invalid.
                   </p>
-                  <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                  <div class="flex flex-col justify-center gap-4 sm:flex-row">
                     <a
                       href="signup.php"
-                      class="px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg"
+                      class="rounded-xl bg-brand px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-brand-dark hover:shadow-xl"
                     >
                       Sign Up Again
                     </a>
                     <a
                       href="contact.php"
-                      class="px-8 py-4 bg-gray-200 text-gray-700 font-semibold rounded-lg hover:bg-gray-300 transition-all"
+                      class="rounded-xl bg-gray-200 px-8 py-4 font-semibold text-gray-700 transition-all hover:bg-gray-300"
                     >
                       Contact Support
                     </a>
                   </div>
                 </div>
 
-              <!-- Default State (pending verification / check email) -->
               <?php else: ?>
-                <div class="text-center">
-                  <div
-                    class="w-20 h-20 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-6"
-                  >
-                    <svg
-                      class="w-10 h-10 text-brand"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                      />
-                    </svg>
-                  </div>
-                  <h3 class="text-2xl font-bold text-gray-800 mb-3">
-                    Check Your Email
-                  </h3>
-                  <p class="text-gray-600 mb-6">
-                    We've sent a verification link to your email address. Click the link in the email to verify your account.
-                  </p>
-
-                  <div class="p-4 bg-blue-50 rounded-lg border border-blue-200 mb-6">
-                    <div class="flex items-start gap-3">
-                      <svg
-                        class="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                        />
+                <div>
+                  <div class="mb-6 text-center sm:text-left">
+                    <div class="mx-auto mb-4 flex h-20 w-20 items-center justify-center rounded-2xl bg-brand/10 sm:mx-0">
+                      <svg class="h-10 w-10 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
-                      <div class="text-sm text-blue-800 text-left">
-                        <p class="font-medium mb-1">Didn't receive the email?</p>
-                        <p class="text-blue-600 mb-3">
-                          Check your spam folder or request a new verification email.
-                        </p>
-                        <form action="auth/resend-verification-handler.php" method="POST" class="flex flex-col sm:flex-row gap-3">
+                    </div>
+                    <p class="mb-2 text-xs font-semibold uppercase tracking-[0.22em] text-brand">One More Step</p>
+                    <h2 class="mb-3 text-3xl font-bold text-gray-900">Check your email</h2>
+                    <p class="text-sm leading-relaxed text-gray-600">
+                      We have sent a verification link to your email address. Open that link to activate your account.
+                    </p>
+                  </div>
+
+                  <div class="mb-6 rounded-xl border border-blue-200 bg-blue-50 p-4">
+                    <div class="flex items-start gap-3">
+                      <svg class="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                      </svg>
+                      <div class="w-full text-left text-sm text-blue-800">
+                        <p class="mb-1 font-medium">Didn’t receive the email?</p>
+                        <p class="mb-3 text-blue-700">Check your spam folder or request a new verification email.</p>
+                        <form action="auth/resend-verification-handler.php" method="POST" class="flex flex-col gap-3 sm:flex-row">
                           <input type="hidden" name="csrf_token" value="<?php echo e(generateCsrfToken()); ?>" />
                           <input
                             type="email"
                             name="resend_email"
                             value="<?php echo e($emailPrefill); ?>"
                             required
-                            class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all"
+                            class="flex-1 rounded-xl border border-gray-300 bg-white px-4 py-3 text-gray-800 transition-all placeholder:text-gray-400 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/25"
                             placeholder="Enter your email"
                           />
                           <button
                             type="submit"
-                            class="px-6 py-3 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg whitespace-nowrap"
+                            class="whitespace-nowrap rounded-xl bg-brand px-6 py-3 font-semibold text-white transition-all hover:bg-brand-dark hover:shadow-lg"
                           >
                             Resend Email
                           </button>
@@ -198,13 +148,11 @@ include __DIR__ . '/includes/header.php';
                     </div>
                   </div>
 
-                  <div class="mt-6">
-                    <p class="text-gray-600 text-sm mb-4">
-                      Already verified your email?
-                    </p>
+                  <div class="text-center">
+                    <p class="mb-4 text-sm text-gray-600">Already verified your email?</p>
                     <a
                       href="login.php"
-                      class="inline-block px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg"
+                      class="inline-block rounded-xl bg-brand px-8 py-4 font-semibold text-white transition-all hover:-translate-y-0.5 hover:bg-brand-dark hover:shadow-xl"
                     >
                       Sign In Now
                     </a>
@@ -217,8 +165,4 @@ include __DIR__ . '/includes/header.php';
       </section>
     </main>
 
-<?php 
-if (!isset($hideHeaderFooter) || !$hideHeaderFooter): 
-  include __DIR__ . '/includes/footer.php'; 
-endif; 
-?>
+<?php include __DIR__ . '/includes/footer.php'; ?>
