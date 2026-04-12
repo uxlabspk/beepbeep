@@ -17,37 +17,13 @@ include __DIR__ . '/includes/header.php';
 
     <main>
       <!-- Login Form Section -->
-      <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-4">
-          <div class="max-w-2xl mx-auto">
-            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div class="grid grid-cols-1 lg:grid-cols-2">
-                <!-- Left side - Branding -->
-                <div class="hidden lg:block bg-gradient-to-br from-dark-card to-dark p-8 text-white">
-                  <div class="flex items-center gap-2 text-2xl font-bold mb-6">
-                    <div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
-                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                      </svg>
-                    </div>
-                    <span>Beep<span class="text-brand">Beep</span></span>
-                  </div>
-                  <h2 class="text-3xl font-bold mb-4">Welcome Back to BeepBeep</h2>
-                  <p class="text-gray-300 mb-8">
-                    Sign in to access your driving lessons, progress tracking, and exclusive resources.
-                    Our DVSA-approved instructors are ready to help you become a confident driver.
-                  </p>
-                  <div class="mt-auto">
-                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&q=80"
-                         alt="Driving school car"
-                         class="w-full h-48 object-cover rounded-lg opacity-80" />
-                  </div>
-                </div>
-
-                <!-- Right side - Form -->
-                <div class="p-8 lg:p-12">
-                  <div class="lg:hidden mb-8">
-                    <div class="flex items-center gap-2 text-2xl font-bold text-dark mb-4">
+      <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="w-full max-w-md">
+          <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div class="px-6 py-10 sm:px-10 lg:px-12">
+                  <!-- Mobile Logo -->
+                  <div class="lg:hidden mb-8 text-center">
+                    <div class="inline-flex items-center gap-2 text-2xl font-bold text-dark mb-2">
                       <div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -57,28 +33,35 @@ include __DIR__ . '/includes/header.php';
                     </div>
                   </div>
 
-                  <h3 class="text-2xl font-bold text-gray-800 mb-2">Sign In to Your Account</h3>
-                  <p class="text-gray-600 text-sm mb-8">
-                    Enter your credentials to access your personalized dashboard.
-                  </p>
+                  <!-- Header -->
+                  <div class="mb-8">
+                    <h3 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 leading-tight">Welcome Back</h3>
+                    <p class="text-gray-600 text-sm sm:text-base leading-relaxed">
+                      Sign in to access your personalized dashboard and continue your learning journey.
+                    </p>
+                  </div>
 
-                  <form action="auth/login-handler.php" method="POST" class="space-y-6">
+                  <!-- Form -->
+                  <form action="auth/login-handler.php" method="POST" class="space-y-5">
                     <input type="hidden" name="csrf_token" value="<?php echo e(generateCsrfToken()); ?>" />
+                    
+                    <!-- Email Field -->
                     <div>
-                      <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email Address</label>
+                      <label for="email" class="block text-sm font-semibold text-gray-700 mb-2">Email Address</label>
                       <input
                         type="email"
                         id="email"
                         name="email"
                         required
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all"
+                        class="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all text-base placeholder-gray-400"
                         placeholder="your@email.com"
                       />
                     </div>
 
+                    <!-- Password Field -->
                     <div>
                       <div class="flex items-center justify-between mb-2">
-                        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                        <label for="password" class="block text-sm font-semibold text-gray-700">Password</label>
                         <a href="forgot-password.php" class="text-sm text-brand hover:text-brand-dark transition-colors font-medium">
                           Forgot Password?
                         </a>
@@ -89,13 +72,14 @@ include __DIR__ . '/includes/header.php';
                           id="password"
                           name="password"
                           required
-                          class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all pr-12"
+                          class="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent transition-all pr-12 text-base placeholder-gray-400"
                           placeholder="Enter your password"
                         />
                         <button
                           type="button"
                           id="togglePassword"
-                          class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-brand transition-colors"
+                          class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-brand transition-colors focus:outline-none"
+                          aria-label="Toggle password visibility"
                         >
                           <svg
                             id="eyeIcon"
@@ -121,37 +105,38 @@ include __DIR__ . '/includes/header.php';
                       </div>
                     </div>
 
-                    <div class="flex items-center gap-2">
+                    <!-- Remember Me -->
+                    <div class="flex items-center">
                       <input
                         type="checkbox"
                         id="remember"
                         name="remember"
-                        class="w-4 h-4 text-brand border-gray-300 rounded focus:ring-brand"
+                        class="w-4 h-4 text-brand border-gray-300 rounded focus:ring-brand cursor-pointer"
                       />
-                      <label for="remember" class="text-sm text-gray-600">
-                        Remember me
+                      <label for="remember" class="ml-2 text-sm text-gray-600 cursor-pointer select-none">
+                        Remember me for 30 days
                       </label>
                     </div>
 
+                    <!-- Submit Button -->
                     <button
                       type="submit"
-                      class="w-full px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg transform hover:-translate-y-0.5"
+                      class="w-full px-8 py-4 bg-brand text-white font-semibold rounded-lg hover:bg-brand-dark transition-all hover:shadow-lg transform hover:-translate-y-0.5 text-base focus:outline-none focus:ring-2 focus:ring-brand focus:ring-offset-2"
                     >
                       Sign In
                     </button>
                   </form>
 
+                  <!-- Sign Up Link -->
                   <div class="mt-8 pt-6 border-t border-gray-200">
-                    <p class="text-gray-600 text-sm text-center">
+                    <p class="text-gray-600 text-sm text-center leading-relaxed">
                       Don't have an account?
                       <a href="signup.php" class="text-brand hover:text-brand-dark transition-colors font-semibold">
-                        Sign Up Now
+                        Create Account
                       </a>
                     </p>
                   </div>
                 </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
