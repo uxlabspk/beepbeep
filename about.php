@@ -39,7 +39,7 @@ include __DIR__ . '/includes/header.php';
         </div>
       </section>
 
-      <!-- Main About Content -->
+      <!-- About / Why Choose Us -->
       <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -61,7 +61,7 @@ include __DIR__ . '/includes/header.php';
               <div
                 class="absolute bottom-4 left-4 bg-brand text-white rounded-2xl px-6 py-4 shadow-xl"
               >
-                <span class="text-4xl font-bold block">23+</span>
+                <span class="text-4xl font-bold block">8+</span>
                 <span class="text-sm opacity-90">Years of Excellence</span>
               </div>
             </div>
@@ -74,11 +74,11 @@ include __DIR__ . '/includes/header.php';
                 Who We Are
               </p>
               <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                The Best Driving School In The World
+                The Best Driving School In The UK
               </h2>
               <p class="text-gray-600 leading-relaxed mb-6">
                 At Beep Beep Driving School, we're passionate about creating
-                safe, confident drivers. Since our founding in 2003, we've
+                safe, confident drivers. Since our founding in 2018, we've
                 maintained the highest standards of driver training across the
                 United Kingdom.
               </p>
@@ -194,7 +194,7 @@ include __DIR__ . '/includes/header.php';
                       Expert Instructors
                     </h4>
                     <p class="text-xs text-gray-500 mt-1">
-                      15+ qualified professionals
+                      3+ qualified professionals
                     </p>
                   </div>
                 </div>
@@ -217,20 +217,36 @@ include __DIR__ . '/includes/header.php';
             class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white"
           >
             <div>
-              <span class="text-5xl font-bold block mb-1">5,400+</span>
-              <span class="text-white/80 text-sm">Students Trained</span>
+              <span
+                class="text-3xl sm:text-4xl md:text-5xl font-bold block mb-1"
+                >200+</span
+              >
+              <span class="text-white/80 text-xs sm:text-sm"
+                >Total Students</span
+              >
             </div>
             <div>
-              <span class="text-5xl font-bold block mb-1">1,150+</span>
-              <span class="text-white/80 text-sm">Tests Passed</span>
+              <span
+                class="text-3xl sm:text-4xl md:text-5xl font-bold block mb-1"
+                >170+</span
+              >
+              <span class="text-white/80 text-xs sm:text-sm">Tests Passed</span>
             </div>
             <div>
-              <span class="text-5xl font-bold block mb-1">150+</span>
-              <span class="text-white/80 text-sm">5-Star Reviews</span>
+              <span
+                class="text-3xl sm:text-4xl md:text-5xl font-bold block mb-1"
+                >80+</span
+              >
+              <span class="text-white/80 text-xs sm:text-sm"
+                >5-Star Reviews</span
+              >
             </div>
             <div>
-              <span class="text-5xl font-bold block mb-1">50+</span>
-              <span class="text-white/80 text-sm">Awards Won</span>
+              <span
+                class="text-3xl sm:text-4xl md:text-5xl font-bold block mb-1"
+                >50+</span
+              >
+              <span class="text-white/80 text-xs sm:text-sm">Awards Won</span>
             </div>
           </div>
         </div>
@@ -390,7 +406,7 @@ include __DIR__ . '/includes/header.php';
               </div>
               <h4 class="text-lg font-bold text-gray-800 mt-4">Max Abacus</h4>
               <p class="text-brand text-sm font-medium">
-                Senior Instructor · 12 yrs
+                5+ yrs
               </p>
             </div>
             <div class="text-center group">
@@ -422,7 +438,7 @@ include __DIR__ . '/includes/header.php';
                 Jenifer Lopez
               </h4>
               <p class="text-brand text-sm font-medium">
-                Lead Instructor · 8 yrs
+                4+ yrs
               </p>
             </div>
             <div class="text-center group">
@@ -451,7 +467,7 @@ include __DIR__ . '/includes/header.php';
                 </div>
               </div>
               <h4 class="text-lg font-bold text-gray-800 mt-4">Henry Jassy</h4>
-              <p class="text-brand text-sm font-medium">Instructor · 5 yrs</p>
+              <p class="text-brand text-sm font-medium">5+ yrs</p>
             </div>
           </div>
         </div>
