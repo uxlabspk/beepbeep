@@ -14,52 +14,50 @@ if (!$isResetFlow && !isLoggedIn()) {
 
 $pageTitle = 'Change Password | Beep Beep Driving School - Update Your Password';
 $currentPage = 'change-password';
-$customStyles = '
-      .auth-section {
-        min-height: calc(100vh - 200px);
-      }
-';
+$customStyles = '';
 include __DIR__ . '/includes/header.php';
 ?>
 
     <main>
-      <!-- Page Hero Section -->
-      <section class="relative py-20 bg-gray-900">
-        <div class="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1502877338535-766e1452684a?w=1600&q=80"
-            alt="Change Password"
-            class="w-full h-full object-cover opacity-40"
-          />
-        </div>
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-gray-900 via-gray-900/80 to-transparent"
-        ></div>
-        <div class="container mx-auto px-4 relative z-10">
-          <div class="max-w-3xl">
-            <p
-              class="text-brand font-semibold text-sm uppercase tracking-widest mb-4 flex items-center gap-2"
-            >
-              <span class="w-8 h-0.5 bg-brand inline-block"></span>
-              Account Security
-            </p>
-            <h1
-              class="text-5xl lg:text-6xl font-bold text-white leading-tight mb-6"
-            >
-              Change Your<br /><span class="text-brand">Password</span>
-            </h1>
-            <p class="text-gray-300 text-lg leading-relaxed">
-              Update your password to keep your account secure and protected.
-            </p>
-          </div>
-        </div>
-      </section>
-
       <!-- Change Password Form Section -->
-      <section class="py-20 bg-gray-50 auth-section">
+      <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-          <div class="max-w-2xl mx-auto">
-            <div class="bg-white p-8 rounded-2xl shadow-md">
+          <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div class="grid grid-cols-1 lg:grid-cols-2">
+                <!-- Left side - Branding -->
+                <div class="hidden lg:block bg-gradient-to-br from-dark-card to-dark p-8 text-white">
+                  <div class="flex items-center gap-2 text-2xl font-bold mb-6">
+                    <div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <span>Beep<span class="text-brand">Beep</span></span>
+                  </div>
+                  <h2 class="text-3xl font-bold mb-4">Update Your Password</h2>
+                  <p class="text-gray-300 mb-8">
+                    Keep your account secure by updating your password regularly. Our system ensures your information stays protected.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&q=80"
+                         alt="Driving school car"
+                         class="w-full h-48 object-cover rounded-lg opacity-80" />
+                  </div>
+                </div>
+
+                <!-- Right side - Form -->
+                <div class="p-8 lg:p-12">
+                  <div class="lg:hidden mb-8">
+                    <div class="flex items-center gap-2 text-2xl font-bold text-dark mb-4">
+                      <div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <span>Beep<span class="text-brand">Beep</span></span>
+                    </div>
+                  </div>
               <!-- Success Message (shown when password is changed successfully) -->
               <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
                 <div class="text-center">
@@ -103,12 +101,12 @@ include __DIR__ . '/includes/header.php';
                 </div>
 
               <?php else: ?>
-                <div class="flex items-center gap-4 mb-6 pb-6 border-b border-gray-200">
+                <div class="text-center mb-6">
                   <div
-                    class="w-14 h-14 bg-brand/10 rounded-lg flex items-center justify-center flex-shrink-0"
+                    class="w-16 h-16 bg-brand/10 rounded-full flex items-center justify-center mx-auto mb-4"
                   >
                     <svg
-                      class="w-7 h-7 text-brand"
+                      class="w-8 h-8 text-brand"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -121,14 +119,12 @@ include __DIR__ . '/includes/header.php';
                       />
                     </svg>
                   </div>
-                  <div>
-                    <h3 class="text-2xl font-bold text-gray-800 mb-1">
-                      Update Your Password
-                    </h3>
-                    <p class="text-gray-600 text-sm">
-                      Enter your current password and choose a new one.
-                    </p>
-                  </div>
+                  <h3 class="text-2xl font-bold text-gray-800 mb-2">
+                    Update Your Password
+                  </h3>
+                  <p class="text-gray-600 text-sm">
+                    Enter your current password and choose a new one.
+                  </p>
                 </div>
 
                 <!-- Password Requirements Info -->

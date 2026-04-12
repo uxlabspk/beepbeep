@@ -8,20 +8,50 @@ $emailPrefill = sanitize($_GET['email'] ?? '');
 
 $pageTitle = 'Verify Email | Beep Beep Driving School - Confirm Your Account';
 $currentPage = 'verify-email';
-$customStyles = '
-      .auth-section {
-        min-height: calc(100vh - 200px);
-      }
-';
+$customStyles = '';
 include __DIR__ . '/includes/header.php';
 ?>
 
     <main>
       <!-- Email Verification Section -->
-      <section class="py-20 bg-gray-50 auth-section">
+      <section class="py-20 bg-gray-50">
         <div class="container mx-auto px-4">
-          <div class="max-w-2xl mx-auto">
-            <div class="bg-white p-8 rounded-2xl shadow-md">
+          <div class="max-w-4xl mx-auto">
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div class="grid grid-cols-1 lg:grid-cols-2">
+                <!-- Left side - Branding -->
+                <div class="hidden lg:block bg-gradient-to-br from-dark-card to-dark p-8 text-white">
+                  <div class="flex items-center gap-2 text-2xl font-bold mb-6">
+                    <div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
+                      <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                      </svg>
+                    </div>
+                    <span>Beep<span class="text-brand">Beep</span></span>
+                  </div>
+                  <h2 class="text-3xl font-bold mb-4">Verify Your Email</h2>
+                  <p class="text-gray-300 mb-8">
+                    Complete this important step to activate your account and start your driving journey with BeepBeep.
+                  </p>
+                  <div class="mt-auto">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&q=80"
+                         alt="Driving school car"
+                         class="w-full h-48 object-cover rounded-lg opacity-80" />
+                  </div>
+                </div>
+
+                <!-- Right side - Content -->
+                <div class="p-8 lg:p-12">
+                  <div class="lg:hidden mb-8">
+                    <div class="flex items-center gap-2 text-2xl font-bold text-dark mb-4">
+                      <div class="w-10 h-10 bg-brand rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                      </div>
+                      <span>Beep<span class="text-brand">Beep</span></span>
+                    </div>
+                  </div>
               <!-- Success State (shown when verification is successful) -->
               <!-- To show this state, add ?status=success to the URL -->
               <?php if (isset($_GET['status']) && $_GET['status'] === 'success'): ?>
