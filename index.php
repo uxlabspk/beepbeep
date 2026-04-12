@@ -515,12 +515,10 @@ include __DIR__ . '/includes/header.php';
                   </div>
                   <div class="p-6">
                     <h3 class="text-xl font-bold text-gray-800 mb-3">
-                      Instructor Training
+                      Manual & Automatic
                     </h3>
                     <p class="text-gray-600 text-sm leading-relaxed mb-4">
-                      Become a qualified driving instructor with our
-                      comprehensive ADI training program. We guide you through
-                      all three qualifying tests.
+                      we offer both manual and automatic driving lessons to cater to your specific needs and preferences.
                     </p>
                     <a
                       href="lessons.php"
