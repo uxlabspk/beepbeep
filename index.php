@@ -441,7 +441,7 @@ include __DIR__ . '/includes/header.php';
             <div>
               <span
                 class="text-3xl sm:text-4xl md:text-5xl font-bold block mb-1"
-                >5,400+</span
+                >200+</span
               >
               <span class="text-white/80 text-xs sm:text-sm"
                 >Total Students</span
@@ -450,14 +450,14 @@ include __DIR__ . '/includes/header.php';
             <div>
               <span
                 class="text-3xl sm:text-4xl md:text-5xl font-bold block mb-1"
-                >1,150+</span
+                >170+</span
               >
               <span class="text-white/80 text-xs sm:text-sm">Tests Passed</span>
             </div>
             <div>
               <span
                 class="text-3xl sm:text-4xl md:text-5xl font-bold block mb-1"
-                >150+</span
+                >80+</span
               >
               <span class="text-white/80 text-xs sm:text-sm"
                 >5-Star Reviews</span
