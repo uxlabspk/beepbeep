@@ -1611,7 +1611,7 @@ include __DIR__ . '/includes/header.php';
             <div class="overflow-hidden">
               <div
                 id="testimonials-track"
-                class="flex transition-transform duration-500 ease-out"
+                class="flex transition-transform duration-500 ease-out py-4 mx-6"
               >
                 <!-- Testimonial 1 -->
                 <div class="w-full md:w-1/3 flex-shrink-0 px-4">
