@@ -11,6 +11,7 @@ if (isLoggedIn()) {
 $pageTitle = 'Sign Up | Beep Beep Driving School - Create Your Account';
 $currentPage = 'signup';
 $customStyles = '';
+$hideHeaderFooter = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -302,4 +303,8 @@ include __DIR__ . '/includes/header.php';
       }
     </script>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php 
+if (!isset($hideHeaderFooter) || !$hideHeaderFooter): 
+  include __DIR__ . '/includes/footer.php'; 
+endif; 
+?>

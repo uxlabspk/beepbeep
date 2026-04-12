@@ -11,6 +11,7 @@ if (isLoggedIn()) {
 $pageTitle = 'Forgot Password | Beep Beep Driving School - Reset Your Password';
 $currentPage = 'forgot-password';
 $customStyles = '';
+$hideHeaderFooter = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -147,4 +148,8 @@ include __DIR__ . '/includes/header.php';
       </section>
     </main>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php 
+if (!isset($hideHeaderFooter) || !$hideHeaderFooter): 
+  include __DIR__ . '/includes/footer.php'; 
+endif; 
+?>

@@ -65,6 +65,7 @@ $authUser = currentUser();
   </head>
 
   <body class="font-primary text-gray-800 antialiased overflow-x-hidden">
+  <?php if (!isset($hideHeaderFooter) || !$hideHeaderFooter): ?>
     <!-- Mobile Menu Overlay -->
     <div id="mobileMenu" class="fixed inset-0 bg-dark/95 z-40 hidden">
       <div class="container mx-auto px-4 py-6">
@@ -150,7 +151,9 @@ $authUser = currentUser();
         </ul>
       </div>
     </div>
+  <?php endif; ?>
 
+  <?php if (!isset($hideHeaderFooter) || !$hideHeaderFooter): ?>
     <!-- Top Bar -->
     <div class="bg-gray-900 text-gray-300 text-xs py-2 hidden lg:block">
       <div class="container mx-auto px-4 flex justify-between items-center">
@@ -235,7 +238,9 @@ $authUser = currentUser();
         </div>
       </div>
     </div>
+  <?php endif; ?>
 
+  <?php if (!isset($hideHeaderFooter) || !$hideHeaderFooter): ?>
     <!-- Header -->
     <header class="bg-white shadow-sm sticky top-0 z-50">
       <nav
@@ -402,8 +407,10 @@ $authUser = currentUser();
         </button>
       </nav>
     </header>
+  <?php endif; ?>
 
     <!-- Close dropdown when clicking outside -->
+    <?php if (!isset($hideHeaderFooter) || !$hideHeaderFooter): ?>
     <script>
       document.addEventListener('click', function(event) {
         const userMenu = document.getElementById('userMenu');
@@ -415,8 +422,9 @@ $authUser = currentUser();
         }
       });
     </script>
+    <?php endif; ?>
 
-    <?php if ($flashMessage): ?>
+    <?php if (isset($flashMessage) && $flashMessage && (!isset($hideHeaderFooter) || !$hideHeaderFooter)): ?>
       <div class="container mx-auto px-4 mt-4">
         <div class="px-4 py-3 rounded-lg <?php echo $flashMessage['type'] === 'success' ? 'bg-green-100 text-green-800 border border-green-200' : 'bg-red-100 text-red-800 border border-red-200'; ?>">
           <?php echo e($flashMessage['message']); ?>

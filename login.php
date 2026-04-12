@@ -11,6 +11,7 @@ if (isLoggedIn()) {
 $pageTitle = 'Login | Beep Beep Driving School';
 $currentPage = 'login';
 $customStyles = '';
+$hideHeaderFooter = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -181,4 +182,8 @@ include __DIR__ . '/includes/header.php';
       }
     </script>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php 
+if (!isset($hideHeaderFooter) || !$hideHeaderFooter): 
+  include __DIR__ . '/includes/footer.php'; 
+endif; 
+?>

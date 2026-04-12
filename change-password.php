@@ -15,6 +15,7 @@ if (!$isResetFlow && !isLoggedIn()) {
 $pageTitle = 'Change Password | Beep Beep Driving School - Update Your Password';
 $currentPage = 'change-password';
 $customStyles = '';
+$hideHeaderFooter = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -552,4 +553,8 @@ include __DIR__ . '/includes/header.php';
       }
     </script>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php 
+if (!isset($hideHeaderFooter) || !$hideHeaderFooter): 
+  include __DIR__ . '/includes/footer.php'; 
+endif; 
+?>

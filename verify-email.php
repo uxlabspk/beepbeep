@@ -9,6 +9,7 @@ $emailPrefill = sanitize($_GET['email'] ?? '');
 $pageTitle = 'Verify Email | Beep Beep Driving School - Confirm Your Account';
 $currentPage = 'verify-email';
 $customStyles = '';
+$hideHeaderFooter = true;
 include __DIR__ . '/includes/header.php';
 ?>
 
@@ -216,4 +217,8 @@ include __DIR__ . '/includes/header.php';
       </section>
     </main>
 
-<?php include __DIR__ . '/includes/footer.php'; ?>
+<?php 
+if (!isset($hideHeaderFooter) || !$hideHeaderFooter): 
+  include __DIR__ . '/includes/footer.php'; 
+endif; 
+?>
