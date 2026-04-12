@@ -296,11 +296,11 @@ include __DIR__ . '/includes/header.php';
                 Who We Are
               </p>
               <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">
-                The Best Driving School In The World
+                The Best Driving School In The UK
               </h2>
               <p class="text-gray-600 leading-relaxed mb-6">
                 At Beep Beep Driving School, we're passionate about creating
-                safe, confident drivers. Since our founding in 2003, we've
+                safe, confident drivers. Since our founding in 2018, we've
                 maintained the highest standards of driver training across the
                 United Kingdom.
               </p>
