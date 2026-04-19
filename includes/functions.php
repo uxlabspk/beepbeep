@@ -76,58 +76,7 @@ function getFlash() {
     return null;
 }
 
-/**
- * Check if user is logged in
- */
-function isLoggedIn() {
-    return isset($_SESSION['user_id']);
-}
 
-/**
- * Get current user data from session
- */
-function currentUser() {
-    return [
-        'id' => $_SESSION['user_id'] ?? null,
-        'first_name' => $_SESSION['user_first_name'] ?? '',
-        'last_name' => $_SESSION['user_last_name'] ?? '',
-        'email' => $_SESSION['user_email'] ?? '',
-        'role' => $_SESSION['user_role'] ?? 'student',
-    ];
-}
-
-/**
- * Log a user into the current session.
- */
-function loginUser(array $user) {
-    session_regenerate_id(true);
-    $_SESSION['user_id'] = $user['id'];
-    $_SESSION['user_first_name'] = $user['first_name'];
-    $_SESSION['user_last_name'] = $user['last_name'];
-    $_SESSION['user_email'] = $user['email'];
-    $_SESSION['user_role'] = $user['role'] ?? 'student';
-}
-
-/**
- * Clear auth session data and destroy session.
- */
-function logoutUser() {
-    $_SESSION = [];
-
-    if (ini_get('session.use_cookies')) {
-        $params = session_get_cookie_params();
-        setcookie(session_name(), '', [
-            'expires' => time() - 42000,
-            'path' => $params['path'] ?? '/',
-            'domain' => $params['domain'] ?? '',
-            'secure' => $params['secure'] ?? false,
-            'httponly' => $params['httponly'] ?? true,
-            'samesite' => $params['samesite'] ?? 'Lax',
-        ]);
-    }
-
-    session_destroy();
-}
 
 /**
  * Generate a CSRF token

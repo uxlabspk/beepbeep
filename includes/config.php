@@ -45,34 +45,11 @@ define('SITE_ADDRESS', '123 High Street, Manchester, M1 1AA');
 // Paths (absolute)
 define('ROOT_PATH', dirname(__DIR__));
 define('INCLUDES_PATH', ROOT_PATH . '/includes');
-define('DATABASE_PATH', ROOT_PATH . '/database');
-define('AUTH_PATH', ROOT_PATH . '/auth');
 define('UPLOADS_PATH', ROOT_PATH . '/uploads');
 
-// Database credentials (use environment variables in production)
-define('DB_HOST', getenv('DB_HOST') ?: '127.0.0.1');
-define('DB_NAME', getenv('DB_NAME') ?: 'driving');
-define('DB_USER', getenv('DB_USER') ?: 'root');
-define('DB_PASS', getenv('DB_PASS') ?: '');
-define('DB_CHARSET', getenv('DB_CHARSET') ?: 'utf8mb4');
 
-// Session settings
-define('SESSION_LIFETIME', 60 * 60 * 24 * 30); // 30 days
-define('SESSION_COOKIE_NAME', 'beepbeep_session');
 
-// Email settings (can be overridden by environment variables)
-define('MAIL_FROM_NAME', getenv('MAIL_FROM_NAME') ?: SITE_NAME);
-define('MAIL_FROM_EMAIL', getenv('MAIL_FROM_EMAIL') ?: SITE_EMAIL);
-define('MAIL_REPLY_TO', getenv('MAIL_REPLY_TO') ?: MAIL_FROM_EMAIL);
-define('MAIL_TRANSPORT', strtolower(getenv('MAIL_TRANSPORT') ?: 'mail')); // mail|smtp
 
-// SMTP settings (used when MAIL_TRANSPORT=smtp)
-define('SMTP_HOST', getenv('SMTP_HOST') ?: '');
-define('SMTP_PORT', (int) (getenv('SMTP_PORT') ?: 587));
-define('SMTP_ENCRYPTION', strtolower(getenv('SMTP_ENCRYPTION') ?: 'tls')); // tls|ssl|none
-define('SMTP_USERNAME', getenv('SMTP_USERNAME') ?: '');
-define('SMTP_PASSWORD', getenv('SMTP_PASSWORD') ?: '');
-define('SMTP_AUTH', filter_var(getenv('SMTP_AUTH') ?: 'true', FILTER_VALIDATE_BOOLEAN));
 
 // Error reporting (set to false on production)
 define('DEBUG_MODE', true);

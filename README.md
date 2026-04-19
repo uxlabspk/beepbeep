@@ -1,11 +1,10 @@
-# Beep Beep Driving School Website
+# Beep Beep Driving School Website Template
 
-A modern, responsive driving school website built with **PHP**, **HTML5**, and **Tailwind CSS**.
+A modern, responsive driving school website template built with **PHP**, **HTML5**, and **Tailwind CSS**. This template provides a clean and professional design for driving schools, with all the essential pages and features.
 
 ## 🚀 Technologies Used
 
 - **PHP 8+** - Server-side scripting
-- **MySQL** - Database
 - **HTML5** - Semantic markup
 - **Tailwind CSS** (CDN) - Utility-first CSS framework
 - **Vanilla JavaScript** - Interactive features
@@ -20,12 +19,6 @@ beepbeep/
 ├── lessons.php               # Courses/Lessons
 ├── contact.php               # Contact page
 ├── book-now.php              # Booking page
-├── dashboard.php             # Student dashboard
-├── login.php                 # Login page
-├── signup.php                # Registration page
-├── forgot-password.php       # Password reset request
-├── change-password.php       # Password change
-├── verify-email.php          # Email verification
 ├── coming-soon.php           # Placeholder page
 ├── .htaccess                 # Apache config
 ├── assets/                   # Static assets
@@ -36,18 +29,10 @@ beepbeep/
 │   ├── config.php            # Site-wide settings
 │   └── functions.php         # Helper functions
 │
-├── auth/                      # 🔐 Authentication logic
-│   ├── login-handler.php     # Process login
-│   ├── signup-handler.php    # Process registration
-│   ├── logout.php            # Destroy session
-│   └── middleware.php        # Auth guards (requireAuth, requireAdmin)
-│
 ├── api/                       # 📡 AJAX endpoints
 │   ├── contact-submit.php    # Contact form submission
 │   └── booking-submit.php    # Booking form submission
 │
-├── database/                  # 🗄️ Database files
-│   ├── db.php                # PDO connection singleton
 │   └── schema.sql            # Database structure + seed data
 │
 ├── emails/                    # 📧 Email templates
@@ -170,22 +155,18 @@ php -S localhost:8000
 5. **Statistics Counter** - Animated numbers
 6. **Testimonials** - Student reviews with ratings
 7. **Booking System** - Online lesson booking
-8. **Student Dashboard** - Track progress and bookings
-9. **Authentication** - Login, signup, password reset, email verification
-10. **Contact Form** - Inquiry form with validation
+8. **Contact Form** - Inquiry form with validation
 
 ## 📝 Next Steps
 
 ### Immediate (Week 1):
 
 - [ ] Add real images to `assets/images/`
-- [ ] Test all forms with database connected
 - [ ] Implement CSRF protection on all forms
 - [ ] Add form validation feedback (AJAX)
 
 ### Mid-term (Week 2):
 
-- [ ] Build admin panel (`admin/` folder)
 - [ ] Implement booking calendar/scheduler
 - [ ] Add payment integration (Stripe)
 - [ ] Set up email sending (PHPMailer / SendGrid)
