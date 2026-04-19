@@ -6,8 +6,7 @@ require_once INCLUDES_PATH . '/functions.php';
 if (session_status() === PHP_SESSION_NONE) {
     initSession();
 }
-$flashMessage = getFlash();
-$authUser = currentUser();
+
 ?>
 <!doctype html>
 <html lang="en-GB">
@@ -115,14 +114,7 @@ $authUser = currentUser();
               >Contact Us</a
             >
           </li>
-          <?php if (isLoggedIn()): ?>
-            <li>
-              <a
-                href="dashboard.php"
-                class="text-white text-xl font-medium hover:text-brand transition-colors"
-                >Dashboard</a
-              >
-            </li>
+
 
 
           <?php else: ?>
@@ -290,7 +282,7 @@ $authUser = currentUser();
               >
                 <div class="w-8 h-8 bg-brand rounded-full flex items-center justify-center">
                   <span class="text-white text-sm font-semibold">
-                    <?php echo strtoupper(substr(currentUser()['first_name'], 0, 1) . substr(currentUser()['last_name'], 0, 1)); ?>
+                    <?php echo strtoupper(substr('User', 0, 1)); ?>
                   </span>
                 </div>
                 <svg class="w-4 h-4 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -306,24 +298,14 @@ $authUser = currentUser();
                 <!-- User Info -->
                 <div class="px-4 py-3 border-b border-gray-100">
                   <p class="text-sm font-semibold text-gray-800">
-                    <?php echo e(currentUser()['first_name'] . ' ' . currentUser()['last_name']); ?>
+                    User Name
                   </p>
                   <p class="text-xs text-gray-500 mt-1">
-                    <?php echo e(currentUser()['email']); ?>
+                    user@example.com
                   </p>
                 </div>
                 
                 <!-- Menu Links -->
-                <a
-                  href="dashboard.php"
-                  class="flex items-center gap-3 px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 transition-colors"
-                >
-                  <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                  Dashboard
-                </a>
-                
                 <!-- Divider -->
                 <div class="border-t border-gray-100 my-2"></div>
 
@@ -378,10 +360,4 @@ $authUser = currentUser();
     </script>
     <?php endif; ?>
 
-    <?php if (isset($flashMessage) && $flashMessage && (!isset($hideHeaderFooter) || !$hideHeaderFooter)): ?>
-      <div class="container mx-auto px-4 mt-4">
-        <div class="px-4 py-3 rounded-lg <?php echo $flashMessage['type'] === 'success' ? 'bg-green-100 text-green-800 border border-green-200' : 'bg-red-100 text-red-800 border border-red-200'; ?>">
-          <?php echo e($flashMessage['message']); ?>
-        </div>
-      </div>
-    <?php endif; ?>
+

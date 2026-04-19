@@ -26,17 +26,16 @@ beepbeep/
 ├── includes/                  # 🔧 Reusable PHP partials
 │   ├── header.php            # Site header + navigation
 │   ├── footer.php            # Site footer
-│   ├── config.php            # Site-wide settings
-│   └── functions.php         # Helper functions
+│   ├── config.php            # Basic site settings (name, URL)
+│   └── functions.php         # Essential helper functions
 │
-├── api/                       # 📡 AJAX endpoints
+├── api/                       # 📡 AJAX endpoints (optional)
 │   ├── contact-submit.php    # Contact form submission
 │   └── booking-submit.php    # Booking form submission
 │
 │   └── schema.sql            # Database structure + seed data
 │
-├── emails/                    # 📧 Email templates
-│   ├── welcome.php           # Welcome / verification email
+
 │   ├── booking-confirmation.php
 │   └── password-reset.php
 │
@@ -48,49 +47,19 @@ beepbeep/
 ### 1. Prerequisites
 
 - PHP 8.0+
-- MySQL 5.7+ or MariaDB 10.3+
 - Apache or Nginx web server
 
-### 2. Database Setup
+### 2. Configuration
 
-```sql
--- Create the database
-CREATE DATABASE beepbeep_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+**Configuration:**
 
--- Import the schema (includes seed data)
-mysql -u root -p beepbeep_db < database/schema.sql
-```
+Edit `includes/config.php` to update your site settings:
 
-### 3. Configuration
-
-**Using Environment Variables (Recommended):**
-
-1. Copy the example environment file:
-
-```bash
-cp .env.example .env
-```
-
-2. Edit `.env` and update your settings:
-
-```env
-DB_HOST=127.0.0.1
-DB_NAME=beepbeep_db
-DB_USER=your_username
-DB_PASS=your_password
-DB_CHARSET=utf8mb4
-```
-
-The `.env` file is automatically loaded by `includes/config.php`. Environment variables take precedence over defaults.
-
-> ⚠️ **Important:** Never commit `.env` to version control. It's already in `.gitignore`.
-
-**Alternative - Direct Configuration:**
-
-If you prefer not to use `.env`, you can edit `includes/config.php` directly and update:
-
-- `SITE_URL` — your live domain URL
-- Database credentials in the `getenv()` fallback values
+- `SITE_NAME` — your driving school name
+- `SITE_URL` — your live domain URL (e.g., 'https://yourdomain.com')
+- `SITE_EMAIL` — your contact email
+- `SITE_PHONE` — your contact phone number
+- `SITE_ADDRESS` — your business address
 - `DEBUG_MODE` — set to `false` on production
 
 ### 4. Web Server Configuration
@@ -169,7 +138,7 @@ php -S localhost:8000
 
 - [ ] Implement booking calendar/scheduler
 - [ ] Add payment integration (Stripe)
-- [ ] Set up email sending (PHPMailer / SendGrid)
+
 
 ### Final (Week 3):
 
